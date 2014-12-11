@@ -1,17 +1,17 @@
 (add-to-list 'load-path "~/.mylisp/")
 (add-to-list 'load-path "~/.mylisp/cedet/")
 (add-to-list 'load-path "~/.mylisp/helm/")
-(add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-20141117.327/")
+;;(add-to-list 'load-path "~/.mylisp/yasnippet")
 (add-to-list 'load-path "~/.emacs.d/elpa/ecb-20140215.114/")  
-(load-file (concat user-emacs-directory "/cedet/cedet-devel-load.el"))
+(load-file (concat user-emacs-directory "cedet/cedet-devel-load.el"))
 (load-file (concat user-emacs-directory "cedet/contrib/cedet-contrib-load.el"))
 ;;使用google 代码规范
 (require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 ;;使用yas进行代码快速插入,如doc，插入注释
-(require 'yasnippet)
- (yas-global-mode 1)
+;;(require 'yasnippet)
+;; (yas-global-mode 1)
 ;;代码浏览框架
 (require 'cedet)
 (require 'semantic)
@@ -19,10 +19,9 @@
 (require 'eassist nil 'noerror)
 (semantic-load-enable-minimum-features)
 (semantic-load-enable-code-helpers)
-(semantic-load-enable-gaudy-code-helpers)
-(semantic-load-enable-excessive-code-helpers)
+;;(semantic-load-enable-gaudy-code-helpers)
+;;(semantic-load-enable-excessive-code-helpers)
 ;;(semantic-load-enable-semantic-debugging-helpers)
-)
 (require 'ecb)
 ;;(require 'ecb-autoloads)
 ;;(ecb-activate)
@@ -56,15 +55,13 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.mylisp/ac-dict")
 (ac-config-default)
-
 (require 'auto-complete-clang)
 (require 'xcscope)
 (setq ac-clang-auto-save t)
 (setq ac-auto-start t)
 (setq ac-quick-help-delay 0.5)
-;;(setq cscope-do-not-update-database t)
+(setq cscope-do-not-update-database t)
 ;; (ac-set-trigger-key "TAB")
-;; (define-key ac-mode-map  [(control tab)] 'auto-complete)
 (define-key ac-mode-map  [(control tab)] 'auto-complete)
 (defun my-ac-config ()
     (setq ac-clang-flags
@@ -86,7 +83,7 @@
 	      (add-hook 'auto-complete-mode-hook 'ac-common-setup)
 	        (global-auto-complete-mode t))
 (defun my-ac-cc-mode-setup ()
-    (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources)))
+  (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources)))
 (add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
 ;; ac-source-gtags
 (my-ac-config)
@@ -110,21 +107,10 @@
   "Insert the current time"
   (interactive "*")
   (insert (current-time-string)))
-;(global-set-key "C-xt" 'insert-current-time) 
+;;(global-set-key "C-xt" 'insert-current-time) 
 (defun cpplint ()
   "check source code format according to Google Style Guide"
   (interactive)
     (compilation-start (concat "/usr/bin/cpplint.py " (buffer-file-name))))
-(defun format-function ()
-  "Format the whole buffer."
-  (setq tab-width 4) ;; change this to taste, this is what K&R uses <img src="http://zhanxw.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley">
-  (setq c-basic-offset tab-width)
-  (c-set-offset 'substatement-open 0)
-  ;; next line is strange, I copied it from .emacs, but it cannot find c-lineup-arglist-intro-after-paren
-  ;; however, disable this line seems working as well.
-  ;;(c-set-offset 'arglist-intro c-lineup-arglist-intro-after-paren)
-  (indent-region (point-min) (point-max) nil)
-  (untabify (point-min) (point-max))
-  (save-buffer)
-    )
 (semanticdb-enable-cscope-databases)  ;;This is causing problems
+;;(setq debug-on-error t)
