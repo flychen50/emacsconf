@@ -1,3 +1,6 @@
+(require 'package)
+(add-to-list 'package-archives
+  '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'load-path "~/.mylisp/")
 (add-to-list 'load-path "~/.mylisp/cedet/")
 (add-to-list 'load-path "~/.mylisp/helm/")
@@ -48,9 +51,6 @@
 ;;(global-set-key [end] 'end-of-buffer)
 ;;(setq x-select-enable-clipboard t);支持emacs和外部程序的粘贴
 ;;;;ejb 快捷键
-(require 'package)
-(add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (require 'helm-config)
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.mylisp/ac-dict")
