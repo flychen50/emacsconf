@@ -15,11 +15,11 @@
                         :type "char")
                         (reparse-symbol arg-sub-list) [38 51]))                  
                 :type "int")
-                nil [19 112]))          
+                nil [19 103]))          
       :file "tt.cpp"
-      :pointmax 114
-      :fsize 113
-      :lastmodtime '(21641 45320 0 0)
+      :pointmax 105
+      :fsize 104
+      :lastmodtime '(21642 18697 0 0)
       :unmatched-syntax nil))
   :file "!root!.mylisp!semantic.cache"
   :semantic-tag-version "2.0"

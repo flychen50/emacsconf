@@ -29,15 +29,10 @@
 ;;(semantic-load-enable-semantic-debugging-helpers)
 (require 'cc-mode)
 (require 'semantic)
-
 (global-semanticdb-minor-mode 1)
 (global-semantic-idle-scheduler-mode 1)
-
 (semantic-mode 1)
 (semantic-add-system-include "/usr/include/boost" 'c++-mode)
-
-
-
 
 
 (require 'ecb)
@@ -108,8 +103,7 @@
   (untabify (point-min) (point-max))
   (save-buffer)
     )
-;;(add-hook 'c++-mode (lambda () (add-to-list 'ac-sources 'ac-source-semantic)))
-(semanticdb-enable-cscope-databases)  ;;This is causing problems
+;;(semanticdb-enable-cscope-databases)  ;;This is causing problems
 ;;auto company
 (add-to-list 'load-path "~/.mylisp/company-mode/")
 (autoload 'company-mode "company" nil t)

@@ -518,30 +518,30 @@
                (:constructor-flag t
                 :parent "BidFeedHandler"
                 :type ("BidFeedHandler" type (:type "class") nil nil))
-                nil [839 893])
+                nil [839 896])
             ("BidFeedHandler" function
                (:destructor-flag t
                 :parent "BidFeedHandler"
                 :type "void")
-                nil [895 1030])
+                nil [898 1033])
             ("CheckConfig" function
                (:parent "BidFeedHandler"
                 :arguments 
                   ( ("config" variable
                        (:reference 1
                         :type ("CINIConfig" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [1064 1083]))                  
+                        (reparse-symbol arg-sub-list) [1067 1086]))                  
                 :type "int")
-                nil [1032 1600])
+                nil [1035 1602])
             ("Init" function
                (:parent "BidFeedHandler"
                 :arguments 
                   ( ("config" variable
                        (:reference 1
                         :type ("CINIConfig" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [1627 1646]))                  
+                        (reparse-symbol arg-sub-list) [1629 1648]))                  
                 :type "int")
-                nil [1602 5196])
+                nil [1604 5198])
             ("Update" function
                (:parent "BidFeedHandler"
                 :arguments 
@@ -549,9 +549,9 @@
                        (:reference 1
                         :constant-flag t
                         :type ("string" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [5224 5245]))                  
+                        (reparse-symbol arg-sub-list) [5226 5247]))                  
                 :type "int")
-                nil [5197 5293])
+                nil [5199 5295])
             ("Query" function
                (:parent "BidFeedHandler"
                 :arguments 
@@ -559,25 +559,25 @@
                        (:reference 1
                         :constant-flag t
                         :type ("AdEng2IdxSrvMsg" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [5321 5354])
+                        (reparse-symbol arg-sub-list) [5323 5356])
                     ("query_struct_ops" variable
                        (:reference 1
                         :type ("QueryStructOps" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [5381 5414])
+                        (reparse-symbol arg-sub-list) [5383 5416])
                     ("response_msg" variable
                        (:reference 1
                         :type ("IdxSrv2AdEngMsg" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [5442 5472])
+                        (reparse-symbol arg-sub-list) [5444 5474])
                     ("session_data" variable
                        (:reference 1
                         :type ("IdxSessionData" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [5499 5528])
+                        (reparse-symbol arg-sub-list) [5501 5530])
                     ("statis_info" variable
                        (:reference 1
                         :type ("StatisticsInfo" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [5555 5583]))                  
+                        (reparse-symbol arg-sub-list) [5557 5585]))                  
                 :type "int")
-                nil [5295 7673])
+                nil [5297 7675])
             ("print_validbidmap" function
                (:parent "BidFeedHandler"
                 :arguments 
@@ -585,10 +585,10 @@
                        (:pointer 1
                         :constant-flag t
                         :type ("uint8_t" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [7713 7746])
-                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7746 7760]))                  
+                        (reparse-symbol arg-sub-list) [7715 7748])
+                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7748 7762]))                  
                 :type "int")
-                nil [7674 8523])
+                nil [7676 8525])
             ("Select" function
                (:parent "BidFeedHandler"
                 :arguments 
@@ -596,27 +596,27 @@
                        (:reference 1
                         :constant-flag t
                         :type ("AdEng2IdxSrvMsg" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [8551 8584])
+                        (reparse-symbol arg-sub-list) [8553 8586])
                     ("valid_adid_bitmap" variable
                        (:pointer 1
                         :constant-flag t
                         :type ("uint8_t" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [8612 8645])
-                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8673 8687])
+                        (reparse-symbol arg-sub-list) [8614 8647])
+                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8675 8689])
                     ("response" variable
                        (:reference 1
                         :type ("IdxSrv2AdEngMsg" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [8715 8741]))                  
+                        (reparse-symbol arg-sub-list) [8717 8743]))                  
                 :type "int")
-                nil [8524 12228])
+                nil [8526 12230])
             ("LoadIndex" function
                (:parent "BidFeedHandler"
                 :type "int")
-                nil [12230 12367])
+                nil [12232 12369])
             ("RollBackCommandByTime" function
                (:parent "BidFeedHandler"
                 :type "int")
-                nil [12369 12535])
+                nil [12371 12537])
             ("QueryIndexInfo" function
                (:parent "BidFeedHandler"
                 :arguments 
@@ -624,28 +624,28 @@
                        (:reference 1
                         :constant-flag t
                         :type ("AdEng2IdxSrvMsg" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [12592 12625])
+                        (reparse-symbol arg-sub-list) [12594 12627])
                     ("response_msg" variable
                        (:reference 1
                         :type ("IdxSrv2AdEngMsg" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [12661 12691]))                  
+                        (reparse-symbol arg-sub-list) [12663 12693]))                  
                 :type "int")
-                nil [12557 18161])
+                nil [12559 18163])
             ("SetQueryInfoKeyVal" function
                (:parent "BidFeedHandler"
                 :arguments 
                   ( ("feed_info_ptr" variable
                        (:pointer 1
                         :type ("FeedInfo" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [18202 18226])
+                        (reparse-symbol arg-sub-list) [18204 18228])
                     ("key" variable
                        (:reference 1
                         :constant-flag t
                         :type ("string" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [18266 18284])
-                    ("post_val" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18324 18342]))                  
+                        (reparse-symbol arg-sub-list) [18268 18286])
+                    ("post_val" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18326 18344]))                  
                 :type "int")
-                nil [18163 18517])
+                nil [18165 18519])
             ("PackageAdDetail" function
                (:parent "BidFeedHandler"
                 :arguments 
@@ -653,18 +653,18 @@
                        (:reference 1
                         :constant-flag t
                         :type ("AdEng2IdxSrvMsg" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [18554 18587])
-                    ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18625 18639])
+                        (reparse-symbol arg-sub-list) [18556 18589])
+                    ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18627 18641])
                     ("response" variable
                        (:reference 1
                         :type ("IdxSrv2AdEngMsg" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [18676 18702]))                  
+                        (reparse-symbol arg-sub-list) [18678 18704]))                  
                 :type "int")
-                nil [18518 19749]))          
+                nil [18520 19751]))          
       :file "idx_bidfeed_handler.cpp"
-      :pointmax 19788
-      :fsize 19823
-      :lastmodtime '(21641 46877 0 0)
+      :pointmax 19790
+      :fsize 19825
+      :lastmodtime '(21642 19619 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "idx_fans_target_index_impl.cpp"
       :major-mode 'c++-mode
