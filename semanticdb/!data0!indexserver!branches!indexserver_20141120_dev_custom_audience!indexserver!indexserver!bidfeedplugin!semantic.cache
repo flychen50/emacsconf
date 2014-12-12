@@ -1,0 +1,2776 @@
+;; Object bidfeedplugin/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bidfeedplugin/"
+  :tables
+  (list
+    (semanticdb-table "idx_bidfeed_plugin.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("indexserver/bidfeedplugin/idx_bidfeed_plugin.h" include (:system-flag t) nil [1 58])
+            ("sharelib/pluginmanager/plugin_manager.h" include (:system-flag t) nil [59 109])
+            ("indexserver/bidfeedplugin/curl_handler.h" include (:system-flag t) nil [110 161])
+            ("vadecommon/websidx/feed_msg.pb.h" include (:system-flag t) nil [162 205])
+            ("sharelib/util/ip_utility.h" include (:system-flag t) nil [206 243])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [245 265])
+            ("monitor" using (:type ("monitor" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [266 290])
+            ("TV_SEC" variable (:constant-flag t) nil [336 342])
+            ("TIMEOUT_SEC" variable (:constant-flag t) nil [354 365])
+            ("TIMEOUT_ZERO" variable (:constant-flag t) nil [376 388])
+            ("InternalProcess" function
+               (:pointer 1
+                :parent "BidFeedPlugin"
+                :type "void")
+                nil [392 1213])
+            ("Init" function
+               (:parent "BidFeedPlugin"
+                :arguments 
+                  ( ("config_file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1239 1263])
+                    ("thread_num" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1264 1284]))                  
+                :type "int")
+                nil [1215 2037])
+            ("Init_test_" function
+               (:parent "BidFeedPlugin"
+                :arguments 
+                  ( ("config_file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2069 2093])
+                    ("thread_num" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2094 2114]))                  
+                :type "int")
+                nil [2039 2848])
+            ("InitStatistics" function
+               (:parent "BidFeedPlugin"
+                :type "int")
+                nil [2850 3089])
+            ("PrintStatistics" function
+               (:parent "BidFeedPlugin"
+                :type "int")
+                nil [3091 3435])
+            ("AddStatistics" function
+               (:parent "BidFeedPlugin"
+                :arguments 
+                  ( ("monitor_agent" variable
+                       (:reference 1
+                        :type ("ClientAgentPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3469 3499]))                  
+                :type "int")
+                nil [3436 4185])
+            ("PreProcess" function
+               (:parent "BidFeedPlugin"
+                :type "int")
+                nil [4186 4381])
+            ("Update" function
+               (:parent "BidFeedPlugin"
+                :arguments 
+                  ( ("query" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4409 4434]))                  
+                :type "int")
+                nil [4383 4501])
+            ("SwitchIndex" function
+               (:parent "BidFeedPlugin"
+                :type "int")
+                nil [4503 4554])
+            ("LoadIndex" function
+               (:parent "BidFeedPlugin"
+                :type "int")
+                nil [4556 4629])
+            ("BuildIndex" function
+               (:parent "BidFeedPlugin"
+                :type "int")
+                nil [4673 5504])
+            ("InitProcess" function
+               (:parent "BidFeedPlugin"
+                :arguments 
+                  ( ("thread_index" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5537 5560]))                  
+                :type "int")
+                nil [5506 5853])
+            ("MakeRetMsg" function
+               (:parent "BidFeedPlugin"
+                :arguments 
+                  ( ("ret_code" variable (:type "int") (reparse-symbol arg-sub-list) [5885 5898])
+                    ("response_msg" variable
+                       (:reference 1
+                        :type ("IdxSrv2AdEngMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5927 5957])
+                    ("response_str" variable
+                       (:reference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5986 6007]))                  
+                :type "int")
+                nil [5855 6262])
+            ("GetHostName" function
+               (:parent "BidFeedPlugin"
+                :type ("string" type (:type "class") nil nil))
+                nil [6264 6472])
+            ("Query" function
+               (:parent "BidFeedPlugin"
+                :arguments 
+                  ( ("query" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6499 6524])
+                    ("response" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6550 6572])
+                    ("session_data" variable
+                       (:reference 1
+                        :type ("IdxSessionData" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6573 6602])
+                    ("thread_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6628 6650]))                  
+                :type "int")
+                nil [6474 8561])
+            ("AutoLoadConfig" function
+               (:parent "BidFeedPlugin"
+                :type "int")
+                nil [8563 8916])
+            ("GetBuildIndexTime" function
+               (:parent "BidFeedPlugin"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [8918 8998])
+            ("InitHandler" function
+               (:parent "BidFeedPlugin"
+                :type "int")
+                nil [9000 9313])
+            ("bidfeed" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("indexserver::DSPlugin" type (:type "class") nil nil)
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [9366 9480]))          
+      :file "idx_bidfeed_plugin.cpp"
+      :pointmax 9484
+      :fsize 9483
+      :lastmodtime '(21638 21211 0 0)
+      :unmatched-syntax '((thing 291 . 326) (thing 9315 . 9348))
+      :lexical-table 
+        '(("TIMEOUT_ZERO" . ((number "0" 389 . 390)))
+          ("TIMEOUT_SEC" . ((number "5" 366 . 367)))
+          ("TV_SEC" . ((number "10" 343 . 345)))
+          )
+)
+    (semanticdb-table "idx_bidfeed_handler.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("INDEXSERVER_ADBIDFEEDPLUGIN_IDX_BIDFEED_HANDLER_H_" variable (:constant-flag t) nil [326 376])
+            ("vadecommon/msidx/custom_audience_response.pb.h" include (:system-flag t) nil [378 435])
+            ("indexserver/bidfeedplugin/idx_category_manager.h" include (:system-flag t) nil [436 495])
+            ("indexserver/bidfeedplugin/idx_define.h" include (:system-flag t) nil [496 545])
+            ("indexserver/bidfeedplugin/idx_update_handler.h" include (:system-flag t) nil [546 603])
+            ("indexserver/bidfeedplugin/idx_addetail_manager.h" include (:system-flag t) nil [604 663])
+            ("indexserver/bidfeedplugin/idx_fans_target_manager.h" include (:system-flag t) nil [664 726])
+            ("indexserver/base/idx_statistics_msg.h" include nil nil [727 775])
+            ("vadredisclient/cluster.h" include nil nil [776 811])
+            ("indexserver/common/session_data.h" include (:system-flag t) nil [812 856])
+            ("custom_audience_interface" using (:type ("custom_audience_interface" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [857 900])
+            ("QueryStructOps" type
+               (:members 
+                  ( ("mem_arr" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1014 1031])
+                    ("thread_no" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1058 1077]))                  
+                :type "struct")
+                nil [986 1102])
+            ("BidFeedHandler" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1131 1138])
+                    ("BidFeedHandler" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("BidFeedHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1147 1164])
+                    ("BidFeedHandler" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1173 1191])
+                    ("public" label nil (reparse-symbol classsubparts) [1196 1203])
+                    ("Query" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("query_msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdEng2IdxSrvMsg" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1267 1300])
+                            ("query_struct_ops" variable
+                               (:reference 1
+                                :type ("QueryStructOps" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1301 1334])
+                            ("response_msg" variable
+                               (:reference 1
+                                :type ("IdxSrv2AdEngMsg" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1353 1383])
+                            ("session_data" variable
+                               (:reference 1
+                                :type ("indexserver::IdxSessionData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1384 1426])
+                            ("statis_info" variable
+                               (:reference 1
+                                :type ("StatisticsInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1431 1459]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1257 1460])
+                    ("Update" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("update" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1480 1506]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1469 1507])
+                    ("LoadData" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1516 1531])
+                    ("Init" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("config" variable
+                               (:reference 1
+                                :type ("sharelib::CINIConfig" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1549 1578]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1540 1579])
+                    ("CheckConfig" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("config" variable
+                               (:reference 1
+                                :type ("sharelib::CINIConfig" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1604 1633]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1588 1634])
+                    ("RollBack" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adid_detail_ptr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdDetailPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1656 1691])
+                            ("column" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1692 1708]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1643 1709])
+                    ("RollBackCommandByTime" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1718 1746])
+                    ("GetMaxAdidByteSize" function (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1755 1836])
+                    ("private" label nil (reparse-symbol classsubparts) [1887 1895])
+                    ("IsFansFilter" function
+                       (:prototype-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("addetail_ptr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdDetailPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1937 1969])
+                            ("follow_custlist" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("uint64_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2003 2045])
+                            ("debug" variable (:type "int") (reparse-symbol arg-sub-list) [2080 2090]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1912 2091])
+                    ("CheckUpdateMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adfeed_detail_info" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdFeedDetailInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2120 2163])
+                            ("datatype" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2191 2209]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2101 2210])
+                    ("Select" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("query_msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdEng2IdxSrvMsg" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2357 2390])
+                            ("valid_adid_bitmap" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2410 2443])
+                            ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2463 2477])
+                            ("response" variable
+                               (:reference 1
+                                :type ("IdxSrv2AdEngMsg" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2497 2523]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2346 2524])
+                    ("PackageAdDetail" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("query_msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdEng2IdxSrvMsg" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2554 2587])
+                            ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2616 2630])
+                            ("response" variable
+                               (:reference 1
+                                :type ("IdxSrv2AdEngMsg" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2659 2685]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2534 2686])
+                    ("QueryIndexInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("query_msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdEng2IdxSrvMsg" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2788 2821])
+                            ("response_msg" variable
+                               (:reference 1
+                                :type ("IdxSrv2AdEngMsg" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2822 2852]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2769 2853])
+                    ("IsPostWhole" function
+                       (:prototype-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("index_name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2925 2955])
+                            ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2956 2970]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2901 2971])
+                    ("SetQueryInfoKeyVal" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("feed_info_ptr" variable
+                               (:pointer 1
+                                :type ("FeedInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3004 3028])
+                            ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3029 3052])
+                            ("post_val" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3053 3071]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2981 3072])
+                    ("public" label nil (reparse-symbol classsubparts) [3078 3085])
+                    ("LoadIndex" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [3117 3133])
+                    ("print_validbidmap" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("valid_adid_bitmap" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3167 3200])
+                            ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3200 3214]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3138 3215])
+                    ("private" label nil (reparse-symbol classsubparts) [3220 3228])
+                    ("adid_dict_" variable (:type ("UIntHashMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3293 3316])
+                    ("status_index_" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3365 3388])
+                    ("category_handler_" variable (:type ("CategoryManagerPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3521 3558])
+                    ("addetail_handler_" variable (:type ("AdDetailManagerPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3646 3683])
+                    ("column_adid_dict_" variable (:type ("UIntHashMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3693 3723])
+                    ("free_column_list_" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("uint32_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3733 3771])
+                    ("adid_tail_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3780 3800])
+                    ("max_adid_byte_size_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3809 3838])
+                    ("max_adid_size_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3847 3871])
+                    ("max_adid_map_size_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3880 3908])
+                    ("allow_dup_num_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3950 3974])
+                    ("addetail_data_path_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3983 4015])
+                    ("build_index_file_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4025 4055])
+                    ("private" label nil (reparse-symbol classsubparts) [4220 4228])
+                    ("redisdb_" variable (:type ("vad_redis::Cluster" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4257 4285])
+                    ("update_handler_" variable (:type ("UpdateHandlerPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4294 4327])
+                    ("fans_target_handler_" variable (:type ("FansTargetManagerPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4336 4378])
+                    ("statistics_msg_" variable (:type ("StatisticsMsg" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4387 4417]))                  
+                :type "class")
+                nil [1104 4421])
+            ("IsFansFilter" function
+               (:parent "BidFeedHandler"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("addetail_ptr" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdDetailPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4469 4501])
+                    ("follow_custlist" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("uint64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4506 4548])
+                    ("debug" variable (:type "int") (reparse-symbol arg-sub-list) [4549 4559]))                  
+                :type "bool")
+                nil [4423 4847])
+            ("IsPostWhole" function
+               (:parent "BidFeedHandler"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("index_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4894 4924])
+                    ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4929 4943]))                  
+                :type "bool")
+                nil [4849 5300])
+            ("BidFeedHandlerPtr" type
+               (:typedef ("std::tr1::shared_ptr" type
+                     (:template-specifier 
+                        ( ("BidFeedHandler" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [5302 5365]))          
+      :file "idx_bidfeed_handler.h"
+      :pointmax 5458
+      :fsize 5457
+      :lastmodtime '(21639 62706 0 0)
+      :unmatched-syntax '((symbol 5366 . 5399) (symbol 3135 . 3137) (symbol 901 . 936))
+      :lexical-table 
+        '(("INDEXSERVER_ADBIDFEEDPLUGIN_IDX_BIDFEED_HANDLER_H_")
+          )
+)
+    (semanticdb-table "idx_statistics_msg.h"
+      :file "idx_statistics_msg.h"
+      :fsize 2041
+      :lastmodtime '(21638 21211 0 0))
+    (semanticdb-table "idx_bidfeed_handler.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("errno.h" include (:system-flag t) nil [166 184])
+            ("fstream" include (:system-flag t) nil [185 203])
+            ("iostream" include (:system-flag t) nil [204 223])
+            ("sstream" include (:system-flag t) nil [224 242])
+            ("indexserver/bidfeedplugin/idx_bidfeed_handler.h" include (:system-flag t) nil [243 301])
+            ("indexserver/bidfeedplugin/idx_define.h" include (:system-flag t) nil [302 351])
+            ("indexserver/bidfeedplugin/idx_parser.h" include (:system-flag t) nil [352 401])
+            ("indexserver/bidfeedplugin/idx_price_strategy.h" include (:system-flag t) nil [402 459])
+            ("indexserver/bidfeedplugin/idx_select_strategy.h" include (:system-flag t) nil [460 518])
+            ("indexserver/bidfeedplugin/time_internal.h" include (:system-flag t) nil [519 571])
+            ("sharelib/util/string_util.h" include (:system-flag t) nil [572 610])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [611 631])
+            ("SHARELIB_US" variable (:type "int") nil [632 644])
+            ("kEffectiveArray" variable
+               (:dereference 1
+                :constant-flag t
+                :default-value "{0x80, 0x40, 0x20, 0x10,
+                                    0x08, 0x04, 0x02, 0x01
+                                   }"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [681 837])
+            ("BidFeedHandler" function
+               (:constructor-flag t
+                :parent "BidFeedHandler"
+                :type ("BidFeedHandler" type (:type "class") nil nil))
+                nil [839 893])
+            ("BidFeedHandler" function
+               (:destructor-flag t
+                :parent "BidFeedHandler"
+                :type "void")
+                nil [895 1030])
+            ("CheckConfig" function
+               (:parent "BidFeedHandler"
+                :arguments 
+                  ( ("config" variable
+                       (:reference 1
+                        :type ("CINIConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1064 1083]))                  
+                :type "int")
+                nil [1032 1600])
+            ("Init" function
+               (:parent "BidFeedHandler"
+                :arguments 
+                  ( ("config" variable
+                       (:reference 1
+                        :type ("CINIConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1627 1646]))                  
+                :type "int")
+                nil [1602 5196])
+            ("Update" function
+               (:parent "BidFeedHandler"
+                :arguments 
+                  ( ("update" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5224 5245]))                  
+                :type "int")
+                nil [5197 5293])
+            ("Query" function
+               (:parent "BidFeedHandler"
+                :arguments 
+                  ( ("query_msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdEng2IdxSrvMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5321 5354])
+                    ("query_struct_ops" variable
+                       (:reference 1
+                        :type ("QueryStructOps" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5381 5414])
+                    ("response_msg" variable
+                       (:reference 1
+                        :type ("IdxSrv2AdEngMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5442 5472])
+                    ("session_data" variable
+                       (:reference 1
+                        :type ("IdxSessionData" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5499 5528])
+                    ("statis_info" variable
+                       (:reference 1
+                        :type ("StatisticsInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5555 5583]))                  
+                :type "int")
+                nil [5295 7673])
+            ("print_validbidmap" function
+               (:parent "BidFeedHandler"
+                :arguments 
+                  ( ("valid_adid_bitmap" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7713 7746])
+                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7746 7760]))                  
+                :type "int")
+                nil [7674 8523])
+            ("Select" function
+               (:parent "BidFeedHandler"
+                :arguments 
+                  ( ("query_msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdEng2IdxSrvMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8551 8584])
+                    ("valid_adid_bitmap" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8612 8645])
+                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8673 8687])
+                    ("response" variable
+                       (:reference 1
+                        :type ("IdxSrv2AdEngMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8715 8741]))                  
+                :type "int")
+                nil [8524 12228])
+            ("LoadIndex" function
+               (:parent "BidFeedHandler"
+                :type "int")
+                nil [12230 12367])
+            ("RollBackCommandByTime" function
+               (:parent "BidFeedHandler"
+                :type "int")
+                nil [12369 12535])
+            ("QueryIndexInfo" function
+               (:parent "BidFeedHandler"
+                :arguments 
+                  ( ("query_msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdEng2IdxSrvMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12592 12625])
+                    ("response_msg" variable
+                       (:reference 1
+                        :type ("IdxSrv2AdEngMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12661 12691]))                  
+                :type "int")
+                nil [12557 18161])
+            ("SetQueryInfoKeyVal" function
+               (:parent "BidFeedHandler"
+                :arguments 
+                  ( ("feed_info_ptr" variable
+                       (:pointer 1
+                        :type ("FeedInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18202 18226])
+                    ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18266 18284])
+                    ("post_val" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18324 18342]))                  
+                :type "int")
+                nil [18163 18517])
+            ("PackageAdDetail" function
+               (:parent "BidFeedHandler"
+                :arguments 
+                  ( ("query_msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdEng2IdxSrvMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18554 18587])
+                    ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18625 18639])
+                    ("response" variable
+                       (:reference 1
+                        :type ("IdxSrv2AdEngMsg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18676 18702]))                  
+                :type "int")
+                nil [18518 19749]))          
+      :file "idx_bidfeed_handler.cpp"
+      :pointmax 19788
+      :fsize 19823
+      :lastmodtime '(21641 46877 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "idx_fans_target_index_impl.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("indexserver/bidfeedplugin/idx_fans_target_index_impl.h" include (:system-flag t) nil [343 408])
+            ("indexserver/bidfeedplugin/time_internal.h" include (:system-flag t) nil [409 461])
+            ("boost/lexical_cast.hpp" include (:system-flag t) nil [463 496])
+            ("FansTargetIndexImpl" function
+               (:constructor-flag t
+                :parent "FansTargetIndexImpl"
+                :arguments 
+                  ( ("max_ad_count" variable (:type "int") (reparse-symbol arg-sub-list) [600 634]))                  
+                :type ("BIDFEED_BEGIN_NAMESPACE_INDEXSERVER" type (:type "class") nil nil))
+                nil [522 1264])
+            ("FansTargetIndexImpl" function
+               (:destructor-flag t
+                :parent "FansTargetIndexImpl"
+                :type "void")
+                nil [1273 1327])
+            ("Init" function
+               (:parent "FansTargetIndexImpl"
+                :type "int")
+                nil [1336 1392])
+            ("MicroSeconds" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("beg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1431 1457]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [1402 1458])
+            ("Query" function
+               (:parent "FansTargetIndexImpl"
+                :arguments 
+                  ( ("cust_list" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CustType" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1491 1530])
+                    ("size_in_byte" variable
+                       (:constant-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1571 1597])
+                    ("ret_bitmap" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1598 1618])
+                    ("timeout" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1629 1644])
+                    ("debug" variable (:type "int") (reparse-symbol arg-sub-list) [1645 1655]))                  
+                :type "int")
+                nil [1460 3658])
+            ("query_custs_iter" type
+               (:superclasses 
+                  ( ("std::unary_function" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("query_custs_iter" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("cust_list" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CustType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3766 3805])
+                            ("bitmap_vec" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint64_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3827 3861]))                          
+                        :type ("query_custs_iter" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [3749 3928])
+                    ("()" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("cust" variable
+                               (:constant-flag t
+                                :type ("CustType" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3955 3975]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3938 4387])
+                    ("cust_list_" variable
+                       (:constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CustType" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4393 4433])
+                    ("bitmap_vec_" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint64_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4438 4473]))                  
+                :type "struct")
+                nil [3667 4476])
+            ("Query" function
+               (:parent "FansTargetIndexImpl"
+                :arguments 
+                  ( ("adid" variable
+                       (:constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4516 4536])
+                    ("cust_list" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CustType" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4548 4587])
+                    ("cust_match_info" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("KeyValue" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4592 4631]))                  
+                :type "int")
+                nil [4485 6909])
+            ("SetMatchedCust" function
+               (:parent "FansTargetIndexImpl"
+                :arguments 
+                  ( ("bitmap_vec" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6958 6998])
+                    ("cust_match_info" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("KeyValue" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7016 7055]))                  
+                :type "int")
+                nil [6918 7415])
+            ("Update" function
+               (:parent "FansTargetIndexImpl"
+                :arguments 
+                  ( ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7457 7471])
+                    ("update_type" variable (:type ("UpdateType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7507 7530])
+                    ("ad_status" variable (:type ("AdStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7559 7578])
+                    ("cust_list" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CustType" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7607 7646]))                  
+                :type "int")
+                nil [7425 9574])
+            ("convert" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("from" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CustType" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9604 9638])
+                    ("to" variable (:type ("CustListPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9667 9682]))                  
+                :type "void")
+                nil [9584 9818])
+            ("Modify" function
+               (:parent "FansTargetIndexImpl"
+                :arguments 
+                  ( ("adid" variable (:type ("AdidType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9861 9875])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [9876 9885])
+                    ("cust_list" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CustType" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9886 9925]))                  
+                :type "int")
+                nil [9829 12553])
+            ("SetOnlineStatus" function
+               (:parent "FansTargetIndexImpl"
+                :arguments 
+                  ( ("adid" variable (:type ("AdidType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12603 12617])
+                    ("valid_status" variable (:type "bool") (reparse-symbol arg-sub-list) [12618 12636]))                  
+                :type "int")
+                nil [12562 12922])
+            ("SoftDelete" function
+               (:parent "FansTargetIndexImpl"
+                :arguments 
+                  ( ("adid" variable (:type ("AdidType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12968 12982]))                  
+                :type "int")
+                nil [12932 13709])
+            ("HardDelete" function
+               (:parent "FansTargetIndexImpl"
+                :arguments 
+                  ( ("adid" variable (:type ("AdidType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13754 13768]))                  
+                :type "int")
+                nil [13718 13843])
+            ("Resize" function
+               (:parent "FansTargetIndexImpl"
+                :type "int")
+                nil [13852 14147])
+            ("cust_list_clear" type
+               (:superclasses 
+                  ( ("std::unary_function" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("cust_list_clear" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("cust2adixs" variable (:type ("Cust2AdixsPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14254 14279])
+                            ("adix" variable (:type ("AdixType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14280 14294]))                          
+                        :type ("cust_list_clear" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [14238 14378])
+                    ("()" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("cust" variable
+                               (:constant-flag t
+                                :type ("CustType" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14401 14421]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [14384 14471])
+                    ("cust2adixs_" variable (:type ("Cust2AdixsPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14477 14503])
+                    ("adix_" variable (:type ("AdixType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14508 14523]))                  
+                :type "struct")
+                nil [14157 14526])
+            ("Clear" function
+               (:parent "FansTargetIndexImpl"
+                :type "int")
+                nil [14535 16126])
+            ("Stat" function
+               (:parent "FansTargetIndexImpl"
+                :arguments 
+                  ( ("data" variable
+                       (:reference 1
+                        :type ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("uint64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16166 16204]))                  
+                :type "bool")
+                nil [16135 16732])
+            ("IsAlmostFull" function
+               (:parent "FansTargetIndexImpl"
+                :type "bool")
+                nil [16741 16835])
+            ("MicroSeconds" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("beg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16880 16906]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [16844 17042])
+            ("__test__hook__GetAdid2AdixPtr" function
+               (:parent "FansTargetIndexImpl"
+                :type ("Adid2AdixPtr" type (:type "class") nil nil))
+                nil [17044 17143])
+            ("__test__hook__GetCust2AdixsPtr" function
+               (:parent "FansTargetIndexImpl"
+                :type ("Cust2AdixsPtr" type (:type "class") nil nil))
+                nil [17144 17239])
+            ("__test__hook__GetStatusBitsetPtr" function
+               (:parent "FansTargetIndexImpl"
+                :type ("StatusBitsetPtr" type (:type "class") nil nil))
+                nil [17240 17342])
+            ("__test__hook__GetAdmetaManagerPtr" function
+               (:parent "FansTargetIndexImpl"
+                :type ("AdmetaManagerPtr" type (:type "class") nil nil))
+                nil [17343 17447])
+            ("__test__hook__GetEmptyAdidsPtr" function
+               (:parent "FansTargetIndexImpl"
+                :type ("EmptyAdidsPtr" type (:type "class") nil nil))
+                nil [17448 17544]))          
+      :file "idx_fans_target_index_impl.cpp"
+      :pointmax 17607
+      :fsize 17606
+      :lastmodtime '(21638 21211 0 0)
+      :unmatched-syntax '((symbol 17573 . 17606) (punctuation 14378 . 14379) (punctuation 1392 . 1393)))
+    (semanticdb-table "idx_parser.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("vadecommon/common/normalizer.h" include (:system-flag t) nil [21 62])
+            ("sharelib/util/time_utility.h" include (:system-flag t) nil [63 102])
+            ("sharelib/util/string_util.h" include (:system-flag t) nil [103 141])
+            ("vadecommon/common/log.h" include (:system-flag t) nil [142 176])
+            ("indexserver/bidfeedplugin/idx_define.h" include (:system-flag t) nil [177 226])
+            ("indexserver/bidfeedplugin/idx_parser.h" include (:system-flag t) nil [227 276])
+            ("indexserver/bidfeedplugin/idx_error_code.h" include (:system-flag t) nil [277 330])
+            ("indexserver/bidfeedplugin/idx_price_strategy.h" include (:system-flag t) nil [331 388])
+            ("vadecommon/util/dim_transform.h" include (:system-flag t) nil [389 431])
+            ("SHARELIB_US" variable (:type "int") nil [433 445])
+            ("tsina::codetools" using (:type ("tsina::codetools" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [447 480])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [481 501])
+            ("NORMALIZER_TYPE" variable (:constant-flag t) nil [511 526])
+            ("AgeCode" type
+               (:members 
+                  ( ("DEF_FEED_AGE_200" variable
+                       (:constant-flag t
+                        :default-value (614 617)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [595 617])
+                    ("DEF_FEED_AGE_201" variable
+                       (:constant-flag t
+                        :default-value (642 645)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [623 645])
+                    ("DEF_FEED_AGE_202" variable
+                       (:constant-flag t
+                        :default-value (670 673)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [651 673])
+                    ("DEF_FEED_AGE_203" variable
+                       (:constant-flag t
+                        :default-value (698 701)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [679 701]))                  
+                :type "enum")
+                nil [576 705])
+            ("AgeCode_new" type
+               (:members 
+                  ( ("DEF_FEED_AGE_200_NEW" variable
+                       (:constant-flag t
+                        :default-value (752 756)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [729 756])
+                    ("DEF_FEED_AGE_201_NEW_START" variable
+                       (:constant-flag t
+                        :default-value (791 795)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [762 795])
+                    ("DEF_FEED_AGE_201_NEW" variable
+                       (:constant-flag t
+                        :default-value (824 828)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [801 828])
+                    ("DEF_FEED_AGE_202_NEW" variable
+                       (:constant-flag t
+                        :default-value (857 861)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [834 861])
+                    ("DEF_FEED_AGE_203_NEW" variable
+                       (:constant-flag t
+                        :default-value (890 894)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [867 894]))                  
+                :type "enum")
+                nil [706 898])
+            ("DimAgeChg" function
+               (:parent "IdxParser"
+                :arguments 
+                  ( ("src_age" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1065 1082])
+                    ("dst_ages" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("uint32_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1083 1110]))                  
+                :type "int")
+                nil [1040 2058])
+            ("ParseAdDetail" function
+               (:parent "IdxParser"
+                :arguments 
+                  ( ("detail" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2221 2241])
+                    ("addetail_ptr" variable
+                       (:reference 1
+                        :type ("AdDetailPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2242 2268]))                  
+                :type "int")
+                nil [2192 6475])
+            ("ParseAdOpc" function
+               (:parent "IdxParser"
+                :arguments 
+                  ( ("opc_json_string" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6503 6538])
+                    ("addetail_ptr" variable
+                       (:reference 1
+                        :type ("AdDetailPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6565 6591]))                  
+                :type "int")
+                nil [6477 9221])
+            ("ParseJsonToString" function
+               (:parent "IdxParser"
+                :arguments 
+                  ( ("json_arr" variable
+                       (:reference 1
+                        :type ("Json::Value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9256 9278])
+                    ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9312 9331])
+                    ("vec" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9332 9352]))                  
+                :type "int")
+                nil [9223 10166])
+            ("ParseJsonToUInit" function
+               (:parent "IdxParser"
+                :arguments 
+                  ( ("json_arr" variable
+                       (:reference 1
+                        :type ("Json::Value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10199 10221])
+                    ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10222 10241])
+                    ("vec" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("uint32_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10242 10264]))                  
+                :type "int")
+                nil [10167 10672])
+            ("ParseJsonToUInt64" function
+               (:parent "IdxParser"
+                :arguments 
+                  ( ("json_arr" variable
+                       (:reference 1
+                        :type ("Json::Value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10708 10730])
+                    ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10731 10750])
+                    ("vec" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("uint64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10751 10773]))                  
+                :type "int")
+                nil [10675 11041]))          
+      :file "idx_parser.cpp"
+      :pointmax 11077
+      :fsize 11076
+      :lastmodtime '(21638 21211 0 0)
+      :unmatched-syntax '((symbol 11043 . 11076) (symbol 539 . 574))
+      :lexical-table 
+        '(("NORMALIZER_TYPE" . 
+              ((symbol "L2U" 527 . 530) (punctuation "|" 530 . 531) (symbol "T2S" 531 . 534) (punctuation "|" 534 . 535) (symbol "S2D" 535 . 538)))
+          )
+)
+    (semanticdb-table "idx_update_handler.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("INDEXSERVER_ADBIDFEEDPLUGIN_IDX_UPDATE_HANDLER_H_" variable (:constant-flag t) nil [187 236])
+            ("INDEXSERVER_ADBIDFEEDPLUGIN_IDX_UPDATE_HANDLER_H_" variable (:constant-flag t) nil [187 236])
+            ("set" include (:system-flag t) nil [238 252])
+            ("vadecommon/websidx/feed_msg.pb.h" include (:system-flag t) nil [253 296])
+            ("vadecommon/msidx/custom_audience_response.pb.h" include (:system-flag t) nil [297 354])
+            ("indexserver/bidfeedplugin/curl_handler.h" include (:system-flag t) nil [355 406])
+            ("indexserver/bidfeedplugin/idx_define.h" include (:system-flag t) nil [407 456])
+            ("sharelib/util/thread_base.h" include (:system-flag t) nil [457 495])
+            ("sharelib/util/lock.h" include (:system-flag t) nil [496 527])
+            ("indexserver/bidfeedplugin/idx_addetail_manager.h" include (:system-flag t) nil [528 587])
+            ("indexserver/bidfeedplugin/idx_category_manager.h" include (:system-flag t) nil [588 647])
+            ("indexserver/bidfeedplugin/idx_fans_target_manager.h" include (:system-flag t) nil [648 710])
+            ("custom_audience_interface" using (:type ("custom_audience_interface" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [712 755])
+            ("websidx_interface" using (:type ("websidx_interface" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [756 790])
+            ("DumpAdStatus" type
+               (:members 
+                  ( ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [855 869])
+                    ("status" variable (:type "int") (reparse-symbol classsubparts) [874 885])
+                    ("adid_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [890 910]))                  
+                :type "struct")
+                nil [829 913])
+            ("UpdateHandler" type
+               (:superclasses 
+                  ( ("CThreadBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [963 970])
+                    ("UpdateHandler" function
+                       (:constructor-flag t
+                        :type ("UpdateHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [979 1106])
+                    ("UpdateHandler" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1115 1354])
+                    ("GetAdidTail" function (:type "int") (reparse-symbol classsubparts) [1364 1424])
+                    ("Init" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("config" variable
+                               (:reference 1
+                                :type ("sharelib::CINIConfig" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1443 1472]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1434 1473])
+                    ("Handle" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("update" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1493 1519]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1482 1520])
+                    ("private" label nil (reparse-symbol classsubparts) [1593 1601])
+                    ("InternalProcess" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1610 1642])
+                    ("MergeRollBackUrl" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1652 1676])
+                    ("LogUpdateMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adcontent" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdContentOps" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1704 1734]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1686 1735])
+                    ("private" label nil (reparse-symbol classsubparts) [1741 1749])
+                    ("InsertAdid" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addetail_ptr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdDetailPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1773 1805]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1758 1806])
+                    ("UpdateOpc" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addetail_ptr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdDetailPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1830 1862])
+                            ("old_addetail_ptr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdDetailPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1885 1921]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1816 1922])
+                    ("RemoveAdid" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addetail_ptr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdDetailPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1946 1978]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1931 1979])
+                    ("RemoveAdid" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2003 2017]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1988 2018])
+                    ("UpdateDetail" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("addetail_ptr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdDetailPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2044 2076])
+                            ("addetail_ptr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdDetailPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2102 2134]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2027 2135])
+                    ("UpdateStatus" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adfeed_detail_info" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdFeedDetailInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2161 2204]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2144 2205])
+                    ("Dump" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [2214 2225])
+                    ("GetFreeColumn" function
+                       (:prototype-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("column" variable
+                               (:reference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2260 2277]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2235 2278])
+                    ("CheckUpdateMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adfeed_detail_info" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdFeedDetailInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2306 2349])
+                            ("datatype" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2377 2395]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2287 2396])
+                    ("public" label nil (reparse-symbol classsubparts) [2402 2409])
+                    ("GetDetail" function
+                       (:prototype-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2439 2453])
+                            ("addetail_ptr" variable
+                               (:reference 1
+                                :type ("AdDetailPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2454 2480]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2418 2481])
+                    ("GetAdidIndex" function
+                       (:prototype-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2514 2528])
+                            ("index" variable
+                               (:reference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2529 2545]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2490 2547])
+                    ("GetIndexAdDetail" function
+                       (:prototype-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2584 2599])
+                            ("addetail_ptr" variable
+                               (:reference 1
+                                :type ("AdDetailPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2600 2626]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2556 2627])
+                    ("Update" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adfeed_detail_info" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdFeedDetailInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2648 2691])
+                            ("datatype" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2711 2729]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2637 2730])
+                    ("SetHandler" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("status_index" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2755 2777])
+                            ("category_handler" variable
+                               (:reference 1
+                                :type ("CategoryManagerPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2802 2839])
+                            ("addetail_handler" variable
+                               (:reference 1
+                                :type ("AdDetailManagerPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2864 2901])
+                            ("fans_target_handler" variable
+                               (:reference 1
+                                :type ("FansTargetManagerPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2926 2968]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2739 2969])
+                    ("RollBack" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adid_detail_ptr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdDetailPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2992 3027])
+                            ("column" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3028 3044]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2979 3045])
+                    ("RollBackCommandByTime" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [3054 3082])
+                    ("GetAdidStatus" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3110 3124])
+                            ("status" variable
+                               (:reference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3125 3142]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3092 3143])
+                    ("LoadData" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [3153 3168])
+                    ("private" label nil (reparse-symbol classsubparts) [3174 3182])
+                    ("rollback_adid_url_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3191 3222])
+                    ("rollback_dump_url_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3231 3262])
+                    ("dump_url_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3271 3293])
+                    ("host_port_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3302 3325])
+                    ("rollback_port_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3334 3361])
+                    ("hostname_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3370 3392])
+                    ("update_log_file_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3401 3430])
+                    ("error_adid_set_" variable (:type ("std::set" type
+                         (:template-specifier 
+                            ( ("uint32_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3484 3519])
+                    ("online_adid_dict_" variable (:type ("std::set" type
+                         (:template-specifier 
+                            ( ("uint32_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3541 3578])
+                    ("del_adid_dict" variable (:type ("std::set" type
+                         (:template-specifier 
+                            ( ("uint32_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3597 3630])
+                    ("rollback_dump_flag_" variable (:type "bool") (reparse-symbol classsubparts) [3649 3674])
+                    ("curl_handler_" variable (:type ("CurlHandlerPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3683 3712])
+                    ("mutex_lock_" variable
+                       (:pointer 1
+                        :type ("sharelib::MutexLock" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3721 3754])
+                    ("check_interval" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3763 3787])
+                    ("status_index_" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3796 3819])
+                    ("column_adid_dict_" variable (:type ("UIntHashMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3856 3886])
+                    ("adid_dict_" variable (:type ("UIntHashMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3923 3946])
+                    ("free_column_list_" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("uint32_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3983 4021])
+                    ("dump_file_path_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4030 4058])
+                    ("category_handler_" variable (:type ("CategoryManagerPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4191 4228])
+                    ("fans_target_handler_" variable (:type ("FansTargetManagerPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4237 4279])
+                    ("addetail_handler_" variable (:type ("AdDetailManagerPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4367 4404])
+                    ("adid_tail_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4413 4433])
+                    ("max_adid_size_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4442 4466])
+                    ("max_adid_byte_size_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4475 4504])
+                    ("dump_db_time_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4513 4539])
+                    ("addetail_data_path_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4548 4580])
+                    ("max_adid_map_size_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4589 4617]))                  
+                :type "class")
+                nil [916 4621])
+            ("GetFreeColumn" function
+               (:parent "UpdateHandler"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("column" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4663 4680]))                  
+                :type "int")
+                nil [4623 4980])
+            ("GetIndexAdDetail" function
+               (:parent "UpdateHandler"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5030 5045])
+                    ("addetail_ptr" variable
+                       (:reference 1
+                        :type ("AdDetailPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5046 5072]))                  
+                :type "int")
+                nil [4982 5277])
+            ("GetDetail" function
+               (:parent "UpdateHandler"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5315 5329])
+                    ("addetail_ptr" variable
+                       (:reference 1
+                        :type ("AdDetailPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5330 5356]))                  
+                :type "int")
+                nil [5279 5421])
+            ("GetAdidIndex" function
+               (:parent "UpdateHandler"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5462 5476])
+                    ("index" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5477 5493]))                  
+                :type "int")
+                nil [5423 5669])
+            ("UpdateHandlerPtr" type
+               (:typedef ("std::tr1::shared_ptr" type
+                     (:template-specifier 
+                        ( ("UpdateHandler" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [5671 5732]))          
+      :file "idx_update_handler.h"
+      :pointmax 5832
+      :fsize 5831
+      :lastmodtime '(21641 41486 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("INDEXSERVER_ADBIDFEEDPLUGIN_IDX_UPDATE_HANDLER_H_")
+          )
+)
+    (semanticdb-table "idx_fans_target_ad_meta.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("INDEXSERVER_ADBIDFEEDPLUGIN_IDX_FANS_TARGET_AD_META_H_" variable (:constant-flag t) nil [420 474])
+            ("tr1/memory" include (:system-flag t) nil [476 497])
+            ("indexserver/bidfeedplugin/idx_fans_target_define.h" include (:system-flag t) nil [498 559])
+            ("indexserver/bidfeedplugin/idx_fans_target_cust_list.h" include (:system-flag t) nil [560 624])
+            ("indexserver/bidfeedplugin/idx_define.h" include (:system-flag t) nil [625 674])
+            ("indexserver/bidfeedplugin/rwlock_impl.h" include (:system-flag t) nil [675 725])
+            ("AdMeta" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [803 810])
+                    ("AdMeta" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("adid" variable (:type ("AdidType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [822 836]))                          
+                        :type ("AdMeta" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [815 837])
+                    ("AdMeta" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [842 860])
+                    ("DelCust" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cust_id" variable (:type ("CustType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [878 895]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [866 896])
+                    ("AddCust" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cust_id" variable (:type ("CustType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [913 930]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [901 931])
+                    ("SetCusts" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("custs" variable (:type ("CustListPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [950 969]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [936 970])
+                    ("GetCusts" function
+                       (:prototype-flag t
+                        :type ("CustListPtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [975 998])
+                    ("GetAdid" function
+                       (:prototype-flag t
+                        :type ("AdidType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1003 1022])
+                    ("GetUpdateTime" function
+                       (:prototype-flag t
+                        :type ("time_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1027 1050])
+                    ("FindCust" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cust_id" variable (:type ("CustType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1069 1086]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1055 1087])
+                    ("Touch" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("timestamp" variable
+                               (:default-value "-1"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1122 1140]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1112 1142])
+                    ("private" label nil (reparse-symbol classsubparts) [1146 1154])
+                    ("IsValid" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1159 1174])
+                    ("adid_" variable (:type ("AdidType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1180 1195])
+                    ("time_" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1200 1213])
+                    ("custs_" variable (:type ("CustListPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1218 1238]))                  
+                :type "class")
+                nil [786 1241])
+            ("AdMetaPtr" type
+               (:typedef ("std::tr1::shared_ptr" type
+                     (:template-specifier 
+                        ( ("AdMeta" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [1243 1290]))          
+      :file "idx_fans_target_ad_meta.h"
+      :pointmax 1415
+      :fsize 1414
+      :lastmodtime '(21638 21211 0 0)
+      :unmatched-syntax '((symbol 1312 . 1345) (symbol 749 . 784))
+      :lexical-table 
+        '(("INDEXSERVER_ADBIDFEEDPLUGIN_IDX_FANS_TARGET_AD_META_H_")
+          )
+)
+    (semanticdb-table "idx_update_handler.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("vadecommon/websidx/feed_msg.pb.h" include (:system-flag t) nil [121 164])
+            ("indexserver/bidfeedplugin/curl_handler.h" include (:system-flag t) nil [165 216])
+            ("indexserver/bidfeedplugin/idx_update_handler.h" include (:system-flag t) nil [217 274])
+            ("indexserver/bidfeedplugin/idx_parser.h" include (:system-flag t) nil [275 324])
+            ("indexserver/bidfeedplugin/bit_operation.h" include (:system-flag t) nil [325 377])
+            ("sharelib/util/ip_utility.h" include (:system-flag t) nil [378 415])
+            ("sharelib/util/string_util.h" include (:system-flag t) nil [416 454])
+            ("sharelib/util/time_utility.h" include (:system-flag t) nil [455 494])
+            ("sharelib/util/file_util.h" include (:system-flag t) nil [495 531])
+            ("fstream" include (:system-flag t) nil [532 550])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [551 571])
+            ("SHARELIB_US" variable (:type "int") nil [572 584])
+            ("custom_audience_interface" using (:type ("custom_audience_interface" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [585 628])
+            ("Init" function
+               (:parent "UpdateHandler"
+                :arguments 
+                  ( ("config" variable
+                       (:reference 1
+                        :type ("CINIConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [690 709]))                  
+                :type "int")
+                nil [666 2725])
+            ("CheckUpdateMsg" function
+               (:parent "UpdateHandler"
+                :arguments 
+                  ( ("adfeed_detail_info" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdFeedDetailInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2761 2804])
+                    ("datatype" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2839 2857]))                  
+                :type "int")
+                nil [2727 4594])
+            ("Update" function
+               (:parent "UpdateHandler"
+                :arguments 
+                  ( ("adfeed_detail_info" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdFeedDetailInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4836 4879])
+                    ("datatype" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4906 4924]))                  
+                :type "int")
+                nil [4810 7597])
+            ("UpdateDetail" function
+               (:parent "UpdateHandler"
+                :arguments 
+                  ( ("addetail_ptr" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdDetailPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7631 7663])
+                    ("old_addetail_ptr" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdDetailPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7696 7732]))                  
+                :type "int")
+                nil [7599 9195])
+            ("UpdateOpc" function
+               (:parent "UpdateHandler"
+                :arguments 
+                  ( ("addetail_ptr" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdDetailPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9226 9258])
+                    ("old_addetail_ptr" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdDetailPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9288 9324]))                  
+                :type "int")
+                nil [9197 10299])
+            ("SetHandler" function
+               (:parent "UpdateHandler"
+                :arguments 
+                  ( ("status_index" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10332 10354])
+                    ("category_handler" variable
+                       (:reference 1
+                        :type ("CategoryManagerPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10386 10423])
+                    ("addetail_handler" variable
+                       (:reference 1
+                        :type ("AdDetailManagerPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10455 10492])
+                    ("fans_target_handler" variable
+                       (:reference 1
+                        :type ("FansTargetManagerPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10524 10566]))                  
+                :type "void")
+                nil [10301 10736])
+            ("RemoveAdid" function
+               (:parent "UpdateHandler"
+                :arguments 
+                  ( ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10768 10782]))                  
+                :type "int")
+                nil [10738 11063])
+            ("RemoveAdid" function
+               (:parent "UpdateHandler"
+                :arguments 
+                  ( ("addetail_ptr" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdDetailPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11095 11127]))                  
+                :type "int")
+                nil [11065 11581])
+            ("InsertAdid" function
+               (:parent "UpdateHandler"
+                :arguments 
+                  ( ("addetail_ptr" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdDetailPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11613 11645]))                  
+                :type "int")
+                nil [11583 13207])
+            ("Dump" function
+               (:parent "UpdateHandler"
+                :type "int")
+                nil [13209 14248])
+            ("GetAdidStatus" function
+               (:parent "UpdateHandler"
+                :arguments 
+                  ( ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14283 14297])
+                    ("status" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14331 14348]))                  
+                :type "int")
+                nil [14250 14578])
+            ("Handle" function
+               (:parent "UpdateHandler"
+                :arguments 
+                  ( ("query" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14696 14721]))                  
+                :type "int")
+                nil [14670 16542])
+            ("InternalProcess" function
+               (:pointer 1
+                :parent "UpdateHandler"
+                :type "void")
+                nil [16544 17814])
+            ("LogUpdateMsg" function
+               (:parent "UpdateHandler"
+                :arguments 
+                  ( ("adcontent" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdContentOps" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17849 17879]))                  
+                :type "void")
+                nil [17816 18116])
+            ("RollBack" function
+               (:parent "UpdateHandler"
+                :arguments 
+                  ( ("adid_detail_ptr" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdDetailPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18146 18181])
+                    ("column" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18182 18198]))                  
+                :type "int")
+                nil [18118 19004])
+            ("UpdateStatus" function
+               (:parent "UpdateHandler"
+                :arguments 
+                  ( ("adfeed_detail_info" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdFeedDetailInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19038 19081]))                  
+                :type "int")
+                nil [19006 20585])
+            ("LoadData" function
+               (:parent "UpdateHandler"
+                :type "int")
+                nil [20601 23086])
+            ("RollBackCommandByTime" function
+               (:parent "UpdateHandler"
+                :type "int")
+                nil [23088 23188]))          
+      :file "idx_update_handler.cpp"
+      :pointmax 23224
+      :fsize 23223
+      :lastmodtime '(21641 41468 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "idx_fans_target_manager.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("INDEXSERVER_ADBIDFEEDPLUGIN_IDX_FANS_TARGET_MANAGER_H_" variable (:constant-flag t) nil [274 328])
+            ("vadecommon/websidx/feed_msg.pb.h" include (:system-flag t) nil [330 373])
+            ("vadecommon/msidx/custom_audience_response.pb.h" include (:system-flag t) nil [374 431])
+            ("vadecommon/msidx/custom_audience_request.pb.h" include (:system-flag t) nil [432 488])
+            ("indexserver/bidfeedplugin/idx_define.h" include (:system-flag t) nil [489 538])
+            ("indexserver/bidfeedplugin/idx_fans_target_index.h" include (:system-flag t) nil [539 599])
+            ("sharelib/util/ini_config.h" include (:system-flag t) nil [600 637])
+            ("websidx_interface" using (:type ("websidx_interface" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [656 690])
+            ("custom_audience_interface" using (:type ("custom_audience_interface" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [691 734])
+            ("FansTargetManager" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [961 968])
+                    ("FansTargetManager" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("FansTargetManager" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [973 993])
+                    ("FansTargetManager" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [998 1019])
+                    ("Init" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("config" variable
+                               (:reference 1
+                                :type ("sharelib::CINIConfig" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1116 1145]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1107 1146])
+                    ("LoadDumpAdidInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ad_detail_ptr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AdDetailPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1303 1336])
+                            ("extern_adid_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1337 1364]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1282 1365])
+                    ("Query" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cust_list" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint64_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1649 1688])
+                            ("size_in_byte" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1703 1725])
+                            ("ret_map" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1740 1757])
+                            ("debug" variable
+                               (:default-value "0"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1757 1768]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1639 1770])
+                    ("Query" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cust_list" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint64_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2069 2108])
+                            ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2123 2137])
+                            ("cust_match_info" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("KeyValue" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2152 2191]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2059 2192])
+                    ("Update" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cust_list" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint64_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2369 2408])
+                            ("status" variable (:type "int") (reparse-symbol arg-sub-list) [2424 2435])
+                            ("extern_adid_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2451 2478])
+                            ("update_type" variable (:type ("UpdateType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2494 2517]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2358 2518])
+                    ("private" label nil (reparse-symbol classsubparts) [2522 2530])
+                    ("InitInternal" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("max_ad_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2552 2574])
+                            ("index_auto_cleanup_time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2596 2639])
+                            ("index_statistics_dump_file" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2661 2707])
+                            ("timeout_for_query" variable (:type "int") (reparse-symbol arg-sub-list) [2729 2751])
+                            ("index_auto_cleanup_check_internal" variable
+                               (:default-value "DEFAULT_INDEX_AUTO_CLEANUP_INTERNAL"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2773 2848]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2535 2850])
+                    ("TranslateAdStatus" function
+                       (:prototype-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("status" variable (:type "int") (reparse-symbol arg-sub-list) [2889 2900]))                          
+                        :type ("AdStatus" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2855 2901])
+                    ("fans_index_" variable (:type ("FansTargetIndexPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3003 3034])
+                    ("temp_uint64_vector_" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint64_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3040 3083])
+                    ("public" label nil (reparse-symbol classsubparts) [3087 3094])
+                    ("__test__hook__Init" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("max_ad_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3122 3144])
+                            ("index_auto_cleanup_time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3172 3215])
+                            ("index_statistics_dump_file" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3243 3289])
+                            ("index_auto_cleanup_check_internal" variable
+                               (:default-value "DEFAULT_INDEX_AUTO_CLEANUP_INTERNAL"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3317 3392]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3099 3394]))                  
+                :type "class")
+                nil [933 3398])
+            ("FansTargetManagerPtr" type
+               (:typedef ("std::tr1::shared_ptr" type
+                     (:template-specifier 
+                        ( ("FansTargetManager" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3401 3470])
+            ("TranslateAdStatus" function
+               (:parent "FansTargetManager"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("status" variable (:type "int") (reparse-symbol arg-sub-list) [3525 3536]))                  
+                :type ("AdStatus" type (:type "class") nil nil))
+                nil [3472 3850]))          
+      :file "idx_fans_target_manager.h"
+      :pointmax 3982
+      :fsize 3981
+      :lastmodtime '(21638 21211 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("INDEXSERVER_ADBIDFEEDPLUGIN_IDX_FANS_TARGET_MANAGER_H_")
+          )
+)
+    (semanticdb-table "idx_fans_target_index.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("indexserver/bidfeedplugin/idx_fans_target_index.h" include (:system-flag t) nil [323 383])
+            ("indexserver/bidfeedplugin/idx_fans_target_index_impl.h" include (:system-flag t) nil [384 449])
+            ("boost/lexical_cast.hpp" include (:system-flag t) nil [451 484])
+            ("FansTargetIndex" function
+               (:constructor-flag t
+                :parent "FansTargetIndex"
+                :arguments 
+                  ( ("max_ad_count" variable (:type "int") (reparse-symbol arg-sub-list) [578 595])
+                    ("index_statistics_dump_file" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [637 683])
+                    ("index_auto_cleanup_time" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [717 760])
+                    ("timeout_for_query" variable (:type "int") (reparse-symbol arg-sub-list) [794 816])
+                    ("index_auto_cleanup_check_internal" variable (:type "int") (reparse-symbol arg-sub-list) [850 888]))                  
+                :type ("BIDFEED_BEGIN_NAMESPACE_INDEXSERVER" type (:type "class") nil nil))
+                nil [508 1162])
+            ("FansTargetIndex" function
+               (:destructor-flag t
+                :parent "FansTargetIndex"
+                :type "void")
+                nil [1171 1227])
+            ("Init" function
+               (:parent "FansTargetIndex"
+                :type "int")
+                nil [1236 1296])
+            ("Query" function
+               (:parent "FansTargetIndex"
+                :arguments 
+                  ( ("cust_list" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CustType" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1326 1365])
+                    ("size_in_byte" variable
+                       (:constant-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1393 1419])
+                    ("ret_bitmap" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1420 1440])
+                    ("debug" variable (:type "int") (reparse-symbol arg-sub-list) [1441 1451]))                  
+                :type "int")
+                nil [1299 1546])
+            ("Query" function
+               (:parent "FansTargetIndex"
+                :arguments 
+                  ( ("adid" variable
+                       (:constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1575 1595])
+                    ("cust_list" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CustType" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1623 1662])
+                    ("cust_match_info" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("KeyValue" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1690 1729]))                  
+                :type "int")
+                nil [1548 1816])
+            ("Update" function
+               (:parent "FansTargetIndex"
+                :arguments 
+                  ( ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1846 1860])
+                    ("update_type" variable (:type ("UpdateType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1896 1919])
+                    ("ad_status" variable (:type ("AdStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1948 1967])
+                    ("cust_list" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("CustType" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1996 2035]))                  
+                :type "int")
+                nil [1818 2362])
+            ("Clear" function
+               (:parent "FansTargetIndex"
+                :type "int")
+                nil [2372 2434])
+            ("InternalProcess" function
+               (:pointer 1
+                :parent "FansTargetIndex"
+                :type "void")
+                nil [2436 3203]))          
+      :file "idx_fans_target_index.cpp"
+      :pointmax 3259
+      :fsize 3258
+      :lastmodtime '(21638 21211 0 0)
+      :unmatched-syntax '((symbol 3225 . 3258) (punctuation 1296 . 1297)))
+    (semanticdb-table "idx_fans_target_index.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("INDEXSERVER_ADBIDFEEDPLUGIN_IDX_FANS_TARGET_INDEX_H_" variable (:constant-flag t) nil [390 442])
+            ("sharelib/util/thread_base.h" include (:system-flag t) nil [445 483])
+            ("vadecommon/msidx/custom_audience_response.pb.h" include (:system-flag t) nil [484 541])
+            ("indexserver/bidfeedplugin/idx_fans_target_define.h" include (:system-flag t) nil [542 603])
+            ("indexserver/bidfeedplugin/idx_fans_target_index_impl.h" include (:system-flag t) nil [604 669])
+            ("custom_audience_interface" using (:type ("custom_audience_interface" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [688 731])
+            ("DEFAULT_INDEX_AUTO_CLEANUP_INTERNAL" variable (:constant-flag t) nil [800 835])
+            ("FansTargetIndex" type
+               (:superclasses 
+                  ( ("CThreadBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [888 895])
+                    ("FansTargetIndex" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("max_ad_count" variable (:type "int") (reparse-symbol arg-sub-list) [961 978])
+                            ("index_statistics_dump_file" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [999 1045])
+                            ("index_auto_cleanup_time" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1066 1109])
+                            ("timeout_for_query" variable (:type "int") (reparse-symbol arg-sub-list) [1130 1152])
+                            ("index_auto_cleanup_check_internal" variable
+                               (:default-value "DEFAULT_INDEX_AUTO_CLEANUP_INTERNAL"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1173 1248]))                          
+                        :type ("FansTargetIndex" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [945 1250])
+                    ("FansTargetIndex" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1255 1282])
+                    ("Init" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1288 1299])
+                    ("Query" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cust_list" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CustType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1475 1514])
+                            ("size_in_byte" variable
+                               (:constant-flag t
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1529 1555])
+                            ("ret_bitmap" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1556 1576])
+                            ("debug" variable
+                               (:default-value "0"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1577 1590]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1465 1592])
+                    ("Query" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adid" variable
+                               (:constant-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1792 1812])
+                            ("cust_list" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CustType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1827 1866])
+                            ("cust_match_info" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("KeyValue" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1881 1920]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1782 1921])
+                    ("Update" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2499 2513])
+                            ("update_type" variable (:type ("UpdateType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2529 2552])
+                            ("ad_status" variable (:type ("AdStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2568 2587])
+                            ("cust_list" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CustType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2603 2642]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2488 2643])
+                    ("private" label nil (reparse-symbol classsubparts) [2647 2655])
+                    ("Clear" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [2660 2672])
+                    ("InternalProcess" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2705 2729])
+                    ("index_impl_" variable (:type ("FansTargetIndexImpl" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2735 2767])
+                    ("index_statistics_dump_file_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2830 2870])
+                    ("index_auto_cleanup_time_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2949 2986])
+                    ("index_auto_cleanup_check_internal_" variable (:type "int") (reparse-symbol classsubparts) [2991 3030])
+                    ("timeout_for_query_" variable (:type "int") (reparse-symbol classsubparts) [3035 3058])
+                    ("stat_" variable (:type ("FansTargetStat" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3064 3085]))                  
+                :type "class")
+                nil [840 3088])
+            ("FansTargetIndexPtr" type
+               (:typedef ("std::tr1::shared_ptr" type
+                     (:template-specifier 
+                        ( ("FansTargetIndex" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [3091 3156]))          
+      :file "idx_fans_target_index.h"
+      :pointmax 3279
+      :fsize 3278
+      :lastmodtime '(21638 21211 0 0)
+      :unmatched-syntax '((symbol 3178 . 3211) (symbol 755 . 790))
+      :lexical-table 
+        '(("INDEXSERVER_ADBIDFEEDPLUGIN_IDX_FANS_TARGET_INDEX_H_")
+          ("DEFAULT_INDEX_AUTO_CLEANUP_INTERNAL" . ((number "60" 836 . 838)))
+          )
+)
+    (semanticdb-table "idx_fans_target_index_impl.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("INDEXSERVER_ADBIDFEEDPLUGIN_IDX_FANS_TARGET_INDEX_IMPL_H_" variable (:constant-flag t) nil [416 473])
+            ("vadecommon/msidx/custom_audience_response.pb.h" include (:system-flag t) nil [474 531])
+            ("indexserver/bidfeedplugin/idx_fans_target_define.h" include (:system-flag t) nil [532 593])
+            ("indexserver/bidfeedplugin/idx_fans_target_adid_to_adix.h" include (:system-flag t) nil [594 661])
+            ("indexserver/bidfeedplugin/idx_fans_target_cust_to_adixs.h" include (:system-flag t) nil [662 730])
+            ("indexserver/bidfeedplugin/idx_fans_target_status_bitset.h" include (:system-flag t) nil [731 799])
+            ("indexserver/bidfeedplugin/idx_fans_target_admeta_manager.h" include (:system-flag t) nil [800 869])
+            ("indexserver/bidfeedplugin/idx_fans_target_empty_adids.h" include (:system-flag t) nil [870 936])
+            ("indexserver/bidfeedplugin/idx_fans_target_stat.h" include (:system-flag t) nil [937 996])
+            ("custom_audience_interface" using (:type ("custom_audience_interface" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1015 1057])
+            ("UpdateType" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("UPDATE_STATUS" variable
+                             (:constant-flag t
+                              :default-value (1151 1152)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1135 1152])
+                          ("UPDATE_OPC" variable
+                             (:constant-flag t
+                              :default-value (1241 1242)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1228 1242])
+                          ("UPDATE_DETAIL" variable
+                             (:constant-flag t
+                              :default-value (1303 1304)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1287 1304])
+                          ("UPDATE_ADD_ADID" variable
+                             (:constant-flag t
+                              :default-value (1346 1347)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1328 1347])
+                          ("UPDATE_INVALID" variable
+                             (:constant-flag t
+                              :default-value (1381 1382)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1364 1382]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [1118 1426])
+            ("AdStatus" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("AD_STATUS_ONLINE" variable
+                             (:constant-flag t
+                              :default-value (1464 1465)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1445 1465])
+                          ("AD_STATUS_OFFLINE" variable
+                             (:constant-flag t
+                              :default-value (1508 1509)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1488 1509])
+                          ("AD_STATUS_DELETE" variable
+                             (:constant-flag t
+                              :default-value (1551 1552)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1532 1552])
+                          ("AD_STATUS_INVALID" variable
+                             (:constant-flag t
+                              :default-value (1597 1598)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1577 1598]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [1428 1632])
+            ("MODIFY_UPDATE" variable (:constant-flag t) nil [1642 1655])
+            ("MODIFY_NONE" variable (:constant-flag t) nil [1666 1677])
+            ("FansTargetIndexImpl" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1711 1718])
+                    ("FansTargetIndexImpl" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("max_ad_count" variable (:type "int") (reparse-symbol arg-sub-list) [1743 1760]))                          
+                        :type ("FansTargetIndexImpl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1723 1761])
+                    ("FansTargetIndexImpl" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1766 1797])
+                    ("Init" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1802 1813])
+                    ("Query" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cust_list" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CustType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1989 2028])
+                            ("size_in_byte" variable
+                               (:constant-flag t
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2043 2069])
+                            ("ret_bitmap" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2070 2090])
+                            ("timeout" variable
+                               (:default-value "1000"
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2105 2126])
+                            ("debug" variable
+                               (:default-value "0"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2127 2138]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1979 2140])
+                    ("Query" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adid" variable
+                               (:constant-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2340 2360])
+                            ("cust_list" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CustType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2375 2414])
+                            ("cust_match_info" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("KeyValue" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2429 2468]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2330 2469])
+                    ("Update" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3047 3061])
+                            ("update_type" variable (:type ("UpdateType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3077 3100])
+                            ("ad_status" variable (:type ("AdStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3116 3135])
+                            ("cust_list" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CustType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3151 3190]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3036 3191])
+                    ("Resize" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [3293 3306])
+                    ("Clear" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [3364 3376])
+                    ("Stat" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("uint64_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3392 3430]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3382 3431])
+                    ("IsAlmostFull" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3437 3457])
+                    ("private" label nil (reparse-symbol classsubparts) [3460 3468])
+                    ("Modify" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adid" variable (:type ("AdidType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3484 3498])
+                            ("type" variable (:type "int") (reparse-symbol arg-sub-list) [3499 3508])
+                            ("cust_list" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("CustType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3509 3548]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3473 3549])
+                    ("SetOnlineStatus" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adid" variable (:type ("AdidType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3606 3620])
+                            ("valid_status" variable (:type "bool") (reparse-symbol arg-sub-list) [3621 3639]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3586 3640])
+                    ("SoftDelete" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adid" variable (:type ("AdidType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3822 3836]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3807 3837])
+                    ("HardDelete" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("adid" variable (:type ("AdidType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3910 3924]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3895 3925])
+                    ("SetMatchedCust" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bitmap_vec" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("uint64_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4012 4052])
+                            ("cust_match_info" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("KeyValue" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4076 4115]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3993 4116])
+                    ("private" label nil (reparse-symbol classsubparts) [4120 4128])
+                    ("adid2adix_" variable (:type ("Adid2AdixPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4133 4157])
+                    ("cust2adixs_" variable (:type ("Cust2AdixsPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4162 4188])
+                    ("status_bitset_" variable (:type ("StatusBitsetPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4193 4224])
+                    ("admeta_managr_" variable (:type ("AdmetaManagerPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4229 4261])
+                    ("empty_adids_" variable (:type ("EmptyAdidsPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4266 4293])
+                    ("public" label nil (reparse-symbol classsubparts) [4297 4304])
+                    ("__test__hook__GetAdid2AdixPtr" function
+                       (:prototype-flag t
+                        :type ("Adid2AdixPtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4309 4354])
+                    ("__test__hook__GetCust2AdixsPtr" function
+                       (:prototype-flag t
+                        :type ("Cust2AdixsPtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4359 4406])
+                    ("__test__hook__GetStatusBitsetPtr" function
+                       (:prototype-flag t
+                        :type ("StatusBitsetPtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4411 4462])
+                    ("__test__hook__GetAdmetaManagerPtr" function
+                       (:prototype-flag t
+                        :type ("AdmetaManagerPtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4467 4520])
+                    ("__test__hook__GetEmptyAdidsPtr" function
+                       (:prototype-flag t
+                        :type ("EmptyAdidsPtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4525 4572]))                  
+                :type "class")
+                nil [1681 4575]))          
+      :file "idx_fans_target_index_impl.h"
+      :pointmax 4703
+      :fsize 4702
+      :lastmodtime '(21638 21211 0 0)
+      :unmatched-syntax '((symbol 4597 . 4630) (symbol 1081 . 1116))
+      :lexical-table 
+        '(("INDEXSERVER_ADBIDFEEDPLUGIN_IDX_FANS_TARGET_INDEX_IMPL_H_")
+          ("MODIFY_UPDATE" . ((number "1" 1656 . 1657)))
+          ("MODIFY_NONE" . ((number "2" 1678 . 1679)))
+          )
+)
+    (semanticdb-table "idx_fans_target_manager.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("indexserver/bidfeedplugin/idx_fans_target_manager.h" include (:system-flag t) nil [205 267])
+            ("indexserver/bidfeedplugin/time_internal.h" include (:system-flag t) nil [268 320])
+            ("DEFAULT_INDEX_STATISTICS_DUMP_FILE" variable (:constant-flag t) nil [330 364])
+            ("DEFAULT_INDEX_AUTO_CLEANUP_TIME" variable (:constant-flag t) nil [404 435])
+            ("DEFAULT_TIMEOUT_FOR_QUERY" variable (:constant-flag t) nil [452 477])
+            ("FansTargetManager" function
+               (:constructor-flag t
+                :parent "FansTargetManager"
+                :type ("BIDFEED_BEGIN_NAMESPACE_INDEXSERVER" type (:type "class") nil nil))
+                nil [518 689])
+            ("FansTargetManager" function
+               (:destructor-flag t
+                :parent "FansTargetManager"
+                :type "void")
+                nil [698 749])
+            ("Init" function
+               (:parent "FansTargetManager"
+                :arguments 
+                  ( ("config" variable
+                       (:reference 1
+                        :type ("sharelib::CINIConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [786 815]))                  
+                :type "int")
+                nil [758 1657])
+            ("InitInternal" function
+               (:parent "FansTargetManager"
+                :arguments 
+                  ( ("max_ad_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1702 1724])
+                    ("index_auto_cleanup_time" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1768 1811])
+                    ("index_statistics_dump_file" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1848 1894])
+                    ("timeout_for_query" variable (:type "int") (reparse-symbol arg-sub-list) [1931 1953])
+                    ("index_auto_cleanup_check_internal" variable (:type "int") (reparse-symbol arg-sub-list) [1990 2028]))                  
+                :type "int")
+                nil [1666 3016])
+            ("LoadDumpAdidInfo" function
+               (:parent "FansTargetManager"
+                :arguments 
+                  ( ("ad_detail_ptr" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AdDetailPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3066 3099])
+                    ("extern_adid_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3147 3174]))                  
+                :type "int")
+                nil [3026 3717])
+            ("Query" function
+               (:parent "FansTargetManager"
+                :arguments 
+                  ( ("cust_list" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3755 3794])
+                    ("size_in_byte" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3831 3853])
+                    ("ret_map" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3883 3900])
+                    ("debug" variable (:type "int") (reparse-symbol arg-sub-list) [3900 3910]))                  
+                :type "int")
+                nil [3726 4523])
+            ("Query" function
+               (:parent "FansTargetManager"
+                :arguments 
+                  ( ("cust_list" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4561 4600])
+                    ("adid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4637 4651])
+                    ("cust_match_info" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("KeyValue" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4681 4720]))                  
+                :type "int")
+                nil [4532 4977])
+            ("Update" function
+               (:parent "FansTargetManager"
+                :arguments 
+                  ( ("cust_list" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("uint64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5016 5055])
+                    ("status" variable (:type "int") (reparse-symbol arg-sub-list) [5093 5104])
+                    ("extern_adid_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5135 5162])
+                    ("update_type" variable (:type ("UpdateType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5193 5216]))                  
+                :type "int")
+                nil [4986 5355])
+            ("__test__hook__Init" function
+               (:parent "FansTargetManager"
+                :arguments 
+                  ( ("max_ad_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5406 5428])
+                    ("index_auto_cleanup_time" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5440 5483])
+                    ("index_statistics_dump_file" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5488 5534])
+                    ("index_auto_cleanup_check_internal" variable (:type "int") (reparse-symbol arg-sub-list) [5539 5577]))                  
+                :type "int")
+                nil [5364 5809]))          
+      :file "idx_fans_target_manager.cpp"
+      :pointmax 5873
+      :fsize 5872
+      :lastmodtime '(21641 42528 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DEFAULT_INDEX_AUTO_CLEANUP_TIME" . ((string "\"03:00\"" 436 . 443)))
+          ("DEFAULT_INDEX_STATISTICS_DUMP_FILE" . ((string "\"./fans_target_statistics.dat\"" 365 . 395)))
+          ("DEFAULT_TIMEOUT_FOR_QUERY" . ((number "1000" 478 . 482)))
+          )
+))
+  :file "!data0!indexserver!branches!indexserver_20141120_dev_custom_audience!indexserver!indexserver!bidfeedplugin!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,135 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "cluster.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [133 152])
+            ("sstream" include (:system-flag t) nil [153 171])
+            ("hiredis/hiredis.h" include nil nil [172 200])
+            ("hiredis/async.h" include nil nil [201 227])
+            ("cluster.h" include nil nil [228 248])
+            ("redis.h" include nil nil [249 267])
+            ("vad_redis" type
+               (:members 
+                  ( ("get" function
+                       (:parent "Cluster"
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [311 334])
+                            ("value" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [335 354]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [292 1235])
+                    ("command_all" function
+                       (:parent "Cluster"
+                        :arguments 
+                          ( ("request" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1268 1295])
+                            ("value" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1296 1315]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1241 2324])
+                    ("sadd" function
+                       (:parent "Cluster"
+                        :arguments 
+                          ( ("uid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2395 2418])
+                            ("adids" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2419 2444]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2375 3018])
+                    ("srem" function
+                       (:parent "Cluster"
+                        :arguments 
+                          ( ("uid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3092 3115])
+                            ("adids" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3116 3141]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [3072 3676])
+                    ("smembers" function
+                       (:parent "Cluster"
+                        :arguments 
+                          ( ("uid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3749 3772])
+                            ("adids" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3773 3805]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [3725 4922])
+                    ("Hash" function
+                       (:methodconst-flag t
+                        :parent "Cluster"
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4947 4970]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4923 5333])
+                    ("hash_murmur" function
+                       (:methodconst-flag t
+                        :parent "Cluster"
+                        :arguments 
+                          ( ("key" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [5365 5381])
+                            ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5382 5396]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5334 6568])
+                    ("Init" function
+                       (:parent "Cluster"
+                        :arguments 
+                          ( ("file" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6590 6614]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [6570 7597]))                  
+                :type "namespace")
+                nil [269 7600]))          
+      :file "cluster.cpp"
+      :pointmax 7602
+      :fsize 7601
+      :lastmodtime '(21641 46806 0 0)
+      :unmatched-syntax nil))
+  :file "!data0!vad_redis_client!trunk!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

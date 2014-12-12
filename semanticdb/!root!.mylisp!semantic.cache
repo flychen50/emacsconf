@@ -1,0 +1,26 @@
+;; Object .mylisp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file ".mylisp/"
+  :tables
+  (list
+    (semanticdb-table "tt.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [28 37])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [38 51]))                  
+                :type "int")
+                nil [19 112]))          
+      :file "tt.cpp"
+      :pointmax 114
+      :fsize 113
+      :lastmodtime '(21641 45320 0 0)
+      :unmatched-syntax nil))
+  :file "!root!.mylisp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

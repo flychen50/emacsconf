@@ -1,0 +1,18 @@
+;; Object generate_mock/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "generate_mock/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-gmake-mode
+      :tags 
+        '( ("all" function nil nil [1 241])
+            ("clean" function nil nil [241 272]))          
+      :file "Makefile"
+      :pointmax 272
+      :fsize 271
+      :lastmodtime '(21638 53651 0 0)
+      :unmatched-syntax '((shell-command 249 . 271) (bol 248 . 248))))
+  :file "!data0!rubik_mock!trunk!generate_mock!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

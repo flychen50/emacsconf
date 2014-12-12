@@ -1,0 +1,51 @@
+;; Object sample/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sample/"
+  :tables
+  (list
+    (semanticdb-table "redis_test.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("errno.h" include nil nil [148 166])
+            ("fstream" include (:system-flag t) nil [167 185])
+            ("iostream" include (:system-flag t) nil [186 205])
+            ("map" include (:system-flag t) nil [206 220])
+            ("sstream" include (:system-flag t) nil [221 239])
+            ("stdlib.h" include (:system-flag t) nil [240 259])
+            ("string.h" include (:system-flag t) nil [260 279])
+            ("string" include (:system-flag t) nil [280 297])
+            ("vector" include (:system-flag t) nil [298 315])
+            ("cluster.h" include nil nil [316 336])
+            ("sys/time.h" include (:system-flag t) nil [337 358])
+            ("stdio.h" include (:system-flag t) nil [359 377])
+            ("unistd.h" include (:system-flag t) nil [378 397])
+            ("boost" using (:type ("boost" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [398 420])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [421 441])
+            ("PASSES" variable
+               (:constant-flag t
+                :default-value "1"
+                :type "int")
+                nil [443 464])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [474 483])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [484 496]))                  
+                :type "int")
+                nil [465 1873]))          
+      :file "redis_test.cpp"
+      :pointmax 1875
+      :fsize 1878
+      :lastmodtime '(21641 43118 0 0)
+      :unmatched-syntax nil))
+  :file "!data0!vad_redis_client!trunk!sample!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

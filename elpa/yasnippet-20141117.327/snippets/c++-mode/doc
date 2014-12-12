@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: doc
+# key: doc
+# --
+/**
+ *Copyright (C) 2014 by weibo inc
+ * @desc: $0
+ * @auth: xinfeng
+ * @mail: xinfeng@staff.weibo.com.cn
+ * @date: 
+ */

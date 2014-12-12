@@ -1,0 +1,69 @@
+;; Object .emacs.d/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file ".emacs.d/"
+  :tables
+  (list
+    (semanticdb-table "init.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("add-to-list" code nil nil [1 38])
+            ("add-to-list" code nil nil [39 89])
+            ("add-to-list" code nil nil [90 133])
+            ("add-to-list" code nil nil [134 176])
+            ("add-to-list" code nil nil [177 243])
+            ("add-to-list" code nil nil [244 304])
+            ("load-file" code nil nil [307 377])
+            ("load-file" code nil nil [378 457])
+            ("company-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [458 498])
+            ("setq" code nil nil [499 526])
+            ("global-set-key" code nil nil [527 593])
+            ("setq" code nil nil [612 679])
+            ("setq" code nil nil [730 784])
+            ("google-c-style" include nil nil [801 826])
+            ("add-hook" code nil nil [827 877])
+            ("add-hook" code nil nil [878 936])
+            ("yasnippet" include nil nil [963 983])
+            ("yas-global-mode" code nil nil [985 1004])
+            ("cedet" include nil nil [1014 1030])
+            ("semantic" include nil nil [1031 1050])
+            ("eassist" include nil nil [1068 1099])
+            ("semantic-load-enable-minimum-features" code nil nil [1100 1139])
+            ("setq" code nil nil [1140 1204])
+            ("cc-mode" include nil nil [1387 1405])
+            ("semantic" include nil nil [1406 1425])
+            ("global-semanticdb-minor-mode" code nil nil [1427 1459])
+            ("global-semantic-idle-scheduler-mode" code nil nil [1460 1499])
+            ("semantic-mode" code nil nil [1501 1518])
+            ("semantic-add-system-include" code nil nil [1519 1579])
+            ("ecb" include nil nil [1585 1599])
+            ("when" code nil nil [1644 1817])
+            ("global-set-key" code nil nil [1818 1870])
+            ("global-set-key" code nil nil [1881 1932])
+            ("global-set-key" code nil nil [1943 1988])
+            ("global-set-key" code nil nil [1999 2051])
+            ("global-set-key" code nil nil [2052 2106])
+            ("global-set-key" code nil nil [2107 2161])
+            ("global-set-key" code nil nil [2162 2216])
+            ("package" include nil nil [2586 2604])
+            ("add-to-list" code nil nil [2605 2690])
+            ("helm-config" include nil nil [2691 2713])
+            ("xcscope" include nil nil [2714 2732])
+            ("put" code nil nil [2733 2769])
+            ("put" code nil nil [2770 2804])
+            ("custom-set-variables" code nil nil [2807 3083])
+            ("custom-set-faces" code nil nil [3084 3323])
+            ("insert-current-time" function (:user-visible-flag t) nil [3347 3458])
+            ("cpplint" function (:user-visible-flag t) nil [3506 3676])
+            ("format-function" function nil nil [3677 4310])
+            ("semanticdb-enable-cscope-databases" code nil nil [4392 4428]))          
+      :file "init.el"
+      :pointmax 4457
+      :fsize 4664
+      :lastmodtime '(21641 43860 0 0)
+      :unmatched-syntax nil))
+  :file "!root!.emacs.d!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

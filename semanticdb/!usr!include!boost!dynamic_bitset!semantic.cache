@@ -1,0 +1,2356 @@
+;; Object dynamic_bitset/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dynamic_bitset/"
+  :tables
+  (list
+    (semanticdb-table "dynamic_bitset.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BOOST_DYNAMIC_BITSET_DYNAMIC_BITSET_HPP" variable (:constant-flag t) nil [543 582])
+            ("cassert" include (:system-flag t) nil [584 602])
+            ("string" include (:system-flag t) nil [603 620])
+            ("stdexcept" include (:system-flag t) nil [621 641])
+            ("algorithm" include (:system-flag t) nil [679 699])
+            ("vector" include (:system-flag t) nil [759 776])
+            ("climits" include (:system-flag t) nil [777 795])
+            ("boost/dynamic_bitset/config.hpp" include nil nil [825 867])
+            ("locale" include (:system-flag t) nil [897 915])
+            ("istream" include (:system-flag t) nil [1032 1052])
+            ("ostream" include (:system-flag t) nil [1053 1073])
+            ("boost/dynamic_bitset_fwd.hpp" include nil nil [1082 1121])
+            ("boost/detail/dynamic_bitset.hpp" include nil nil [1122 1164])
+            ("boost/detail/iterator.hpp" include nil nil [1165 1201])
+            ("boost/static_assert.hpp" include nil nil [1242 1276])
+            ("boost/limits.hpp" include nil nil [1277 1304])
+            ("boost/pending/lowest_bit.hpp" include nil nil [1305 1344])
+            ("boost" type
+               (:members 
+                  ( ("dynamic_bitset" type
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "class"
+                        :members 
+                          ( ("BOOST_STATIC_ASSERT" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("detail::dynamic_bitset_allowed_block_type::value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1914 1970]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1894 1971])
+                            ("public" label nil (reparse-symbol classsubparts) [1973 1980])
+                            ("block_type" type
+                               (:typedef ("Block" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1985 2010])
+                            ("allocator_type" type
+                               (:typedef ("Allocator" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [2015 2048])
+                            ("size_type" type
+                               (:typedef ("std::size_t" type (:type "class") nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [2053 2083])
+                            ("block_width_type" type
+                               (:typedef ("int")
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [2088 2117])
+                            ("BOOST_STATIC_CONSTANT" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("block_width_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2152 2169])
+                                    ("" variable (:type ("bits_per_block" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2170 2223]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2130 2225])
+                            ("BOOST_STATIC_CONSTANT" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2252 2262])
+                                    ("" variable (:type ("npos" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2263 2296]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2230 2298])
+                            ("public" label nil (reparse-symbol classsubparts) [2301 2308])
+                            ("reference" type
+                               (:members 
+                                  ( ("dynamic_bitset" type
+                                       (:prototype t
+                                        :template-specifier 
+                                          ( ("Block" type nil nil nil)
+                                            ("Allocator" type nil nil nil))                                          
+                                        :type "class")
+                                        (reparse-symbol classsubparts) [2450 2489])
+                                    ("reference" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("b" variable
+                                               (:reference 1
+                                                :type ("block_type" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2552 2567])
+                                            ("pos" variable (:type "int") (reparse-symbol arg-sub-list) [2568 2576]))                                          
+                                        :type ("reference" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2542 2641])
+                                    ("&" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2651 2668])
+                                    ("public" label nil (reparse-symbol classsubparts) [2692 2699])
+                                    ("~" function
+                                       (:methodconst-flag t
+                                        :operator-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [2824 2882])
+                                    ("flip" function (:type ("reference" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2892 2938])
+                                    ("=" function
+                                       (:operator-flag t
+                                        :arguments 
+                                          ( ("x" variable (:type "bool") (reparse-symbol arg-sub-list) [2969 2976]))                                          
+                                        :type ("reference" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2948 3024])
+                                    ("=" function
+                                       (:operator-flag t
+                                        :arguments 
+                                          ( ("rhs" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("reference" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3070 3091]))                                          
+                                        :type ("reference" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3049 3125])
+                                    ("|=" function
+                                       (:operator-flag t
+                                        :arguments 
+                                          ( ("x" variable (:type "bool") (reparse-symbol arg-sub-list) [3176 3183]))                                          
+                                        :type ("reference" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3154 3221])
+                                    ("&=" function
+                                       (:operator-flag t
+                                        :arguments 
+                                          ( ("x" variable (:type "bool") (reparse-symbol arg-sub-list) [3252 3259]))                                          
+                                        :type ("reference" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3230 3297])
+                                    ("^=" function
+                                       (:operator-flag t
+                                        :arguments 
+                                          ( ("x" variable (:type "bool") (reparse-symbol arg-sub-list) [3328 3335]))                                          
+                                        :type ("reference" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3306 3373])
+                                    ("-=" function
+                                       (:operator-flag t
+                                        :arguments 
+                                          ( ("x" variable (:type "bool") (reparse-symbol arg-sub-list) [3404 3411]))                                          
+                                        :type ("reference" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3382 3449])
+                                    ("private" label nil (reparse-symbol classsubparts) [3456 3464])
+                                    ("m_block" variable (:type ("block_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3473 3494])
+                                    ("m_mask" variable
+                                       (:constant-flag t
+                                        :type ("block_type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3503 3527])
+                                    ("do_set" function (:type "void") (reparse-symbol classsubparts) [3537 3573])
+                                    ("do_reset" function (:type "void") (reparse-symbol classsubparts) [3582 3621])
+                                    ("do_flip" function (:type "void") (reparse-symbol classsubparts) [3630 3667])
+                                    ("do_assign" function
+                                       (:arguments 
+                                          ( ("x" variable (:type "bool") (reparse-symbol arg-sub-list) [3691 3698]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3676 3728]))                                  
+                                :type "class")
+                                (reparse-symbol classsubparts) [2413 3735])
+                            ("const_reference" type
+                               (:typedef ("bool")
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3741 3770])
+                            ("dynamic_bitset" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("alloc" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "Allocator()"
+                                        :type ("Allocator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3830 3866]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3815 3868])
+                            ("dynamic_bitset" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("num_bits" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3902 3921])
+                                    ("value" variable
+                                       (:default-value "0"
+                                        :type "unsigned long")
+                                        (reparse-symbol arg-sub-list) [3922 3945])
+                                    ("alloc" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "Allocator()"
+                                        :type ("Allocator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3962 3998]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3887 4000])
+                            ("dynamic_bitset" function
+                               (:template 
+                                  ( ("CharT" type (:type "class") nil nil)
+                                    ("Traits" type (:type "class") nil nil)
+                                    ("Alloc" type (:type "class") nil nil))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("s" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::basic_string" type
+                                             (:template-specifier 
+                                                ( ("CharT" type nil nil nil)
+                                                  ("Traits" type nil nil nil)
+                                                  ("Alloc" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [4616 4665])
+                                    ("pos" variable
+                                       (:typemodifiers ("typename")
+                                        :type ("std::basic_string::size_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4674 4738])
+                                    ("n" variable
+                                       (:typemodifiers ("typename")
+                                        :type ("std::basic_string::size_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4747 4809])
+                                    ("num_bits" variable
+                                       (:default-value "npos"
+                                        :type ("size_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4818 4843])
+                                    ("alloc" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "Allocator()"
+                                        :type ("Allocator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4853 4889]))                                  
+                                :constructor-flag t)
+                                (reparse-symbol classsubparts) [4538 4994])
+                            ("dynamic_bitset" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("s" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::basic_string" type
+                                             (:template-specifier 
+                                                ( ("CharT" type nil nil nil)
+                                                  ("Traits" type nil nil nil)
+                                                  ("Alloc" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [5091 5140])
+                                    ("pos" variable
+                                       (:typemodifiers ("typename")
+                                        :default-value "0"
+                                        :type ("std::basic_string::size_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5147 5214]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5076 5396])
+                            ("dynamic_bitset" function
+                               (:template 
+                                  ( ("BlockInputIterator" type (:type "class") nil nil))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("first" variable (:type ("BlockInputIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5605 5630])
+                                    ("last" variable (:type ("BlockInputIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5631 5655])
+                                    ("alloc" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :default-value "Allocator()"
+                                        :type ("Allocator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5675 5711]))                                  
+                                :constructor-flag t)
+                                (reparse-symbol classsubparts) [5547 5801])
+                            ("dynamic_bitset" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5847 5871]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5832 5872])
+                            ("dynamic_bitset" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [5878 5896])
+                            ("swap" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("b" variable
+                                       (:reference 1
+                                        :type ("dynamic_bitset" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5912 5930]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5902 5931])
+                            ("=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5962 5986]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5936 5987])
+                            ("get_allocator" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("allocator_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5993 6030])
+                            ("resize" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("num_bits" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6080 6099])
+                                    ("value" variable
+                                       (:default-value "false"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [6100 6118]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6068 6120])
+                            ("clear" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [6125 6138])
+                            ("push_back" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("bit" variable (:type "bool") (reparse-symbol arg-sub-list) [6158 6167]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6143 6168])
+                            ("append" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("block" variable (:type ("Block" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6185 6197]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6173 6198])
+                            ("m_append" function
+                               (:template 
+                                  ( ("BlockInputIterator" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("first" variable (:type ("BlockInputIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6261 6286])
+                                    ("last" variable (:type ("BlockInputIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6287 6311])
+                                    ("" variable (:type ("std::input_iterator_tag" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6312 6336]))                                  )
+                                (reparse-symbol classsubparts) [6204 6475])
+                            ("m_append" function
+                               (:template 
+                                  ( ("BlockInputIterator" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("first" variable (:type ("BlockInputIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6537 6562])
+                                    ("last" variable (:type ("BlockInputIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6563 6587])
+                                    ("" variable (:type ("std::forward_iterator_tag" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6588 6614]))                                  )
+                                (reparse-symbol classsubparts) [6480 7281])
+                            ("append" function
+                               (:template 
+                                  ( ("BlockInputIterator" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("first" variable (:type ("BlockInputIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7341 7366])
+                                    ("last" variable (:type ("BlockInputIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7367 7391]))                                  )
+                                (reparse-symbol classsubparts) [7286 7591])
+                            ("&=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7650 7674]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7623 7675])
+                            ("|=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7707 7731]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7680 7732])
+                            ("^=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7764 7788]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7737 7789])
+                            ("-=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7821 7845]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7794 7846])
+                            ("<<=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("n" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7879 7891]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7851 7892])
+                            (">>=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("n" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7925 7937]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7897 7938])
+                            ("<<" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("n" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7969 7981]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7943 7988])
+                            (">>" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("n" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8019 8031]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7993 8038])
+                            ("set" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("n" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8092 8104])
+                                    ("val" variable
+                                       (:default-value "true"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [8105 8120]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8072 8122])
+                            ("set" function
+                               (:prototype-flag t
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8127 8149])
+                            ("reset" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("n" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8176 8188]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8154 8189])
+                            ("reset" function
+                               (:prototype-flag t
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8194 8218])
+                            ("flip" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("n" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8244 8256]))                                  
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8223 8257])
+                            ("flip" function
+                               (:prototype-flag t
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8262 8285])
+                            ("test" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("n" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8300 8312]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8290 8319])
+                            ("any" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8324 8341])
+                            ("none" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8346 8364])
+                            ("~" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :operator-flag t
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8369 8402])
+                            ("count" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("size_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8407 8431])
+                            ("[]" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("pos" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8475 8489]))                                  
+                                :type ("reference" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8454 8565])
+                            ("[]" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("pos" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8586 8600]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8570 8628])
+                            ("to_ulong" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type "unsigned long")
+                                (reparse-symbol classsubparts) [8634 8665])
+                            ("size" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("size_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8671 8694])
+                            ("num_blocks" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("size_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8699 8728])
+                            ("max_size" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("size_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8733 8760])
+                            ("empty" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8765 8784])
+                            ("is_subset_of" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("a" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8891 8915]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8873 8922])
+                            ("is_proper_subset_of" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("a" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8952 8976]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8927 8983])
+                            ("intersects" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("a" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9004 9029]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [8988 9036])
+                            ("find_first" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type ("size_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9056 9085])
+                            ("find_next" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("pos" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9110 9124]))                                  
+                                :type ("size_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9090 9131])
+                            ("==" function
+                               (:template 
+                                  ( ("B" type (:type "class") nil nil)
+                                    ("A" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("a" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type
+                                             (:template-specifier 
+                                                ( ("B" type nil nil nil)
+                                                  ("A" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9284 9314])
+                                    ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type
+                                             (:template-specifier 
+                                                ( ("B" type nil nil nil)
+                                                  ("A" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9342 9372]))                                  
+                                :operator-flag t
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [9223 9373])
+                            ("<" function
+                               (:template 
+                                  ( ("B" type (:type "class") nil nil)
+                                    ("A" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("a" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type
+                                             (:template-specifier 
+                                                ( ("B" type nil nil nil)
+                                                  ("A" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9439 9469])
+                                    ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type
+                                             (:template-specifier 
+                                                ( ("B" type nil nil nil)
+                                                  ("A" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9496 9526]))                                  
+                                :operator-flag t
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [9379 9527])
+                            ("to_block_range" function
+                               (:template 
+                                  ( ("B" type (:type "class") nil nil)
+                                    ("A" type (:type "class") nil nil)
+                                    ("BlockOutputIterator" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type
+                                             (:template-specifier 
+                                                ( ("B" type nil nil nil)
+                                                  ("A" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9629 9659])
+                                    ("result" variable (:type ("BlockOutputIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9691 9718]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [9534 9719])
+                            ("from_block_range" function
+                               (:template 
+                                  ( ("BlockIterator" type (:type "class") nil nil)
+                                    ("B" type (:type "class") nil nil)
+                                    ("A" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("first" variable (:type ("BlockIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9816 9836])
+                                    ("last" variable (:type ("BlockIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9837 9856])
+                                    ("result" variable
+                                       (:reference 1
+                                        :type ("dynamic_bitset" type
+                                             (:template-specifier 
+                                                ( ("B" type nil nil nil)
+                                                  ("A" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9890 9919]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [9725 9920])
+                            (">>" function
+                               (:template 
+                                  ( ("CharT" type (:type "class") nil nil)
+                                    ("Traits" type (:type "class") nil nil)
+                                    ("B" type (:type "class") nil nil)
+                                    ("A" type (:type "class") nil nil))                                  
+                                :type ("std::basic_istream" type
+                                     (:template-specifier 
+                                        ( ("CharT" type nil nil nil)
+                                          ("Traits" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("is" variable
+                                       (:reference 1
+                                        :type ("std::basic_istream" type
+                                             (:template-specifier 
+                                                ( ("CharT" type nil nil nil)
+                                                  ("Traits" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10051 10089])
+                                    ("b" variable
+                                       (:reference 1
+                                        :type ("dynamic_bitset" type
+                                             (:template-specifier 
+                                                ( ("B" type nil nil nil)
+                                                  ("A" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10147 10171]))                                  
+                                :operator-flag t
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [9927 10172])
+                            ("to_string_helper" function
+                               (:template 
+                                  ( ("B" type (:type "class") nil nil)
+                                    ("A" type (:type "class") nil nil)
+                                    ("stringT" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("b" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("dynamic_bitset" type
+                                             (:template-specifier 
+                                                ( ("B" type nil nil nil)
+                                                  ("A" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10263 10294])
+                                    ("s" variable
+                                       (:reference 1
+                                        :type ("stringT" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10295 10307])
+                                    ("dump_all" variable (:type "bool") (reparse-symbol arg-sub-list) [10308 10322]))                                  
+                                :prototype-flag t)
+                                (reparse-symbol classsubparts) [10178 10323])
+                            ("private" label nil (reparse-symbol classsubparts) [10335 10343])
+                            ("BOOST_STATIC_CONSTANT" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("block_width_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10370 10387])
+                                    ("" variable (:type ("ulong_width" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10388 10405])
+                                    ("" variable (:type ("numeric_limits" type
+                                         (:template-specifier 
+                                            ( ("unsigned long" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [10407 10437])
+                                    ("" variable (:type ("digits" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10438 10445]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [10348 10446])
+                            ("buffer_type" type
+                               (:typedef ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("block_type" type nil nil nil)
+                                          ("allocator_type" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [10451 10511])
+                            ("m_zero_unused_bits" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [10517 10543])
+                            ("m_check_invariants" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [10548 10580])
+                            ("m_do_find_from" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("first_block" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10611 10633]))                                  
+                                :type ("size_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10586 10640])
+                            ("count_extra_bits" function
+                               (:methodconst-flag t
+                                :type ("block_width_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10646 10717])
+                            ("block_index" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("pos" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10751 10765]))                                  
+                                :type ("size_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10722 10798])
+                            ("bit_index" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("pos" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10837 10851]))                                  
+                                :type ("block_width_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10803 10902])
+                            ("bit_mask" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("pos" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10929 10943]))                                  
+                                :type ("Block" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10907 10982])
+                            ("init_from_string" function
+                               (:template 
+                                  ( ("CharT" type (:type "class") nil nil)
+                                    ("Traits" type (:type "class") nil nil)
+                                    ("Alloc" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("s" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::basic_string" type
+                                             (:template-specifier 
+                                                ( ("CharT" type nil nil nil)
+                                                  ("Traits" type nil nil nil)
+                                                  ("Alloc" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [11073 11122])
+                                    ("pos" variable
+                                       (:typemodifiers ("typename")
+                                        :type ("std::basic_string::size_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11131 11195])
+                                    ("n" variable
+                                       (:typemodifiers ("typename")
+                                        :type ("std::basic_string::size_type" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11204 11266])
+                                    ("num_bits" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11275 11294])
+                                    ("alloc" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Allocator" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11303 11326]))                                  )
+                                (reparse-symbol classsubparts) [10988 12228])
+                            ("m_unchecked_test" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :arguments 
+                                  ( ("pos" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12287 12301]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [12265 12308])
+                            ("calc_num_blocks" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("num_bits" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12346 12365]))                                  
+                                :type ("size_type" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [12313 12366])
+                            ("m_highest_block" function
+                               (:prototype-flag t
+                                :type ("Block" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [12372 12404])
+                            ("m_highest_block" function
+                               (:prototype-flag t
+                                :methodconst-flag t
+                                :constant-flag t
+                                :type ("Block" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [12409 12447])
+                            ("m_bits" variable (:type ("buffer_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12453 12472])
+                            ("m_num_bits" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12500 12523])
+                            ("bit_appender" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol classsubparts) [12530 12549])
+                            ("bit_appender" friend nil (reparse-symbol classsubparts) [12554 12580])
+                            ("bit_appender" type
+                               (:members 
+                                  ( ("bs" variable (:type ("dynamic_bitset" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13056 13076])
+                                    ("n" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13083 13095])
+                                    ("mask" variable (:type ("Block" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13102 13113])
+                                    ("current" variable
+                                       (:pointer 1
+                                        :type ("Block" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [13120 13136])
+                                    ("public" label nil (reparse-symbol classsubparts) [13141 13148])
+                                    ("bit_appender" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("r" variable
+                                               (:reference 1
+                                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [13170 13189]))                                          
+                                        :type ("bit_appender" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [13157 13227])
+                                    ("bit_appender" function
+                                       (:destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [13236 13664])
+                                    ("do_append" function
+                                       (:typemodifiers ("inline")
+                                        :arguments 
+                                          ( ("value" variable (:type "bool") (reparse-symbol arg-sub-list) [13695 13706]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [13673 14003])
+                                    ("get_count" function
+                                       (:methodconst-flag t
+                                        :type ("size_type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [14012 14053]))                                  
+                                :type "class")
+                                (reparse-symbol classsubparts) [12585 14060]))                          )
+                        (reparse-symbol namespacesubparts) [1393 14064])
+                    ("!=" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14164 14206])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14223 14265]))                          
+                        :operator-flag t
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [14102 14266])
+                    ("<=" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14330 14372])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14389 14431]))                          
+                        :operator-flag t
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [14268 14432])
+                    (">" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14495 14537])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14553 14595]))                          
+                        :operator-flag t
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [14434 14596])
+                    (">=" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14660 14702])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14719 14761]))                          
+                        :operator-flag t
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [14598 14762])
+                    ("<<" function
+                       (:template 
+                          ( ("CharT" type (:type "class") nil nil)
+                            ("Traits" type (:type "class") nil nil)
+                            ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("std::basic_ostream" type
+                             (:template-specifier 
+                                ( ("CharT" type nil nil nil)
+                                  ("Traits" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::basic_ostream" type
+                                     (:template-specifier 
+                                        ( ("CharT" type nil nil nil)
+                                          ("Traits" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [15227 15265])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [15277 15319]))                          
+                        :operator-flag t
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [15102 15320])
+                    (">>" function
+                       (:template 
+                          ( ("CharT" type (:type "class") nil nil)
+                            ("Traits" type (:type "class") nil nil)
+                            ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("std::basic_istream" type
+                             (:template-specifier 
+                                ( ("CharT" type nil nil nil)
+                                  ("Traits" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::basic_istream" type
+                                     (:template-specifier 
+                                        ( ("CharT" type nil nil nil)
+                                          ("Traits" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [15447 15485])
+                            ("b" variable
+                               (:reference 1
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [15497 15533]))                          
+                        :operator-flag t
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [15322 15534])
+                    ("&" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("b1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [15653 15696])
+                            ("b2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [15707 15750]))                          
+                        :operator-flag t
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [15564 15751])
+                    ("|" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("b1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [15842 15885])
+                            ("b2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [15896 15939]))                          
+                        :operator-flag t
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [15753 15940])
+                    ("^" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("b1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [16031 16074])
+                            ("b2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [16085 16128]))                          
+                        :operator-flag t
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [15942 16129])
+                    ("-" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("b1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [16220 16263])
+                            ("b2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [16274 16317]))                          
+                        :operator-flag t
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [16131 16318])
+                    ("swap" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("b1" variable
+                               (:reference 1
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [16399 16436])
+                            ("b2" variable
+                               (:reference 1
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [16447 16484]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [16344 16485])
+                    ("to_string" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil)
+                            ("stringT" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [16567 16609])
+                            ("s" variable
+                               (:reference 1
+                                :type ("stringT" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16610 16622]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [16488 16623])
+                    ("to_block_range" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil)
+                            ("BlockOutputIterator" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [16728 16770])
+                            ("result" variable (:type ("BlockOutputIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16786 16813]))                          
+                        :prototype-flag t)
+                        (reparse-symbol namespacesubparts) [16632 16814])
+                    ("from_block_range" function
+                       (:template 
+                          ( ("BlockIterator" type (:type "class") nil nil)
+                            ("B" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("first" variable (:type ("BlockIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16939 16959])
+                            ("last" variable (:type ("BlockIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16960 16979])
+                            ("result" variable
+                               (:reference 1
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("B" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [16997 17026]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [16852 17139])
+                    ("dynamic_bitset" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("alloc" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Allocator" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17454 17477]))                          
+                        :parent "dynamic_bitset"
+                        :constructor-flag t)
+                        (reparse-symbol namespacesubparts) [17359 17515])
+                    ("dynamic_bitset" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("num_bits" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17613 17632])
+                            ("value" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [17633 17653])
+                            ("alloc" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Allocator" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17654 17677]))                          
+                        :parent "dynamic_bitset"
+                        :constructor-flag t)
+                        (reparse-symbol namespacesubparts) [17517 18328])
+                    ("dynamic_bitset" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18453 18477]))                          
+                        :typemodifiers ("inline")
+                        :parent "dynamic_bitset"
+                        :constructor-flag t)
+                        (reparse-symbol namespacesubparts) [18350 18539])
+                    ("dynamic_bitset" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "void"
+                        :typemodifiers ("inline")
+                        :parent "dynamic_bitset"
+                        :destructor-flag t)
+                        (reparse-symbol namespacesubparts) [18541 18684])
+                    ("swap" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("b" variable
+                               (:reference 1
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [18784 18820]))                          
+                        :typemodifiers ("inline")
+                        :parent "dynamic_bitset")
+                        (reparse-symbol namespacesubparts) [18686 18910])
+                    ("=" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [19037 19079]))                          
+                        :parent "dynamic_bitset"
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [18912 19265])
+                    ("get_allocator" function
+                       (:methodconst-flag t
+                        :parent "dynamic_bitset"
+                        :type ("allocator_type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [19363 19472])
+                    ("resize" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("num_bits" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19676 19695])
+                            ("value" variable (:type "bool") (reparse-symbol arg-sub-list) [19696 19707]))                          
+                        :parent "dynamic_bitset")
+                        (reparse-symbol namespacesubparts) [19583 20732])
+                    ("clear" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "void"
+                        :parent "dynamic_bitset")
+                        (reparse-symbol namespacesubparts) [20734 20879])
+                    ("push_back" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("bit" variable (:type "bool") (reparse-symbol arg-sub-list) [20978 20987]))                          
+                        :parent "dynamic_bitset")
+                        (reparse-symbol namespacesubparts) [20882 21037])
+                    ("append" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("value" variable (:type ("Block" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21132 21144]))                          
+                        :parent "dynamic_bitset")
+                        (reparse-symbol namespacesubparts) [21039 21584])
+                    ("&=" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [21813 21839]))                          
+                        :parent "dynamic_bitset"
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [21688 21980])
+                    ("|=" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [22107 22133]))                          
+                        :parent "dynamic_bitset"
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [21982 22302])
+                    ("^=" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [22429 22455]))                          
+                        :parent "dynamic_bitset"
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [22304 22630])
+                    ("-=" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [22757 22783]))                          
+                        :parent "dynamic_bitset"
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [22632 22953])
+                    ("<<=" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("n" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23272 23284]))                          
+                        :parent "dynamic_bitset"
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [23146 24280])
+                    (">>=" function
+                       (:template 
+                          ( ("B" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("B" type nil nil nil)
+                                  ("A" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("n" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24426 24438]))                          
+                        :parent "dynamic_bitset"
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [24335 25467])
+                    ("<<" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("n" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25594 25606]))                          
+                        :parent "dynamic_bitset"
+                        :operator-flag t
+                        :methodconst-flag t)
+                        (reparse-symbol namespacesubparts) [25470 25665])
+                    (">>" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("n" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25791 25803]))                          
+                        :parent "dynamic_bitset"
+                        :operator-flag t
+                        :methodconst-flag t)
+                        (reparse-symbol namespacesubparts) [25667 25862])
+                    ("set" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("pos" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26088 26102])
+                            ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [26103 26112]))                          
+                        :parent "dynamic_bitset")
+                        (reparse-symbol namespacesubparts) [25970 26499])
+                    ("set" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :parent "dynamic_bitset")
+                        (reparse-symbol namespacesubparts) [26501 26718])
+                    ("reset" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("pos" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26840 26854]))                          
+                        :parent "dynamic_bitset")
+                        (reparse-symbol namespacesubparts) [26720 27243])
+                    ("reset" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :parent "dynamic_bitset")
+                        (reparse-symbol namespacesubparts) [27245 27439])
+                    ("flip" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("pos" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27560 27574]))                          
+                        :parent "dynamic_bitset")
+                        (reparse-symbol namespacesubparts) [27441 27673])
+                    ("flip" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :parent "dynamic_bitset")
+                        (reparse-symbol namespacesubparts) [27675 27924])
+                    ("m_unchecked_test" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("pos" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28028 28042]))                          
+                        :parent "dynamic_bitset"
+                        :methodconst-flag t)
+                        (reparse-symbol namespacesubparts) [27926 28112])
+                    ("test" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("pos" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28204 28218]))                          
+                        :parent "dynamic_bitset"
+                        :methodconst-flag t)
+                        (reparse-symbol namespacesubparts) [28114 28292])
+                    ("any" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :parent "dynamic_bitset"
+                        :methodconst-flag t)
+                        (reparse-symbol namespacesubparts) [28294 28509])
+                    ("none" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :typemodifiers ("inline")
+                        :parent "dynamic_bitset"
+                        :methodconst-flag t)
+                        (reparse-symbol namespacesubparts) [28511 28638])
+                    ("~" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :parent "dynamic_bitset"
+                        :operator-flag t
+                        :methodconst-flag t)
+                        (reparse-symbol namespacesubparts) [28640 28831])
+                    ("count" function
+                       (:methodconst-flag t
+                        :parent "dynamic_bitset"
+                        :type ("size_type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [30339 30802])
+                    ("to_string_helper" function
+                       (:template 
+                          ( ("B" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil)
+                            ("stringT" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("B" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [30976 31007])
+                            ("s" variable
+                               (:reference 1
+                                :type ("stringT" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [31008 31020])
+                            ("dump_all" variable (:type "bool") (reparse-symbol arg-sub-list) [31043 31057]))                          )
+                        (reparse-symbol namespacesubparts) [30902 31790])
+                    ("to_string" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil)
+                            ("stringT" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [32125 32167])
+                            ("s" variable
+                               (:reference 1
+                                :type ("stringT" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [32168 32179]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [32029 32218])
+                    ("dump_to_string" function
+                       (:template 
+                          ( ("B" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil)
+                            ("stringT" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("B" type nil nil nil)
+                                          ("A" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [32443 32473])
+                            ("s" variable
+                               (:reference 1
+                                :type ("stringT" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [32474 32485]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [32364 32548])
+                    ("to_block_range" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil)
+                            ("BlockOutputIterator" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [32653 32695])
+                            ("result" variable (:type ("BlockOutputIterator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32711 32738]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [32550 32916])
+                    ("to_ulong" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "unsigned long"
+                        :parent "dynamic_bitset"
+                        :methodconst-flag t)
+                        (reparse-symbol namespacesubparts) [32918 33886])
+                    ("size" function
+                       (:methodconst-flag t
+                        :parent "dynamic_bitset"
+                        :type ("size_type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [33985 34068])
+                    ("num_blocks" function
+                       (:methodconst-flag t
+                        :parent "dynamic_bitset"
+                        :type ("size_type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [34166 34258])
+                    ("max_size" function
+                       (:methodconst-flag t
+                        :parent "dynamic_bitset"
+                        :type ("size_type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [34356 34961])
+                    ("empty" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :typemodifiers ("inline")
+                        :parent "dynamic_bitset"
+                        :methodconst-flag t)
+                        (reparse-symbol namespacesubparts) [34963 35094])
+                    ("is_subset_of" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [35861 35903]))                          
+                        :parent "dynamic_bitset"
+                        :methodconst-flag t)
+                        (reparse-symbol namespacesubparts) [35762 36075])
+                    ("is_proper_subset_of" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [36183 36225]))                          
+                        :parent "dynamic_bitset"
+                        :methodconst-flag t)
+                        (reparse-symbol namespacesubparts) [36077 36513])
+                    ("intersects" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [36611 36636]))                          
+                        :parent "dynamic_bitset"
+                        :methodconst-flag t)
+                        (reparse-symbol namespacesubparts) [36515 36906])
+                    ("m_do_find_from" function
+                       (:methodconst-flag t
+                        :parent "dynamic_bitset"
+                        :arguments 
+                          ( ("first_block" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37189 37211]))                          
+                        :type ("size_type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [37130 37463])
+                    ("find_first" function
+                       (:methodconst-flag t
+                        :parent "dynamic_bitset"
+                        :type ("size_type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [37555 37651])
+                    ("find_next" function
+                       (:methodconst-flag t
+                        :parent "dynamic_bitset"
+                        :arguments 
+                          ( ("pos" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37797 37811]))                          
+                        :type ("size_type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [37743 38218])
+                    ("==" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [38379 38421])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [38438 38480]))                          
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [38317 38573])
+                    ("!=" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [38644 38686])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [38710 38752]))                          
+                        :typemodifiers ("inline")
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [38575 38778])
+                    ("<" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [38841 38883])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [38899 38941]))                          
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [38780 39519])
+                    ("<=" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [39590 39632])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [39656 39698]))                          
+                        :typemodifiers ("inline")
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [39521 39723])
+                    (">" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [39793 39835])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [39858 39900]))                          
+                        :typemodifiers ("inline")
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [39725 39922])
+                    (">=" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [39993 40035])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [40059 40101]))                          
+                        :typemodifiers ("inline")
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [39924 40126])
+                    ("<<" function
+                       (:template 
+                          ( ("Ch" type (:type "class") nil nil)
+                            ("Tr" type (:type "class") nil nil)
+                            ("Block" type (:type "class") nil nil)
+                            ("Alloc" type (:type "class") nil nil))                          
+                        :type ("std::basic_ostream" type
+                             (:template-specifier 
+                                ( ("Ch" type nil nil nil)
+                                  ("Tr" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("os" variable
+                               (:reference 1
+                                :type ("std::basic_ostream" type
+                                     (:template-specifier 
+                                        ( ("Ch" type nil nil nil)
+                                          ("Tr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [42454 42485])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Alloc" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [42497 42535]))                          
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [42347 44957])
+                    (">>" function
+                       (:template 
+                          ( ("Ch" type (:type "class") nil nil)
+                            ("Tr" type (:type "class") nil nil)
+                            ("Block" type (:type "class") nil nil)
+                            ("Alloc" type (:type "class") nil nil))                          
+                        :type ("std::basic_istream" type
+                             (:template-specifier 
+                                ( ("Ch" type nil nil nil)
+                                  ("Tr" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("is" variable
+                               (:reference 1
+                                :type ("std::basic_istream" type
+                                     (:template-specifier 
+                                        ( ("Ch" type nil nil nil)
+                                          ("Tr" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [47273 47304])
+                            ("b" variable
+                               (:reference 1
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Alloc" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [47305 47337]))                          
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [47166 49596])
+                    ("&" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("x" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [49799 49841])
+                            ("y" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [49852 49894]))                          
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [49710 49960])
+                    ("|" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("x" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [50051 50093])
+                            ("y" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [50104 50146]))                          
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [49962 50212])
+                    ("^" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("x" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [50303 50345])
+                            ("y" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [50356 50398]))                          
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [50214 50464])
+                    ("-" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("dynamic_bitset" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil)
+                                  ("Allocator" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :arguments 
+                          ( ("x" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [50555 50597])
+                            ("y" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [50608 50650]))                          
+                        :operator-flag t)
+                        (reparse-symbol namespacesubparts) [50466 50716])
+                    ("swap" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("left" variable
+                               (:reference 1
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [50885 50924])
+                            ("right" variable
+                               (:reference 1
+                                :type ("dynamic_bitset" type
+                                     (:template-specifier 
+                                        ( ("Block" type nil nil nil)
+                                          ("Allocator" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [50930 50970]))                          
+                        :typemodifiers ("inline"))
+                        (reparse-symbol namespacesubparts) [50823 51015])
+                    ("calc_num_blocks" function
+                       (:parent "dynamic_bitset"
+                        :arguments 
+                          ( ("num_bits" variable (:type ("size_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51310 51329]))                          
+                        :type ("size_type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [51250 51435])
+                    ("m_highest_block" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("Block" type (:type "class") nil nil)
+                        :typemodifiers ("inline")
+                        :parent "dynamic_bitset")
+                        (reparse-symbol namespacesubparts) [51482 51703])
+                    ("m_highest_block" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type ("Block" type (:type "class") nil nil)
+                        :constant-flag t
+                        :typemodifiers ("inline")
+                        :parent "dynamic_bitset"
+                        :methodconst-flag t)
+                        (reparse-symbol namespacesubparts) [51756 51953])
+                    ("m_zero_unused_bits" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "void"
+                        :typemodifiers ("inline")
+                        :parent "dynamic_bitset")
+                        (reparse-symbol namespacesubparts) [52165 52562])
+                    ("m_check_invariants" function
+                       (:template 
+                          ( ("Block" type (:type "class") nil nil)
+                            ("Allocator" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :parent "dynamic_bitset"
+                        :methodconst-flag t)
+                        (reparse-symbol namespacesubparts) [52590 53067]))                  
+                :type "namespace")
+                nil [1374 53071]))          
+      :file "dynamic_bitset.hpp"
+      :pointmax 53144
+      :fsize 53143
+      :lastmodtime '(17915 58951 0 0)
+      :unmatched-syntax '((punctuation 51249 . 51250) (punctuation 51248 . 51249) (punctuation 51247 . 51248) (symbol 51238 . 51247) (punctuation 51236 . 51237) (symbol 51231 . 51236) (punctuation 51230 . 51231) (symbol 51216 . 51230) (TYPENAME 51207 . 51215) (INLINE 51200 . 51206) (punctuation 51198 . 51199) (symbol 51189 . 51198) (TYPENAME 51180 . 51188) (punctuation 51178 . 51179) (symbol 51173 . 51178) (TYPENAME 51164 . 51172) (punctuation 51163 . 51164) (TEMPLATE 51154 . 51162) (punctuation 37742 . 37743) (punctuation 37741 . 37742) (punctuation 37740 . 37741) (symbol 37731 . 37740) (punctuation 37729 . 37730) (symbol 37724 . 37729) (punctuation 37723 . 37724) (symbol 37709 . 37723) (TYPENAME 37700 . 37708) (punctuation 37698 . 37699) (symbol 37689 . 37698) (TYPENAME 37680 . 37688) (punctuation 37678 . 37679) (symbol 37673 . 37678) (TYPENAME 37664 . 37672) (punctuation 37663 . 37664) (TEMPLATE 37654 . 37662) (punctuation 37554 . 37555) (punctuation 37553 . 37554) (punctuation 37552 . 37553) (symbol 37543 . 37552) (punctuation 37541 . 37542) (symbol 37536 . 37541) (punctuation 37535 . 37536) (symbol 37521 . 37535) (TYPENAME 37512 . 37520) (punctuation 37510 . 37511) (symbol 37501 . 37510) (TYPENAME 37492 . 37500) (punctuation 37490 . 37491) (symbol 37485 . 37490) (TYPENAME 37476 . 37484) (punctuation 37475 . 37476) (TEMPLATE 37466 . 37474) (punctuation 37129 . 37130) (punctuation 37128 . 37129) (punctuation 37127 . 37128) (symbol 37118 . 37127) (punctuation 37116 . 37117) (symbol 37111 . 37116) (punctuation 37110 . 37111) (symbol 37096 . 37110) (TYPENAME 37087 . 37095) (punctuation 37085 . 37086) (symbol 37076 . 37085) (TYPENAME 37067 . 37075) (punctuation 37065 . 37066) (symbol 37060 . 37065) (TYPENAME 37051 . 37059) (punctuation 37050 . 37051) (TEMPLATE 37041 . 37049) (punctuation 34355 . 34356) (punctuation 34354 . 34355) (punctuation 34353 . 34354) (symbol 34344 . 34353) (punctuation 34342 . 34343) (symbol 34337 . 34342) (punctuation 34336 . 34337) (symbol 34322 . 34336) (TYPENAME 34313 . 34321) (INLINE 34306 . 34312) (punctuation 34304 . 34305) (symbol 34295 . 34304) (TYPENAME 34286 . 34294) (punctuation 34284 . 34285) (symbol 34279 . 34284) (TYPENAME 34270 . 34278) (punctuation 34269 . 34270) (TEMPLATE 34260 . 34268) (punctuation 34165 . 34166) (punctuation 34164 . 34165) (punctuation 34163 . 34164) (symbol 34154 . 34163) (punctuation 34152 . 34153) (symbol 34147 . 34152) (punctuation 34146 . 34147) (symbol 34132 . 34146) (TYPENAME 34123 . 34131) (INLINE 34116 . 34122) (punctuation 34114 . 34115) (symbol 34105 . 34114) (TYPENAME 34096 . 34104) (punctuation 34094 . 34095) (symbol 34089 . 34094) (TYPENAME 34080 . 34088) (punctuation 34079 . 34080) (TEMPLATE 34070 . 34078) (punctuation 33984 . 33985) (punctuation 33983 . 33984) (punctuation 33982 . 33983) (symbol 33973 . 33982) (punctuation 33971 . 33972) (symbol 33966 . 33971) (punctuation 33965 . 33966) (symbol 33951 . 33965) (TYPENAME 33942 . 33950) (INLINE 33935 . 33941) (punctuation 33933 . 33934) (symbol 33924 . 33933) (TYPENAME 33915 . 33923) (punctuation 33913 . 33914) (symbol 33908 . 33913) (TYPENAME 33899 . 33907) (punctuation 33898 . 33899) (TEMPLATE 33889 . 33897) (punctuation 30338 . 30339) (punctuation 30337 . 30338) (punctuation 30336 . 30337) (symbol 30327 . 30336) (punctuation 30325 . 30326) (symbol 30320 . 30325) (punctuation 30319 . 30320) (symbol 30305 . 30319) (TYPENAME 30296 . 30304) (punctuation 30294 . 30295) (symbol 30285 . 30294) (TYPENAME 30276 . 30284) (punctuation 30274 . 30275) (symbol 30269 . 30274) (TYPENAME 30260 . 30268) (punctuation 30259 . 30260) (TEMPLATE 30250 . 30258) (punctuation 19362 . 19363) (punctuation 19361 . 19362) (punctuation 19360 . 19361) (symbol 19351 . 19360) (punctuation 19349 . 19350) (symbol 19344 . 19349) (punctuation 19343 . 19344) (symbol 19329 . 19343) (TYPENAME 19320 . 19328) (INLINE 19313 . 19319) (punctuation 19311 . 19312) (symbol 19302 . 19311) (TYPENAME 19293 . 19301) (punctuation 19291 . 19292) (symbol 19286 . 19291) (TYPENAME 19277 . 19285) (punctuation 19276 . 19277) (TEMPLATE 19267 . 19275) (punctuation 12258 . 12259) (symbol 12230 . 12258) (punctuation 10437 . 10438) (punctuation 10436 . 10437) (punctuation 10406 . 10407) (punctuation 10405 . 10406) (EXPLICIT 5063 . 5071) (punctuation 5057 . 5058) (symbol 5052 . 5057) (TYPENAME 5043 . 5051) (punctuation 5041 . 5042) (symbol 5035 . 5041) (TYPENAME 5026 . 5034) (punctuation 5024 . 5025) (symbol 5019 . 5024) (TYPENAME 5010 . 5018) (punctuation 5009 . 5010) (TEMPLATE 5000 . 5008) (EXPLICIT 3874 . 3882) (EXPLICIT 3802 . 3810) (semantic-list 2780 . 2815) (CONST 2774 . 2779) (semantic-list 2771 . 2773) (BOOL 2767 . 2771) (OPERATOR 2758 . 2766) (FRIEND 2443 . 2449) (semantic-list 2780 . 2815) (CONST 2774 . 2779) (semantic-list 2771 . 2773) (BOOL 2767 . 2771) (OPERATOR 2758 . 2766) (FRIEND 2443 . 2449))
+      :lexical-table 
+        '(("BOOST_DYNAMIC_BITSET_DYNAMIC_BITSET_HPP")
+          )
+))
+  :file "!usr!include!boost!dynamic_bitset!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

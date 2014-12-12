@@ -1,0 +1,98 @@
+;; Object .emacs.d/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file ".emacs.d/"
+  :tables
+  (list
+    (semanticdb-table "init.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("add-to-list" code nil nil [1 38])
+            ("add-to-list" code nil nil [39 82])
+            ("add-to-list" code nil nil [83 125])
+            ("add-to-list" code nil nil [126 192])
+            ("add-to-list" code nil nil [193 253])
+            ("load-file" code nil nil [256 326])
+            ("load-file" code nil nil [327 406])
+            ("setq" code nil nil [407 474])
+            ("setq" code nil nil [525 579])
+            ("google-c-style" include nil nil [596 621])
+            ("add-hook" code nil nil [622 672])
+            ("add-hook" code nil nil [673 731])
+            ("yasnippet" include nil nil [758 778])
+            ("yas-global-mode" code nil nil [780 799])
+            ("cedet" include nil nil [809 825])
+            ("semantic" include nil nil [826 845])
+            ("eassist" include nil nil [863 894])
+            ("semantic-load-enable-minimum-features" code nil nil [895 934])
+            ("setq" code nil nil [935 999])
+            ("semantic-load-enable-code-helpers" code nil nil [1000 1035])
+            ("semantic-load-enable-gaudy-code-helpers" code nil nil [1036 1077])
+            ("semantic-load-enable-excessive-code-helpers" code nil nil [1078 1123])
+            ("cc-mode" include nil nil [1176 1194])
+            ("semantic" include nil nil [1195 1214])
+            ("global-semanticdb-minor-mode" code nil nil [1216 1248])
+            ("global-semantic-idle-scheduler-mode" code nil nil [1249 1288])
+            ("semantic-mode" code nil nil [1290 1307])
+            ("semantic-add-system-include" code nil nil [1308 1368])
+            ("ecb" include nil nil [1374 1388])
+            ("when" code nil nil [1433 1606])
+            ("global-set-key" code nil nil [1607 1659])
+            ("global-set-key" code nil nil [1670 1721])
+            ("global-set-key" code nil nil [1732 1777])
+            ("global-set-key" code nil nil [1788 1840])
+            ("global-set-key" code nil nil [1841 1895])
+            ("global-set-key" code nil nil [1896 1950])
+            ("global-set-key" code nil nil [1951 2005])
+            ("package" include nil nil [2375 2393])
+            ("add-to-list" code nil nil [2394 2479])
+            ("helm-config" include nil nil [2480 2502])
+            ("xcscope" include nil nil [2503 2521])
+            ("put" code nil nil [2522 2558])
+            ("put" code nil nil [2559 2593])
+            ("custom-set-variables" code nil nil [2596 2872])
+            ("custom-set-faces" code nil nil [2873 3112])
+            ("insert-current-time" function (:user-visible-flag t) nil [3136 3247])
+            ("cpplint" function (:user-visible-flag t) nil [3295 3465])
+            ("format-function" function nil nil [3466 4099])
+            ("semanticdb-enable-cscope-databases" code nil nil [4181 4217])
+            ("add-to-list" code nil nil [4261 4311])
+            ("company-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [4312 4352]))          
+      :file "init.el"
+      :pointmax 4353
+      :fsize 4544
+      :lastmodtime '(21641 46628 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "tt.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdid" include (:system-flag t) nil [1 17])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [27 36])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [37 50]))                  
+                :type "int")
+                nil [18 76]))          
+      :file "tt.cpp"
+      :pointmax 77
+      :fsize 76
+      :lastmodtime '(21641 44381 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "srecode-map.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("srecode-map" code nil nil [50 1279]))          
+      :file "srecode-map.el"
+      :pointmax 1280
+      :fsize 1279
+      :lastmodtime '(21641 41229 0 0)
+      :unmatched-syntax nil))
+  :file "!root!.emacs.d!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
