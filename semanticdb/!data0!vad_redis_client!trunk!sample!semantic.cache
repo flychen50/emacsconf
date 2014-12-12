@@ -44,7 +44,7 @@
       :file "redis_test.cpp"
       :pointmax 1875
       :fsize 1878
-      :lastmodtime '(21641 43118 0 0)
+      :lastmodtime '(21642 22349 0 0)
       :unmatched-syntax nil))
   :file "!data0!vad_redis_client!trunk!sample!semantic.cache"
   :semantic-tag-version "2.0"

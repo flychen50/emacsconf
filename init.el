@@ -19,6 +19,8 @@
 ;;代码浏览框架
 (require 'cedet)
 (require 'semantic)
+(require 'ede)
+(global-ede-mode)
 ;;cpp和header快速切换
 (require 'eassist nil 'noerror)
 (semantic-load-enable-minimum-features)
@@ -107,3 +109,5 @@
 ;;auto company
 (add-to-list 'load-path "~/.mylisp/company-mode/")
 (autoload 'company-mode "company" nil t)
+(setq bc-bookmark-file "~/.emacs.d/bookmark")
+(setq bc-bookmark-limit 300)
