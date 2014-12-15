@@ -1,3 +1,12 @@
+;;(require 'package)
+;;(add-to-list 'package-archives
+  ;;'("melpa" . "http://melpa.milkbox.net/packages/") t)
+(require 'package)
+(setq package-archives
+      '(("gnu" . "http://elpa.gnu.org/packages/")
+	("marmalade" . "http://marmalade-repo.org/packages/")
+	("melpa" . "http://melpa.milkbox.net/packages/")))
+(package-initialize)
 (add-to-list 'load-path "~/.mylisp/")
 (add-to-list 'load-path "~/.mylisp/cedet/")
 (add-to-list 'load-path "~/.mylisp/helm/")
@@ -5,8 +14,8 @@
 (add-to-list 'load-path "~/.emacs.d/elpa/ecb-20140215.114/")  
 (load-file (concat user-emacs-directory "/cedet/cedet-devel-load.el"))
 (load-file (concat user-emacs-directory "cedet/contrib/cedet-contrib-load.el"))
-(setq semanticdb-project-roots
-      (list (expand-file-name "/")));semantic检索范围
+;; (setq semanticdb-project-roots
+;;       (list (expand-file-name "/")));semantic检索范围
 ;;设置semantic cache临时文件的路径，避免到处都是临时文件
 (setq semanticdb-default-save-directory "~/.emacs.d/")
 ;;使用google 代码规范
@@ -63,9 +72,6 @@
 ;;(global-set-key [end] 'end-of-buffer)
 ;;(setq x-select-enable-clipboard t);支持emacs和外部程序的粘贴
 ;;;;ejb 快捷键
-(require 'package)
-(add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (require 'helm-config)
 (require 'xcscope)
 (put 'set-goal-column 'disabled nil)
@@ -111,3 +117,7 @@
 (autoload 'company-mode "company" nil t)
 (setq bc-bookmark-file "~/.emacs.d/bookmark")
 (setq bc-bookmark-limit 300)
+;; Configuration of Python IDE
+;; https://github.com/jorgenschaefer/elpy
+(require 'elpy nil t)
+(elpy-enable)
