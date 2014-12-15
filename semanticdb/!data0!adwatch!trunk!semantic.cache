@@ -1,0 +1,1069 @@
+;; Object trunk/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "trunk/"
+  :tables
+  (list
+    (semanticdb-table "adalert.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [16 26])
+            ("logging" include nil nil [27 41])
+            ("time" include nil nil [42 53])
+            ("datetime" include nil nil [54 69])
+            ("re" include nil nil [70 79])
+            ("mimetypes" include nil nil [80 96])
+            ("urllib" include nil nil [97 110])
+            ("urllib2" include nil nil [111 125])
+            ("send_alert" include nil nil [126 143])
+            ("adreport" include nil nil [144 159])
+            ("logging" include nil nil [160 174])
+            ("json" include nil nil [175 186])
+            ("logging" code nil nil [187 227])
+            ("sent_txt_mail" function (:arguments 
+              ( ("object_text" variable nil (reparse-symbol function_parameters) [246 257])
+                ("title" variable nil (reparse-symbol function_parameters) [258 263])
+                ("html_text" variable nil (reparse-symbol function_parameters) [264 273]))              ) nil [228 2069])
+            ("get_alert" function (:arguments 
+              ( ("db_table" variable nil (reparse-symbol function_parameters) [2085 2093])
+                ("table_name" variable nil (reparse-symbol function_parameters) [2094 2104])
+                ("is_ec" variable nil (reparse-symbol function_parameters) [2105 2110])
+                ("is_fc" variable nil (reparse-symbol function_parameters) [2113 2118])
+                ("is_imp" variable nil (reparse-symbol function_parameters) [2121 2127])
+                ("is_iv" variable nil (reparse-symbol function_parameters) [2130 2135])
+                ("f_aecafc" variable nil (reparse-symbol function_parameters) [2138 2146])
+                ("f_ec" variable nil (reparse-symbol function_parameters) [2151 2155])
+                ("f_fc" variable nil (reparse-symbol function_parameters) [2159 2163])
+                ("f_ecfc" variable nil (reparse-symbol function_parameters) [2167 2173])
+                ("f_imp" variable nil (reparse-symbol function_parameters) [2177 2182])
+                ("f_iv" variable nil (reparse-symbol function_parameters) [2186 2190])
+                ("alertting" variable nil (reparse-symbol function_parameters) [2194 2203])
+                ("sptime" variable nil (reparse-symbol function_parameters) [2206 2212]))              ) nil [2071 12068])
+            ("send_mail_bidfeed" function (:arguments 
+              ( ("day_count" variable nil (reparse-symbol function_parameters) [12092 12101]))              ) nil [12069 12738])
+            ("if" code nil nil [12739 12791]))          
+      :file "adalert.py"
+      :pointmax 12791
+      :fsize 13142
+      :lastmodtime '(21646 18882 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "send_alert.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [41 51])
+            ("logging" include nil nil [52 66])
+            ("time" include nil nil [67 78])
+            ("re" include nil nil [79 88])
+            ("mimetypes" include nil nil [89 105])
+            ("urllib" include nil nil [106 119])
+            ("urllib2" include nil nil [120 134])
+            ("Client" type
+               (:superclasses ("object")
+                :members 
+                  ( ("log" variable nil (reparse-symbol indented_block_body) [163 200])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [271 287])
+                            ("self" variable nil (reparse-symbol indented_block_body) [296 312])
+                            ("self" variable nil (reparse-symbol indented_block_body) [321 338])
+                            ("self" variable nil (reparse-symbol indented_block_body) [347 383])
+                            ("self" variable nil (reparse-symbol indented_block_body) [392 407])
+                            ("self" variable nil (reparse-symbol indented_block_body) [416 434])
+                            ("self" variable nil (reparse-symbol indented_block_body) [443 464])
+                            ("self" variable nil (reparse-symbol indented_block_body) [473 498])
+                            ("self" code nil (reparse-symbol indented_block_body) [508 577]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [219 223])
+                            ("host" variable nil (reparse-symbol function_parameters) [225 229])
+                            ("port" variable nil (reparse-symbol function_parameters) [231 235])
+                            ("need_authorize" variable nil (reparse-symbol function_parameters) [240 254]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [206 578])
+                    ("bind_auth" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [598 602])
+                            ("kid" variable nil (reparse-symbol function_parameters) [604 607])
+                            ("passwd" variable nil (reparse-symbol function_parameters) [609 615])
+                            ("api_expired" variable nil (reparse-symbol function_parameters) [617 628]))                          )
+                        (reparse-symbol indented_block_body) [584 762])
+                    ("set_timeout" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [783 787])
+                            ("timeout" variable nil (reparse-symbol function_parameters) [789 796]))                          )
+                        (reparse-symbol indented_block_body) [767 830])
+                    ("hash" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [844 848])
+                            ("request" variable nil (reparse-symbol function_parameters) [850 857])
+                            ("method" variable nil (reparse-symbol function_parameters) [859 865]))                          )
+                        (reparse-symbol indented_block_body) [835 2456])
+                    ("get" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2469 2473])
+                            ("path" variable nil (reparse-symbol function_parameters) [2475 2479])
+                            ("queries" variable nil (reparse-symbol function_parameters) [2481 2488])
+                            ("parse" variable nil (reparse-symbol function_parameters) [2493 2498]))                          )
+                        (reparse-symbol indented_block_body) [2461 3239])
+                    ("post" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3253 3257])
+                            ("path" variable nil (reparse-symbol function_parameters) [3259 3263])
+                            ("data" variable nil (reparse-symbol function_parameters) [3265 3269])
+                            ("files" variable nil (reparse-symbol function_parameters) [3274 3279])
+                            ("parse" variable nil (reparse-symbol function_parameters) [3284 3289]))                          )
+                        (reparse-symbol indented_block_body) [3244 4114])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4129 4133])
+                            ("response" variable nil (reparse-symbol function_parameters) [4135 4143]))                          )
+                        (reparse-symbol indented_block_body) [4119 4637])
+                    ("get_content_type" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4663 4667])
+                            ("filename" variable nil (reparse-symbol function_parameters) [4669 4677]))                          )
+                        (reparse-symbol indented_block_body) [4642 4759])
+                    ("encode_multipart_formdata" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4794 4798])
+                            ("fields" variable nil (reparse-symbol function_parameters) [4800 4806])
+                            ("files" variable nil (reparse-symbol function_parameters) [4808 4813]))                          
+                        :documentation "
+        fields is a sequence of (name, value) elements for regular form fields.
+        files is a sequence of (name, filename, value) elements for data to be uploaded as files
+        Return (content_type, body) ready for httplib.HTTP instance
+        ")
+                        (reparse-symbol indented_block_body) [4764 6079])
+                    ("encode_queries" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6103 6107])
+                            ("queries" variable nil (reparse-symbol function_parameters) [6109 6116])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [6121 6129]))                          )
+                        (reparse-symbol indented_block_body) [6084 6433])
+                    ("get_url" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6450 6454])
+                            ("path" variable nil (reparse-symbol function_parameters) [6456 6460]))                          )
+                        (reparse-symbol indented_block_body) [6438 6662])
+                    ("local_ip" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6680 6684]))                          )
+                        (reparse-symbol indented_block_body) [6667 7997]))                  
+                :type "class")
+                nil [137 7997])
+            ("usage" function (:arguments 
+              ( ("return_code" variable nil (reparse-symbol function_parameters) [8008 8019]))              ) nil [7998 9347])
+            ("_debug" variable nil nil [9348 9362])
+            ("debug" function (:arguments 
+              ( ("message" variable nil (reparse-symbol function_parameters) [9373 9380])
+                ("args" variable nil (reparse-symbol function_parameters) [9382 9387]))              ) nil [9363 9434])
+            ("if" code nil nil [9436 12532]))          
+      :file "send_alert.py"
+      :pointmax 12533
+      :fsize 12532
+      :lastmodtime '(21604 7187 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "adreport.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [16 25])
+            ("sys" include nil nil [26 36])
+            ("logging" include nil nil [37 51])
+            ("time" include nil nil [52 63])
+            ("datetime" include nil nil [64 79])
+            ("re" include nil nil [80 89])
+            ("mimetypes" include nil nil [90 106])
+            ("urllib" include nil nil [107 120])
+            ("urllib2" include nil nil [121 135])
+            ("mysql.connector" include nil nil [136 158])
+            ("send_alert" include nil nil [159 176])
+            ("datetime" include nil nil [177 216])
+            ("matchart" include nil nil [217 232])
+            ("sys" include nil nil [233 243])
+            ("reload" code nil nil [244 255])
+            ("sys" code nil nil [256 287])
+            ("last_time" variable nil nil [288 300])
+            ("sent_txt_mail" function (:arguments 
+              ( ("title" variable nil (reparse-symbol function_parameters) [319 324])
+                ("html_text" variable nil (reparse-symbol function_parameters) [325 334]))              ) nil [301 1931])
+            ("get_url" function (:arguments 
+              ( ("db_table" variable nil (reparse-symbol function_parameters) [1945 1953])
+                ("table_name" variable nil (reparse-symbol function_parameters) [1954 1964])
+                ("html_template" variable nil (reparse-symbol function_parameters) [1965 1978])
+                ("fc_std" variable nil (reparse-symbol function_parameters) [1979 1985])
+                ("pv_std" variable nil (reparse-symbol function_parameters) [1986 1992])
+                ("iv_std" variable nil (reparse-symbol function_parameters) [1993 1999])
+                ("is_ec" variable nil (reparse-symbol function_parameters) [2000 2005])
+                ("is_fc" variable nil (reparse-symbol function_parameters) [2006 2011])
+                ("is_imp" variable nil (reparse-symbol function_parameters) [2012 2018])
+                ("is_iv" variable nil (reparse-symbol function_parameters) [2019 2024]))              ) nil [1933 20517])
+            ("send_mail_bidfeed" function (:arguments 
+              ( ("db_table" variable nil (reparse-symbol function_parameters) [20541 20549])
+                ("table_name" variable nil (reparse-symbol function_parameters) [20550 20560])
+                ("title" variable nil (reparse-symbol function_parameters) [20561 20566])
+                ("html_template" variable nil (reparse-symbol function_parameters) [20567 20580])
+                ("fc_std" variable nil (reparse-symbol function_parameters) [20581 20587])
+                ("pv_std" variable nil (reparse-symbol function_parameters) [20588 20594])
+                ("iv_std" variable nil (reparse-symbol function_parameters) [20596 20602])
+                ("ec" variable nil (reparse-symbol function_parameters) [20603 20605])
+                ("fc" variable nil (reparse-symbol function_parameters) [20608 20610])
+                ("imp" variable nil (reparse-symbol function_parameters) [20613 20616])
+                ("iv" variable nil (reparse-symbol function_parameters) [20619 20621]))              ) nil [20518 20974])
+            ("send_mail_report" function (:arguments 
+              ( ("db_name" variable nil (reparse-symbol function_parameters) [20995 21002]))              ) nil [20974 21646])
+            ("if" code nil nil [21646 22408]))          
+      :file "adreport.py"
+      :pointmax 22409
+      :fsize 22624
+      :lastmodtime '(21638 48359 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "matchart.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("matplotlib.pyplot" include nil nil [1 32])
+            ("matplotlib.finance" include nil nil [33 92])
+            ("matplotlib.dates" include nil nil [93 163])
+            ("datetime" include nil nil [164 203])
+            ("createpng" function (:arguments 
+              ( ("data" variable nil (reparse-symbol function_parameters) [218 222])
+                ("pic_name" variable nil (reparse-symbol function_parameters) [223 231])
+                ("title" variable nil (reparse-symbol function_parameters) [232 237]))              ) nil [204 1466])
+            ("mysql.connector" include nil nil [1467 1489])
+            ("cnx" variable nil nil [1490 1660])
+            ("cursor" variable nil nil [1661 1682])
+            ("query" variable nil nil [1683 1823])
+            ("cursor" code nil nil [1824 1845])
+            ("data" variable nil nil [1846 1853])
+            ("dates" variable nil nil [1854 1862])
+            ("levels" variable nil nil [1863 1872])
+            ("for" code nil nil [1873 2053])
+            ("lex" variable nil nil [2053 2059])
+            ("lex" code nil nil [2060 2077])
+            ("lex" code nil nil [2078 2096])
+            ("lex" code nil nil [2097 2114])
+            ("lex" code nil nil [2115 2133])
+            ("data" code nil nil [2134 2150])
+            ("query" variable nil nil [2151 2292])
+            ("cursor" code nil nil [2293 2314])
+            ("dates2" variable nil nil [2315 2324])
+            ("levels2" variable nil nil [2325 2335])
+            ("d" variable nil nil [2336 2352])
+            ("for" code nil nil [2353 2513])
+            ("lex2" variable nil nil [2514 2521])
+            ("lex2" code nil nil [2522 2541])
+            ("lex2" code nil nil [2542 2562])
+            ("lex2" code nil nil [2563 2586])
+            ("lex2" code nil nil [2587 2606])
+            ("data" code nil nil [2607 2624]))          
+      :file "matchart.py"
+      :pointmax 2668
+      :fsize 2667
+      :lastmodtime '(21604 7186 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "adconsume.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [37 47])
+            ("os" include nil nil [48 57])
+            ("logging" include nil nil [58 72])
+            ("time" include nil nil [73 84])
+            ("datetime" include nil nil [85 100])
+            ("re" include nil nil [101 110])
+            ("mimetypes" include nil nil [111 127])
+            ("urllib" include nil nil [128 141])
+            ("urllib2" include nil nil [142 156])
+            ("sys" include nil nil [157 167])
+            ("reload" code nil nil [170 181])
+            ("sys" code nil nil [184 214])
+            ("mysql.connector" include nil nil [215 237])
+            ("cnx" variable nil nil [238 435])
+            ("print" code nil nil [436 526])
+            ("cursor" variable nil nil [527 548])
+            ("query" variable nil nil [549 601])
+            ("cursor" code nil nil [602 623])
+            ("for" code nil nil [624 655])
+            ("cursor" code nil nil [655 669])
+            ("cnx" code nil nil [670 681]))          
+      :file "adconsume.py"
+      :pointmax 682
+      :fsize 681
+      :lastmodtime '(21646 32740 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ds_report.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [16 26])
+            ("os" include nil nil [27 36])
+            ("logging" include nil nil [37 51])
+            ("time" include nil nil [52 63])
+            ("datetime" include nil nil [64 79])
+            ("re" include nil nil [80 89])
+            ("mimetypes" include nil nil [90 106])
+            ("urllib" include nil nil [107 120])
+            ("urllib2" include nil nil [121 135])
+            ("send_alert" include nil nil [136 153])
+            ("sys" include nil nil [154 164])
+            ("reload" code nil nil [167 178])
+            ("sys" code nil nil [181 211])
+            ("up_url" variable nil nil [514 543])
+            ("down_url" variable nil nil [544 573])
+            ("equal_url" variable nil nil [574 606])
+            ("all_count" variable nil nil [607 623])
+            ("all_count" variable nil nil [624 646])
+            ("all_count" variable nil nil [647 669])
+            ("all_count" variable nil nil [670 692])
+            ("all_count" variable nil nil [693 715])
+            ("all_count" variable nil nil [716 738])
+            ("all_count" variable nil nil [739 761])
+            ("all_count" variable nil nil [762 784])
+            ("all_count" variable nil nil [785 807])
+            ("all_count" variable nil nil [808 830])
+            ("mysql.connector" include nil nil [832 854])
+            ("yes_per" function (:arguments 
+              ( ("cur_consume_dt" variable nil (reparse-symbol function_parameters) [867 881])
+                ("yes_consume_dt" variable nil (reparse-symbol function_parameters) [882 896])
+                ("info" variable nil (reparse-symbol function_parameters) [897 901]))              ) nil [855 1421])
+            ("sent_txt_mail" function (:arguments 
+              ( ("title" variable nil (reparse-symbol function_parameters) [1440 1445])
+                ("html_text" variable nil (reparse-symbol function_parameters) [1446 1455]))              ) nil [1422 2993])
+            ("get_url" function (:arguments 
+              ( ("db_table" variable nil (reparse-symbol function_parameters) [3007 3015])
+                ("table_zhname" variable nil (reparse-symbol function_parameters) [3016 3028])
+                ("table_name" variable nil (reparse-symbol function_parameters) [3029 3039])
+                ("day_table" variable nil (reparse-symbol function_parameters) [3040 3049])
+                ("is_ec" variable nil (reparse-symbol function_parameters) [3050 3055])
+                ("is_fc" variable nil (reparse-symbol function_parameters) [3058 3063])
+                ("is_imp" variable nil (reparse-symbol function_parameters) [3066 3072])
+                ("is_iv" variable nil (reparse-symbol function_parameters) [3075 3080])
+                ("content_file" variable nil (reparse-symbol function_parameters) [3083 3095]))              ) nil [2995 6433])
+            ("create_template" function (:arguments 
+              ( ("content_file" variable nil (reparse-symbol function_parameters) [6455 6467])
+                ("is_ec" variable nil (reparse-symbol function_parameters) [6468 6473])
+                ("cur_consume_dt" variable nil (reparse-symbol function_parameters) [6474 6488])
+                ("yes_consume_dt" variable nil (reparse-symbol function_parameters) [6489 6503])
+                ("up10_consume_dt" variable nil (reparse-symbol function_parameters) [6504 6519])
+                ("is_fc" variable nil (reparse-symbol function_parameters) [6520 6525])
+                ("cur_fin_dt" variable nil (reparse-symbol function_parameters) [6526 6536])
+                ("yes_fin_dt" variable nil (reparse-symbol function_parameters) [6537 6547])
+                ("up10_fin_dt" variable nil (reparse-symbol function_parameters) [6548 6559])
+                ("is_imp" variable nil (reparse-symbol function_parameters) [6560 6566])
+                ("cur_imp_dt" variable nil (reparse-symbol function_parameters) [6567 6577])
+                ("yes_imp_dt" variable nil (reparse-symbol function_parameters) [6578 6588])
+                ("up10_imp_dt" variable nil (reparse-symbol function_parameters) [6589 6600])
+                ("is_iv" variable nil (reparse-symbol function_parameters) [6601 6606])
+                ("cur_iv_dt" variable nil (reparse-symbol function_parameters) [6607 6616])
+                ("yes_iv_dt" variable nil (reparse-symbol function_parameters) [6617 6626])
+                ("up10_iv_dt" variable nil (reparse-symbol function_parameters) [6627 6637])
+                ("table_name" variable nil (reparse-symbol function_parameters) [6638 6648]))              ) nil [6435 9181])
+            ("send_mail_bidfeed" function (:arguments 
+              ( ("day_count" variable nil (reparse-symbol function_parameters) [9205 9214]))              ) nil [9182 11771])
+            ("if" code nil nil [11771 11823]))          
+      :file "ds_report.py"
+      :pointmax 11823
+      :fsize 11890
+      :lastmodtime '(21646 18869 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "aderror.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [16 26])
+            ("logging" include nil nil [27 41])
+            ("time" include nil nil [42 53])
+            ("datetime" include nil nil [54 69])
+            ("re" include nil nil [70 79])
+            ("mimetypes" include nil nil [80 96])
+            ("urllib" include nil nil [97 110])
+            ("urllib2" include nil nil [111 125])
+            ("send_alert" include nil nil [126 143])
+            ("adreport" include nil nil [144 159])
+            ("logging" include nil nil [160 174])
+            ("json" include nil nil [175 186])
+            ("logging" code nil nil [187 227])
+            ("sent_txt_mail" function (:arguments 
+              ( ("object_text" variable nil (reparse-symbol function_parameters) [246 257])
+                ("title" variable nil (reparse-symbol function_parameters) [258 263])
+                ("html_text" variable nil (reparse-symbol function_parameters) [264 273]))              ) nil [228 2058])
+            ("send_mail_bidfeed" function (:arguments 
+              ( ("day_count" variable nil (reparse-symbol function_parameters) [2081 2090]))              ) nil [2058 2942])
+            ("if" code nil nil [2942 2994]))          
+      :file "aderror.py"
+      :pointmax 2994
+      :fsize 3013
+      :lastmodtime '(21609 20596 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "sae_adwatch.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [16 25])
+            ("sys" include nil nil [26 36])
+            ("logging" include nil nil [37 51])
+            ("time" include nil nil [52 63])
+            ("datetime" include nil nil [64 79])
+            ("re" include nil nil [80 89])
+            ("mimetypes" include nil nil [90 106])
+            ("urllib" include nil nil [107 120])
+            ("urllib2" include nil nil [121 135])
+            ("send_alert" include nil nil [136 153])
+            ("sent_txt_mail" function (:arguments 
+              ( ("title" variable nil (reparse-symbol function_parameters) [172 177])
+                ("html_text" variable nil (reparse-symbol function_parameters) [178 187]))              ) nil [154 1787])
+            ("get_url" function (:arguments 
+              ( ("db_table" variable nil (reparse-symbol function_parameters) [1801 1809])
+                ("table_name" variable nil (reparse-symbol function_parameters) [1810 1820]))              ) nil [1789 10885])
+            ("send_mail_bidfeed" function (:arguments 
+              ( ("day_count" variable nil (reparse-symbol function_parameters) [10909 10918]))              ) nil [10886 12089])
+            ("if" code nil nil [12094 12146]))          
+      :file "sae_adwatch.py"
+      :pointmax 12146
+      :fsize 12413
+      :lastmodtime '(21604 7188 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "daywatch.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [16 26])
+            ("os" include nil nil [27 36])
+            ("logging" include nil nil [37 51])
+            ("time" include nil nil [52 63])
+            ("datetime" include nil nil [64 79])
+            ("re" include nil nil [80 89])
+            ("mimetypes" include nil nil [90 106])
+            ("urllib" include nil nil [107 120])
+            ("urllib2" include nil nil [121 135])
+            ("send_alert" include nil nil [136 153])
+            ("matchart" include nil nil [154 169])
+            ("sys" include nil nil [170 180])
+            ("reload" code nil nil [183 194])
+            ("sys" code nil nil [197 227])
+            ("up_url" variable nil nil [228 325])
+            ("down_url" variable nil nil [326 425])
+            ("equal_url" variable nil nil [426 526])
+            ("mysql.connector" include nil nil [527 549])
+            ("yes_per" function (:arguments 
+              ( ("cur_consume_dt" variable nil (reparse-symbol function_parameters) [562 576])
+                ("yes_consume_dt" variable nil (reparse-symbol function_parameters) [577 591])
+                ("info" variable nil (reparse-symbol function_parameters) [592 596]))              ) nil [550 1106])
+            ("google_chart" function (:arguments 
+              ( ("min_data" variable nil (reparse-symbol function_parameters) [1124 1132])
+                ("max_data" variable nil (reparse-symbol function_parameters) [1133 1141])
+                ("bidfeed_x" variable nil (reparse-symbol function_parameters) [1142 1151])
+                ("bidfeed_y" variable nil (reparse-symbol function_parameters) [1152 1161])
+                ("x_label" variable nil (reparse-symbol function_parameters) [1162 1169])
+                ("db_table" variable nil (reparse-symbol function_parameters) [1170 1178]))              ) nil [1107 1962])
+            ("google2chart" function (:arguments 
+              ( ("min_data" variable nil (reparse-symbol function_parameters) [1979 1987])
+                ("max_data" variable nil (reparse-symbol function_parameters) [1988 1996])
+                ("bidfeed_x" variable nil (reparse-symbol function_parameters) [1997 2006])
+                ("bidfeed_y" variable nil (reparse-symbol function_parameters) [2007 2016])
+                ("x_label" variable nil (reparse-symbol function_parameters) [2017 2024])
+                ("bidfeed_y2" variable nil (reparse-symbol function_parameters) [2025 2035])
+                ("db_table" variable nil (reparse-symbol function_parameters) [2036 2044]))              ) nil [1962 2855])
+            ("sent_txt_mail" function (:arguments 
+              ( ("title" variable nil (reparse-symbol function_parameters) [2873 2878])
+                ("html_text" variable nil (reparse-symbol function_parameters) [2879 2888]))              ) nil [2855 4482])
+            ("get_url" function (:arguments 
+              ( ("db_table" variable nil (reparse-symbol function_parameters) [4496 4504])
+                ("table_name" variable nil (reparse-symbol function_parameters) [4505 4515])
+                ("is_ec" variable nil (reparse-symbol function_parameters) [4516 4521])
+                ("is_fc" variable nil (reparse-symbol function_parameters) [4524 4529])
+                ("is_imp" variable nil (reparse-symbol function_parameters) [4532 4538])
+                ("is_iv" variable nil (reparse-symbol function_parameters) [4541 4546]))              ) nil [4484 13451])
+            ("send_mail_bidfeed" function (:arguments 
+              ( ("day_count" variable nil (reparse-symbol function_parameters) [13475 13484]))              ) nil [13452 15211])
+            ("if" code nil nil [15216 15268]))          
+      :file "daywatch.py"
+      :pointmax 15268
+      :fsize 15573
+      :lastmodtime '(21604 7186 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "adwatch_google.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [16 26])
+            ("logging" include nil nil [27 41])
+            ("time" include nil nil [42 53])
+            ("datetime" include nil nil [54 69])
+            ("re" include nil nil [70 79])
+            ("mimetypes" include nil nil [80 96])
+            ("urllib" include nil nil [97 110])
+            ("urllib2" include nil nil [111 125])
+            ("send_alert" include nil nil [126 143])
+            ("sent_txt_mail" function (:arguments 
+              ( ("title" variable nil (reparse-symbol function_parameters) [162 167])
+                ("html_text" variable nil (reparse-symbol function_parameters) [168 177]))              ) nil [144 1779])
+            ("get_url" function (:arguments 
+              ( ("db_table" variable nil (reparse-symbol function_parameters) [1793 1801])
+                ("table_name" variable nil (reparse-symbol function_parameters) [1802 1812]))              ) nil [1781 10249])
+            ("send_mail_bidfeed" function (:arguments 
+              ( ("day_count" variable nil (reparse-symbol function_parameters) [10273 10282]))              ) nil [10250 11448])
+            ("if" code nil nil [11453 11505]))          
+      :file "adwatch_google.py"
+      :pointmax 11505
+      :fsize 11680
+      :lastmodtime '(21604 7188 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "mysql_sql.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("pdb" include nil nil [1 11])
+            ("sys" include nil nil [12 22])
+            ("mysql" include nil nil [42 54])
+            ("send_data_to_mysql" type
+               (:members 
+                  ( ("connect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [99 103]))                          )
+                        (reparse-symbol indented_block_body) [86 273])
+                    ("initial_mysql" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [305 309])
+                            ("f_host" variable nil (reparse-symbol function_parameters) [311 317])
+                            ("f_port" variable nil (reparse-symbol function_parameters) [320 326])
+                            ("f_user" variable nil (reparse-symbol function_parameters) [329 335])
+                            ("f_passwd" variable nil (reparse-symbol function_parameters) [338 346])
+                            ("f_db" variable nil (reparse-symbol function_parameters) [351 355]))                          )
+                        (reparse-symbol indented_block_body) [286 517])
+                    ("add_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [536 540])
+                            ("server_name" variable nil (reparse-symbol function_parameters) [542 553])
+                            ("data" variable nil (reparse-symbol function_parameters) [556 560])
+                            ("url_str" variable nil (reparse-symbol function_parameters) [563 570])
+                            ("all_count" variable nil (reparse-symbol function_parameters) [573 582])
+                            ("more1s" variable nil (reparse-symbol function_parameters) [585 591])
+                            ("more2s" variable nil (reparse-symbol function_parameters) [594 600])
+                            ("more5s" variable nil (reparse-symbol function_parameters) [603 609])
+                            ("google_count" variable nil (reparse-symbol function_parameters) [611 623])
+                            ("google_more1s" variable nil (reparse-symbol function_parameters) [626 639])
+                            ("google_more2s" variable nil (reparse-symbol function_parameters) [642 655])
+                            ("google_more5s" variable nil (reparse-symbol function_parameters) [658 671]))                          )
+                        (reparse-symbol indented_block_body) [522 1708]))                  
+                :type "class")
+                nil [56 1708])
+            ("if" code nil nil [1709 2009]))          
+      :file "mysql_sql.py"
+      :pointmax 2019
+      :fsize 2065
+      :lastmodtime '(21604 7188 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "datademo.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("matplotlib.pyplot" include nil nil [1 32])
+            ("matplotlib.finance" include nil nil [33 92])
+            ("matplotlib.dates" include nil nil [93 163])
+            ("datetime" include nil nil [164 203])
+            ("createpng" function (:arguments 
+              ( ("dates" variable nil (reparse-symbol function_parameters) [218 223])
+                ("levels" variable nil (reparse-symbol function_parameters) [224 230]))              ) nil [204 801])
+            ("mysql.connector" include nil nil [802 824])
+            ("cnx" variable nil nil [825 995])
+            ("cursor" variable nil nil [996 1017])
+            ("query" variable nil nil [1018 1149])
+            ("cursor" code nil nil [1150 1171])
+            ("dates" variable nil nil [1172 1180])
+            ("levels" variable nil nil [1181 1190])
+            ("for" code nil nil [1191 1371])
+            ("createpng" code nil nil [1371 1394]))          
+      :file "datademo.py"
+      :pointmax 1395
+      :fsize 1394
+      :lastmodtime '(21604 7187 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "adwatch1.2.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [16 25])
+            ("sys" include nil nil [26 36])
+            ("logging" include nil nil [37 51])
+            ("time" include nil nil [52 63])
+            ("datetime" include nil nil [64 79])
+            ("re" include nil nil [80 89])
+            ("mimetypes" include nil nil [90 106])
+            ("urllib" include nil nil [107 120])
+            ("urllib2" include nil nil [121 135])
+            ("mysql.connector" include nil nil [136 158])
+            ("send_alert" include nil nil [159 176])
+            ("datetime" include nil nil [177 216])
+            ("matchart" include nil nil [217 232])
+            ("sys" include nil nil [233 243])
+            ("reload" code nil nil [244 255])
+            ("sys" code nil nil [256 287])
+            ("last_time" variable nil nil [288 300])
+            ("sent_txt_mail" function (:arguments 
+              ( ("title" variable nil (reparse-symbol function_parameters) [319 324])
+                ("html_text" variable nil (reparse-symbol function_parameters) [325 334]))              ) nil [301 1916])
+            ("get_url" function (:arguments 
+              ( ("db_table" variable nil (reparse-symbol function_parameters) [1930 1938])
+                ("table_name" variable nil (reparse-symbol function_parameters) [1939 1949])
+                ("html_template" variable nil (reparse-symbol function_parameters) [1950 1963])
+                ("fc_std" variable nil (reparse-symbol function_parameters) [1964 1970])
+                ("pv_std" variable nil (reparse-symbol function_parameters) [1971 1977])
+                ("iv_std" variable nil (reparse-symbol function_parameters) [1978 1984])
+                ("is_ec" variable nil (reparse-symbol function_parameters) [1985 1990])
+                ("is_fc" variable nil (reparse-symbol function_parameters) [1991 1996])
+                ("is_imp" variable nil (reparse-symbol function_parameters) [1997 2003])
+                ("is_iv" variable nil (reparse-symbol function_parameters) [2004 2009]))              ) nil [1918 20502])
+            ("send_mail_bidfeed" function (:arguments 
+              ( ("db_table" variable nil (reparse-symbol function_parameters) [20526 20534])
+                ("table_name" variable nil (reparse-symbol function_parameters) [20535 20545])
+                ("title" variable nil (reparse-symbol function_parameters) [20546 20551])
+                ("html_template" variable nil (reparse-symbol function_parameters) [20552 20565])
+                ("fc_std" variable nil (reparse-symbol function_parameters) [20566 20572])
+                ("pv_std" variable nil (reparse-symbol function_parameters) [20573 20579])
+                ("iv_std" variable nil (reparse-symbol function_parameters) [20581 20587])
+                ("ec" variable nil (reparse-symbol function_parameters) [20588 20590])
+                ("fc" variable nil (reparse-symbol function_parameters) [20593 20595])
+                ("imp" variable nil (reparse-symbol function_parameters) [20598 20601])
+                ("iv" variable nil (reparse-symbol function_parameters) [20604 20606]))              ) nil [20503 20959])
+            ("if" code nil nil [20959 21572]))          
+      :file "adwatch1.2.py"
+      :pointmax 21687
+      :fsize 21902
+      :lastmodtime '(21646 18727 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "pretty.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("prettyplotlib" include nil nil [1 28])
+            ("numpy" include nil nil [29 47])
+            ("matplotlib.pyplot" include nil nil [74 105])
+            ("matplotlib" include nil nil [106 130])
+            ("prettyplotlib" include nil nil [131 167])
+            ("np" code nil nil [207 225])
+            ("fig, ax" code nil nil [227 252])
+            ("for" code nil nil [283 509])
+            ("ppl" code nil nil [510 550])
+            ("fig" code nil nil [552 607]))          
+      :file "pretty.py"
+      :pointmax 608
+      :fsize 607
+      :lastmodtime '(21604 7187 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ecpm_mc.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [16 26])
+            ("logging" include nil nil [27 41])
+            ("time" include nil nil [42 53])
+            ("datetime" include nil nil [54 69])
+            ("re" include nil nil [70 79])
+            ("mimetypes" include nil nil [80 96])
+            ("urllib" include nil nil [97 110])
+            ("urllib2" include nil nil [111 125])
+            ("send_alert" include nil nil [126 143])
+            ("adreport" include nil nil [144 159])
+            ("logging" include nil nil [160 174])
+            ("json" include nil nil [175 186])
+            ("memcache" include nil nil [187 202])
+            ("logging" code nil nil [203 243])
+            ("get_alert" function nil nil [244 2707])
+            ("send_mail_bidfeed" function (:arguments 
+              ( ("day_count" variable nil (reparse-symbol function_parameters) [2731 2740]))              ) nil [2708 2760])
+            ("if" code nil nil [2760 2812]))          
+      :file "ecpm_mc.py"
+      :pointmax 2812
+      :fsize 2843
+      :lastmodtime '(21638 26627 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "matplotlib__adwatch.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [16 25])
+            ("sys" include nil nil [26 36])
+            ("logging" include nil nil [37 51])
+            ("time" include nil nil [52 63])
+            ("datetime" include nil nil [64 79])
+            ("re" include nil nil [80 89])
+            ("mimetypes" include nil nil [90 106])
+            ("urllib" include nil nil [107 120])
+            ("urllib2" include nil nil [121 135])
+            ("send_alert" include nil nil [136 153])
+            ("sent_txt_mail" function (:arguments 
+              ( ("title" variable nil (reparse-symbol function_parameters) [172 177])
+                ("html_text" variable nil (reparse-symbol function_parameters) [178 187]))              ) nil [154 1824])
+            ("get_url" function (:arguments 
+              ( ("db_table" variable nil (reparse-symbol function_parameters) [1838 1846])
+                ("table_name" variable nil (reparse-symbol function_parameters) [1847 1857]))              ) nil [1826 16255])
+            ("send_mail_bidfeed" function (:arguments 
+              ( ("day_count" variable nil (reparse-symbol function_parameters) [16279 16288]))              ) nil [16256 17440])
+            ("if" code nil nil [17440 17492]))          
+      :file "matplotlib__adwatch.py"
+      :pointmax 17492
+      :fsize 17663
+      :lastmodtime '(21646 18727 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "adwatch_echarts.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [16 26])
+            ("logging" include nil nil [27 41])
+            ("time" include nil nil [42 53])
+            ("datetime" include nil nil [54 69])
+            ("re" include nil nil [70 79])
+            ("mimetypes" include nil nil [80 96])
+            ("urllib" include nil nil [97 110])
+            ("urllib2" include nil nil [111 125])
+            ("send_alert" include nil nil [126 143])
+            ("sent_txt_mail" function (:arguments 
+              ( ("title" variable nil (reparse-symbol function_parameters) [162 167])
+                ("html_text" variable nil (reparse-symbol function_parameters) [168 177]))              ) nil [144 1779])
+            ("get_url" function (:arguments 
+              ( ("db_table" variable nil (reparse-symbol function_parameters) [1793 1801])
+                ("table_name" variable nil (reparse-symbol function_parameters) [1802 1812]))              ) nil [1781 10249])
+            ("send_mail_bidfeed" function (:arguments 
+              ( ("day_count" variable nil (reparse-symbol function_parameters) [10273 10282]))              ) nil [10250 12315])
+            ("if" code nil nil [12320 12372]))          
+      :file "adwatch_echarts.py"
+      :pointmax 12372
+      :fsize 12701
+      :lastmodtime '(21604 7187 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "adwatch1.1.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [16 25])
+            ("sys" include nil nil [26 36])
+            ("logging" include nil nil [37 51])
+            ("time" include nil nil [52 63])
+            ("datetime" include nil nil [64 79])
+            ("re" include nil nil [80 89])
+            ("mimetypes" include nil nil [90 106])
+            ("urllib" include nil nil [107 120])
+            ("urllib2" include nil nil [121 135])
+            ("mysql.connector" include nil nil [136 158])
+            ("send_alert" include nil nil [159 176])
+            ("sent_txt_mail" function (:arguments 
+              ( ("title" variable nil (reparse-symbol function_parameters) [195 200])
+                ("html_text" variable nil (reparse-symbol function_parameters) [201 210]))              ) nil [177 1838])
+            ("get_url" function (:arguments 
+              ( ("db_table" variable nil (reparse-symbol function_parameters) [1852 1860])
+                ("table_name" variable nil (reparse-symbol function_parameters) [1861 1871])
+                ("html_template" variable nil (reparse-symbol function_parameters) [1872 1885])
+                ("fc_std" variable nil (reparse-symbol function_parameters) [1886 1892])
+                ("pv_std" variable nil (reparse-symbol function_parameters) [1893 1899])
+                ("iv_std" variable nil (reparse-symbol function_parameters) [1900 1906])
+                ("is_ec" variable nil (reparse-symbol function_parameters) [1907 1912])
+                ("is_fc" variable nil (reparse-symbol function_parameters) [1913 1918])
+                ("is_imp" variable nil (reparse-symbol function_parameters) [1919 1925])
+                ("is_iv" variable nil (reparse-symbol function_parameters) [1926 1931]))              ) nil [1840 21270])
+            ("send_mail_bidfeed" function (:arguments 
+              ( ("table_name" variable nil (reparse-symbol function_parameters) [21294 21304])
+                ("title" variable nil (reparse-symbol function_parameters) [21305 21310])
+                ("html_template" variable nil (reparse-symbol function_parameters) [21311 21324])
+                ("fc_std" variable nil (reparse-symbol function_parameters) [21325 21331])
+                ("pv_std" variable nil (reparse-symbol function_parameters) [21332 21338])
+                ("iv_std" variable nil (reparse-symbol function_parameters) [21340 21346])
+                ("ec" variable nil (reparse-symbol function_parameters) [21347 21349])
+                ("fc" variable nil (reparse-symbol function_parameters) [21352 21354])
+                ("imp" variable nil (reparse-symbol function_parameters) [21357 21360])
+                ("iv" variable nil (reparse-symbol function_parameters) [21363 21365]))              ) nil [21271 21714])
+            ("if" code nil nil [21714 22291]))          
+      :file "adwatch1.1.py"
+      :pointmax 22406
+      :fsize 22617
+      :lastmodtime '(21604 7188 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "jt.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [16 26])
+            ("logging" include nil nil [27 41])
+            ("time" include nil nil [42 53])
+            ("datetime" include nil nil [54 69])
+            ("re" include nil nil [70 79])
+            ("mimetypes" include nil nil [80 96])
+            ("urllib" include nil nil [97 110])
+            ("urllib2" include nil nil [111 125])
+            ("adreport" include nil nil [126 141])
+            ("logging" include nil nil [142 156])
+            ("json" include nil nil [157 168])
+            ("sptime" variable nil nil [169 272])
+            ("print" code nil nil [273 285])
+            ("decodejson" variable nil nil [286 315])
+            ("alltime" variable nil nil [316 342])
+            ("for" code nil nil [343 458]))          
+      :file "jt.py"
+      :pointmax 458
+      :fsize 457
+      :lastmodtime '(21604 7187 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "mobile_pc.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [37 47])
+            ("os" include nil nil [48 57])
+            ("logging" include nil nil [58 72])
+            ("time" include nil nil [73 84])
+            ("datetime" include nil nil [85 100])
+            ("re" include nil nil [101 110])
+            ("mimetypes" include nil nil [111 127])
+            ("urllib" include nil nil [128 141])
+            ("urllib2" include nil nil [142 156])
+            ("sys" include nil nil [157 167])
+            ("reload" code nil nil [170 181])
+            ("sys" code nil nil [184 214])
+            ("mysql.connector" include nil nil [215 237])
+            ("dc" variable nil nil [238 247])
+            ("dc" variable nil nil [248 262])
+            ("dc" variable nil nil [263 273])
+            ("cnx" variable nil nil [274 444])
+            ("cursor" variable nil nil [445 466])
+            ("query" variable nil nil [467 620])
+            ("cursor" code nil nil [621 642])
+            ("for" code nil nil [643 690])
+            ("query" variable nil nil [690 829])
+            ("cursor" code nil nil [830 851])
+            ("for" code nil nil [852 895])
+            ("query" variable nil nil [895 1043])
+            ("cursor" code nil nil [1044 1065])
+            ("for" code nil nil [1066 1199])
+            ("query" variable nil nil [1200 1359])
+            ("cursor" code nil nil [1360 1381])
+            ("for" code nil nil [1382 1515])
+            ("query" variable nil nil [1515 1666])
+            ("cursor" code nil nil [1667 1688])
+            ("for" code nil nil [1689 1736])
+            ("moi_pc" code nil nil [1736 1780])
+            ("datetime" include nil nil [1781 1806])
+            ("today" variable nil nil [1807 1827])
+            ("query" code nil nil [1828 1930])
+            ("cursor" code nil nil [1932 1953])
+            ("cursor" code nil nil [1954 1968])
+            ("cnx" code nil nil [1969 1980]))          
+      :file "mobile_pc.py"
+      :pointmax 1981
+      :fsize 1984
+      :lastmodtime '(21609 20637 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "newda.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Show how to make date plots in matplotlib using date tick locators and
+formatters.  See major_minor_demo1.py for more information on
+controlling major and minor ticks
+\"\"\"" code nil nil [24 198])
+            ("__future__" include nil nil [199 236])
+            ("os" include nil nil [237 246])
+            ("sys" include nil nil [247 257])
+            ("sys" include nil nil [258 268])
+            ("logging" include nil nil [269 283])
+            ("time" include nil nil [284 295])
+            ("datetime" include nil nil [296 311])
+            ("re" include nil nil [312 321])
+            ("matplotlib.pyplot" include nil nil [322 353])
+            ("matplotlib.dates" include nil nil [354 389])
+            ("matplotlib.finance" include nil nil [390 449])
+            ("matplotlib.dates" include nil nil [450 522])
+            ("mondays" variable nil nil [541 573])
+            ("months" variable nil nil [593 654])
+            ("monthsFmt" variable nil nil [655 690])
+            ("quotes" variable nil nil [693 752])
+            ("print" code nil nil [753 777])
+            ("if" code nil nil [779 851])
+            ("dates" variable nil nil [852 882])
+            ("opens" variable nil nil [883 913])
+            ("mysql.connector" include nil nil [914 936])
+            ("cnx" variable nil nil [937 1107])
+            ("cursor" variable nil nil [1108 1129])
+            ("query" variable nil nil [1130 1261])
+            ("cursor" code nil nil [1262 1283])
+            ("wbdates" variable nil nil [1284 1294])
+            ("wblevels" variable nil nil [1295 1306])
+            ("for" code nil nil [1307 1491])
+            ("fig, ax" code nil nil [1492 1516])
+            ("ax" code nil nil [1517 1553])
+            ("ax" code nil nil [1554 1588])
+            ("ax" code nil nil [1589 1628])
+            ("ax" code nil nil [1629 1664])
+            ("ax" code nil nil [1665 1684])
+            ("ax" code nil nil [1746 1759])
+            ("fig" code nil nil [1761 1780]))          
+      :file "newda.py"
+      :pointmax 1781
+      :fsize 1780
+      :lastmodtime '(21604 7188 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "get-pip.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "get-pip.py"
+      :pointmax 1340904
+      :fsize 1340903
+      :lastmodtime '(21604 11821 0 0)
+      :unmatched-syntax '((STRING_LITERAL 1063 . 1340904) ($EOI 1340904 . 1340904)))
+    (semanticdb-table "pic.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+File Function: 读取数据文件，生成曲线图
+data source format:
+     51 07:27:46
+    106 07:27:47
+    139 07:27:48
+    326 07:27:49
+    185 07:27:50
+    ..
+Author: Kevin Hou
+Date: 2013/01/22
+\"\"\"" code nil nil [47 229])
+            ("matplotlib.pyplot" include nil nil [231 261])
+            ("matplotlib.ticker" include nil nil [262 322])
+            ("numpy" include nil nil [323 341])
+            ("MultipleLocator" variable nil nil [343 376])
+            ("fig" variable nil nil [378 409])
+            ("x" variable nil nil [422 444])
+            ("y" variable nil nil [445 451])
+            ("z" variable nil nil [452 458])
+            ("t" variable nil nil [459 465])
+            ("f" variable nil nil [467 492])
+            ("num" variable nil nil [493 498])
+            ("for" code nil nil [499 654])
+            ("f" code nil nil [654 663])
+            ("print" code nil nil [664 671])
+            ("print" code nil nil [672 679])
+            ("pl" code nil nil [680 718])
+            ("f" variable nil nil [720 745])
+            ("for" code nil nil [746 801])
+            ("f" code nil nil [801 810])
+            ("pl" code nil nil [811 836])
+            ("ax" variable nil nil [838 851])
+            ("pl" code nil nil [866 880])
+            ("pl" code nil nil [881 902])
+            ("pl" code nil nil [914 947])
+            ("pl" code nil nil [949 958])
+            ("ax" code nil nil [972 1020])
+            ("ax" code nil nil [1021 1070])
+            ("locs, labels" code nil nil [1244 1269])
+            ("pl" code nil nil [1290 1308])
+            ("pl" code nil nil [1310 1329])
+            ("pl" code nil nil [1330 1354])
+            ("pl" code nil nil [1453 1464])
+            ("fig" code nil nil [1491 1510])
+            ("pl" code nil nil [1523 1544]))          
+      :file "pic.py"
+      :pointmax 1545
+      :fsize 1796
+      :lastmodtime '(21604 7187 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "day_noimage.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [16 26])
+            ("os" include nil nil [27 36])
+            ("logging" include nil nil [37 51])
+            ("time" include nil nil [52 63])
+            ("datetime" include nil nil [64 79])
+            ("re" include nil nil [80 89])
+            ("mimetypes" include nil nil [90 106])
+            ("urllib" include nil nil [107 120])
+            ("urllib2" include nil nil [121 135])
+            ("send_alert" include nil nil [136 153])
+            ("sys" include nil nil [154 164])
+            ("reload" code nil nil [167 178])
+            ("sys" code nil nil [181 211])
+            ("up_url" variable nil nil [514 543])
+            ("down_url" variable nil nil [544 573])
+            ("equal_url" variable nil nil [574 606])
+            ("mysql.connector" include nil nil [607 629])
+            ("yes_per" function (:arguments 
+              ( ("cur_consume_dt" variable nil (reparse-symbol function_parameters) [642 656])
+                ("yes_consume_dt" variable nil (reparse-symbol function_parameters) [657 671])
+                ("info" variable nil (reparse-symbol function_parameters) [672 676]))              ) nil [630 1196])
+            ("google_chart" function (:arguments 
+              ( ("min_data" variable nil (reparse-symbol function_parameters) [1215 1223])
+                ("max_data" variable nil (reparse-symbol function_parameters) [1224 1232])
+                ("bidfeed_x" variable nil (reparse-symbol function_parameters) [1233 1242])
+                ("bidfeed_y" variable nil (reparse-symbol function_parameters) [1243 1252])
+                ("x_label" variable nil (reparse-symbol function_parameters) [1253 1260])
+                ("db_table" variable nil (reparse-symbol function_parameters) [1261 1269]))              ) nil [1198 2053])
+            ("google2chart" function (:arguments 
+              ( ("min_data" variable nil (reparse-symbol function_parameters) [2070 2078])
+                ("max_data" variable nil (reparse-symbol function_parameters) [2079 2087])
+                ("bidfeed_x" variable nil (reparse-symbol function_parameters) [2088 2097])
+                ("bidfeed_y" variable nil (reparse-symbol function_parameters) [2098 2107])
+                ("x_label" variable nil (reparse-symbol function_parameters) [2108 2115])
+                ("bidfeed_y2" variable nil (reparse-symbol function_parameters) [2116 2126])
+                ("db_table" variable nil (reparse-symbol function_parameters) [2127 2135]))              ) nil [2053 2946])
+            ("sent_txt_mail" function (:arguments 
+              ( ("title" variable nil (reparse-symbol function_parameters) [2964 2969])
+                ("html_text" variable nil (reparse-symbol function_parameters) [2970 2979]))              ) nil [2946 4575])
+            ("get_url" function (:arguments 
+              ( ("db_table" variable nil (reparse-symbol function_parameters) [4589 4597])
+                ("table_name" variable nil (reparse-symbol function_parameters) [4598 4608])
+                ("is_ec" variable nil (reparse-symbol function_parameters) [4609 4614])
+                ("is_fc" variable nil (reparse-symbol function_parameters) [4617 4622])
+                ("is_imp" variable nil (reparse-symbol function_parameters) [4625 4631])
+                ("is_iv" variable nil (reparse-symbol function_parameters) [4634 4639]))              ) nil [4577 11639])
+            ("send_mail_bidfeed" function (:arguments 
+              ( ("day_count" variable nil (reparse-symbol function_parameters) [11663 11672]))              ) nil [11640 13415])
+            ("if" code nil nil [13420 13472]))          
+      :file "day_noimage.py"
+      :pointmax 13472
+      :fsize 13811
+      :lastmodtime '(21604 7186 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "addb.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("mysql.connector" include nil nil [1 23])
+            ("cnx" variable nil nil [24 194])
+            ("cursor" variable nil nil [195 216])
+            ("query" variable nil nil [218 323])
+            ("cursor" code nil nil [325 346])
+            ("for" code nil nil [348 408])
+            ("cursor" code nil nil [410 424])
+            ("cnx" code nil nil [427 438]))          
+      :file "addb.py"
+      :pointmax 439
+      :fsize 438
+      :lastmodtime '(21604 7187 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "stack.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("matplotlib.pyplot" include nil nil [1 32])
+            ("matplotlib.dates" include nil nil [33 66])
+            ("datetime" include nil nil [67 106])
+            ("numpy" include nil nil [107 125])
+            ("mysql.connector" include nil nil [130 152])
+            ("cnx" variable nil nil [153 323])
+            ("cursor" variable nil nil [324 345])
+            ("query" variable nil nil [346 477])
+            ("cursor" code nil nil [478 499])
+            ("dates" variable nil nil [500 508])
+            ("levels" variable nil nil [509 518])
+            ("for" code nil nil [519 699])
+            ("fig" variable nil nil [1208 1226])
+            ("ax" variable nil nil [1227 1252])
+            ("ax" code nil nil [1274 1294])
+            ("ax" code nil nil [1337 1396])
+            ("ax" code nil nil [1397 1444])
+            ("ax" code nil nil [1445 1466])
+            ("ax" code nil nil [1467 1498])
+            ("ax" code nil nil [1499 1512])
+            ("fig" code nil nil [1573 1603])
+            ("fig" code nil nil [1604 1622])
+            ("plt" code nil nil [1636 1668]))          
+      :file "stack.py"
+      :pointmax 1669
+      :fsize 1668
+      :lastmodtime '(21604 7188 0 0)
+      :unmatched-syntax nil))
+  :file "!data0!adwatch!trunk!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

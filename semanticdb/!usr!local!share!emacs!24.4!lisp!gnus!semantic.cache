@@ -1,0 +1,940 @@
+;; Object gnus/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gnus/"
+  :tables
+  (list
+    (semanticdb-table "message.el.gz"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("unless" code nil nil [1113 1187])
+            ("cl" include nil nil [1210 1223])
+            ("mailheader" include nil nil [1226 1247])
+            ("gmm-utils" include nil nil [1248 1268])
+            ("mail-utils" include nil nil [1269 1290])
+            ("nnheader" include nil nil [1439 1458])
+            ("if" code nil nil [1623 1698])
+            ("mail-parse" include nil nil [1699 1720])
+            ("mml" include nil nil [1721 1735])
+            ("rfc822" include nil nil [1736 1753])
+            ("format-spec" include nil nil [1754 1776])
+            ("mailclient-send-it" function (:prototype-flag t) nil [1778 1821])
+            ("gnus-message-group-art" variable nil nil [1847 1878])
+            ("gnus-list-identifiers" variable nil nil [1879 1909])
+            ("rmail-enable-mime-composing" variable nil nil [1949 1985])
+            ("message" customgroup
+               (:user-visible-flag t
+                :value (quote ((user-mail-address custom-variable) (user-full-name custom-variable))))
+                nil [1987 2190])
+            ("put" code nil nil [2192 2237])
+            ("put" code nil nil [2238 2280])
+            ("message-various" customgroup (:user-visible-flag t) nil [2282 2423])
+            ("message-buffers" customgroup (:user-visible-flag t) nil [2425 2546])
+            ("message-sending" customgroup (:user-visible-flag t) nil [2548 2671])
+            ("message-interface" customgroup (:user-visible-flag t) nil [2673 2792])
+            ("message-forwarding" customgroup (:user-visible-flag t) nil [2794 2926])
+            ("message-insertion" customgroup (:user-visible-flag t) nil [2928 3047])
+            ("message-headers" customgroup (:user-visible-flag t) nil [3049 3170])
+            ("message-news" customgroup (:user-visible-flag t) nil [3172 3246])
+            ("message-mail" customgroup (:user-visible-flag t) nil [3248 3322])
+            ("message-faces" customgroup (:user-visible-flag t) nil [3324 3424])
+            ("message-directory" variable
+               (:user-visible-flag t
+                :default-value "~/Mail/")
+                nil [3426 3579])
+            ("message-max-buffers" variable
+               (:user-visible-flag t
+                :default-value 10)
+                nil [3581 3722])
+            ("message-send-rename-function" variable nil nil [3724 3892])
+            ("message-fcc-handler-function" variable
+               (:user-visible-flag t
+                :default-value (quote message-output))
+                nil [3894 4258])
+            ("message-fcc-externalize-attachments" variable nil nil [4260 4446])
+            ("message-courtesy-message" variable
+               (:user-visible-flag t
+                :default-value "The following message is a courtesy copy of an article
+that has been posted to %s as well.
+
+")
+                nil [4448 4901])
+            ("message-ignored-bounced-headers" variable
+               (:user-visible-flag t
+                :default-value "^\\(Received\\|Return-Path\\|Delivered-To\\):")
+                nil [4903 5111])
+            ("message-from-style" variable (:default-value mail-from-style) nil [5113 5675])
+            ("message-insert-canlock" variable (:default-value t) nil [5677 5835])
+            ("message-syntax-checks" variable
+               (:user-visible-flag t
+                :default-value (if message-insert-canlock (quote ((sender . disabled))) nil))
+                nil [5837 6705])
+            ("message-required-headers" variable
+               (:user-visible-flag t
+                :default-value (quote ((optional . References) From)))
+                nil [6731 7098])
+            ("message-draft-headers" variable
+               (:user-visible-flag t
+                :default-value (quote (References From Date)))
+                nil [7100 7357])
+            ("message-required-news-headers" variable
+               (:user-visible-flag t
+                :default-value (quote (From Newsgroups Subject Date Message-ID (optional . Organization) (optional . User-Agent))))
+                nil [7359 7914])
+            ("message-required-mail-headers" variable
+               (:user-visible-flag t
+                :default-value (quote (From Subject Date (optional . In-Reply-To) Message-ID (optional . User-Agent))))
+                nil [7916 8353])
+            ("message-prune-recipient-rules" variable nil nil [8355 8660])
+            ("message-deletable-headers" variable (:default-value (quote (Message-ID Date Lines))) nil [8662 8906])
+            ("message-ignored-news-headers" variable
+               (:user-visible-flag t
+                :default-value "^NNTP-Posting-Host:\\|^Xref:\\|^[BGF]cc:\\|^Resent-Fcc:\\|^X-Draft-From:\\|^X-Gnus-Agent-Meta-Information:\\|^X-Message-SMTP-Method:\\|^X-Gnus-Delayed:")
+                nil [8908 9500])
+            ("message-ignored-mail-headers" variable
+               (:user-visible-flag t
+                :default-value "^\\([GF]cc\\|Resent-Fcc\\|Xref\\|X-Draft-From\\|X-Gnus-Agent-Meta-Information\\):")
+                nil [9502 9811])
+            ("message-ignored-supersedes-headers" variable
+               (:user-visible-flag t
+                :default-value "^Path:\\|^Date\\|^NNTP-Posting-Host:\\|^Xref:\\|^Lines:\\|^Received:\\|^X-From-Line:\\|^X-Trace:\\|^X-ID:\\|^X-Complaints-To:\\|Return-Path:\\|^Supersedes:\\|^NNTP-Posting-Date:\\|^X-Trace:\\|^X-Complaints-To:\\|^Cancel-Lock:\\|^Cancel-Key:\\|^X-Hashcash:\\|^X-Payment:\\|^Approved:\\|^Injection-Date:\\|^Injection-Info:")
+                nil [9813 10640])
+            ("message-subject-re-regexp" variable
+               (:user-visible-flag t
+                :default-value "^[ 	]*\\([Rr][Ee]\\(\\[[0-9]*\\]\\)*:[ 	]*\\)*[ 	]*")
+                nil [10642 10883])
+            ("message-subject-trailing-was-query" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [10942 11579])
+            ("message-subject-trailing-was-ask-regexp" variable
+               (:user-visible-flag t
+                :default-value "[ 	]*\\([[(]+[Ww][Aa][Ss]:?[ 	]*.*[])]+\\)")
+                nil [11581 12158])
+            ("message-subject-trailing-was-regexp" variable
+               (:user-visible-flag t
+                :default-value "[ 	]*\\((*[Ww][Aa][Ss]:[ 	]*.*)\\)")
+                nil [12160 12656])
+            ("message-mark-insert-begin" variable (:default-value "--8<---------------cut here---------------start------------->8---
+") nil [12685 12963])
+            ("message-mark-insert-end" variable (:default-value "--8<---------------cut here---------------end--------------->8---
+") nil [12965 13235])
+            ("message-archive-header" variable (:default-value "X-No-Archive: Yes
+") nil [13237 13535])
+            ("message-archive-note" variable (:default-value "X-No-Archive: Yes - save http://groups.google.com/") nil [13537 13863])
+            ("message-cross-post-old-target" variable nil nil [14013 14101])
+            ("make-variable-buffer-local" code nil nil [14102 14161])
+            ("message-cross-post-default" variable (:default-value t) nil [14163 14517])
+            ("message-cross-post-note" variable (:default-value "Crosspost & Followup-To: ") nil [14519 14717])
+            ("message-followup-to-note" variable (:default-value "Followup-To: ") nil [14719 14896])
+            ("message-cross-post-note-function" variable (:default-value (quote message-cross-post-insert-note)) nil [14898 15297])
+            ("message-signature-separator" variable (:default-value "^-- $") nil [15354 15911])
+            ("message-elide-ellipsis" variable
+               (:user-visible-flag t
+                :default-value "
+[...]
+
+")
+                nil [15913 16240])
+            ("message-interactive" variable (:default-value mail-interactive) nil [16242 16568])
+            ("message-confirm-send" variable nil nil [16570 16818])
+            ("message-generate-new-buffers" variable
+               (:user-visible-flag t
+                :default-value (quote unsent))
+                nil [16820 17961])
+            ("message-kill-buffer-on-exit" variable (:user-visible-flag t) nil [17963 18184])
+            ("message-kill-buffer-query" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [18186 18415])
+            ("message-user-organization" variable (:default-value (or (getenv "ORGANIZATION") t)) nil [18417 18664])
+            ("message-user-organization-file" variable
+               (:user-visible-flag t
+                :default-value (let (orgfile) (dolist (f (list "/etc/organization" "/etc/news/organization" "/usr/lib/news/organization")) (when (file-readable-p f) (setq orgfile f))) orgfile))
+                nil [18666 19046])
+            ("message-make-forward-subject-function" variable
+               (:user-visible-flag t
+                :default-value (function message-forward-subject-name-subject))
+                nil [19048 19976])
+            ("message-forward-as-mime" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [19978 20265])
+            ("message-forward-show-mml" variable
+               (:user-visible-flag t
+                :default-value (quote best))
+                nil [20267 20865])
+            ("message-forward-before-signature" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [20867 21030])
+            ("message-wash-forwarded-subjects" variable (:user-visible-flag t) nil [21032 21302])
+            ("message-ignored-resent-headers" variable
+               (:user-visible-flag t
+                :default-value "^Return-receipt\\|^X-Gnus\\|^Gnus-Warning:\\|^>?From \\|^Delivered-To:\\|^X-Content-Length:\\|^X-UIDL:")
+                nil [21304 22197])
+            ("message-forward-ignored-headers" variable
+               (:user-visible-flag t
+                :default-value "^Content-Transfer-Encoding:\\|^X-Gnus")
+                nil [22199 22638])
+            ("message-ignored-cited-headers" variable
+               (:user-visible-flag t
+                :default-value ".")
+                nil [22640 22839])
+            ("message-cite-prefix-regexp" variable
+               (:user-visible-flag t
+                :default-value mail-citation-prefix-regexp)
+                nil [22841 23310])
+            ("message-cancel-message" variable (:default-value "I am canceling my own article.
+") nil [23312 23526])
+            ("message-send-mail-function" function nil nil [23528 24120])
+            ("message-default-send-mail-function" function nil nil [24122 24496])
+            ("message-send-mail-function" variable (:default-value (message-default-send-mail-function)) nil [24531 25662])
+            ("message-send-news-function" variable (:default-value (quote message-send-news)) nil [25664 25997])
+            ("message-reply-to-function" variable nil nil [25999 26326])
+            ("message-wide-reply-to-function" variable nil nil [26328 26665])
+            ("message-followup-to-function" variable nil nil [26667 27000])
+            ("message-extra-wide-headers" variable nil nil [27002 27193])
+            ("message-use-followup-to" variable
+               (:user-visible-flag t
+                :default-value (quote ask))
+                nil [27195 27698])
+            ("message-use-mail-followup-to" variable
+               (:user-visible-flag t
+                :default-value (quote use))
+                nil [27700 28131])
+            ("message-subscribed-address-functions" variable (:user-visible-flag t) nil [28133 28652])
+            ("message-subscribed-address-file" variable (:user-visible-flag t) nil [28654 29027])
+            ("message-subscribed-addresses" variable (:user-visible-flag t) nil [29029 29439])
+            ("message-subscribed-regexps" variable (:user-visible-flag t) nil [29441 29861])
+            ("message-allow-no-recipients" variable (:default-value (quote ask)) nil [29863 30302])
+            ("message-sendmail-f-is-evil" variable (:user-visible-flag t) nil [30304 30569])
+            ("message-sendmail-envelope-from" variable
+               (:user-visible-flag t
+                :default-value (if (boundp (quote mail-envelope-from)) mail-envelope-from))
+                nil [30571 31140])
+            ("message-sendmail-extra-arguments" variable nil nil [31142 31410])
+            ("message-qmail-inject-program" variable (:default-value "/var/qmail/bin/qmail-inject") nil [31435 31638])
+            ("message-qmail-inject-args" variable nil nil [31640 32151])
+            ("gnus-post-method" variable nil nil [32153 32178])
+            ("gnus-select-method" variable nil nil [32179 32206])
+            ("message-post-method" variable
+               (:user-visible-flag t
+                :default-value (cond ((and (boundp (quote gnus-post-method)) (listp gnus-post-method) gnus-post-method) gnus-post-method) ((boundp (quote gnus-select-method)) gnus-select-method) (t (quote (nnspool "")))))
+                nil [32207 32711])
+            ("message-generate-headers-first" variable nil nil [32713 33415])
+            ("message-fill-column" variable (:default-value 72) nil [33417 33758])
+            ("message-setup-hook" variable nil nil [33760 34011])
+            ("message-cancel-hook" variable nil nil [34013 34188])
+            ("message-signature-setup-hook" variable nil nil [34190 34491])
+            ("message-mode-hook" variable nil nil [34493 34604])
+            ("message-header-hook" variable nil nil [34606 34744])
+            ("message-header-setup-hook" variable nil nil [34746 34963])
+            ("message-minibuffer-local-map" variable (:default-value (let ((map (make-sparse-keymap (quote message-minibuffer-local-map)))) (set-keymap-parent map minibuffer-local-map) map)) nil [34965 35310])
+            ("message-citation-line-function" variable
+               (:user-visible-flag t
+                :default-value (quote message-insert-citation-line))
+                nil [35312 36127])
+            ("message-citation-line-format" variable (:default-value "On %a, %b %d %Y, %N wrote:
+") nil [36129 37212])
+            ("message-yank-prefix" variable
+               (:user-visible-flag t
+                :default-value mail-yank-prefix)
+                nil [37214 37572])
+            ("message-yank-cited-prefix" variable
+               (:user-visible-flag t
+                :default-value ">")
+                nil [37574 37921])
+            ("message-yank-empty-prefix" variable
+               (:user-visible-flag t
+                :default-value ">")
+                nil [37923 38202])
+            ("message-indentation-spaces" variable
+               (:user-visible-flag t
+                :default-value mail-indentation-spaces)
+                nil [38204 38511])
+            ("message-cite-function" variable
+               (:user-visible-flag t
+                :default-value (quote message-cite-original-without-signature))
+                nil [38513 39114])
+            ("message-indent-citation-function" variable
+               (:user-visible-flag t
+                :default-value (quote message-indent-citation))
+                nil [39116 39550])
+            ("message-signature" variable
+               (:user-visible-flag t
+                :default-value mail-signature)
+                nil [39552 39963])
+            ("message-signature-file" variable
+               (:user-visible-flag t
+                :default-value mail-signature-file)
+                nil [39965 40409])
+            ("message-signature-directory" variable (:user-visible-flag t) nil [40411 40805])
+            ("message-signature-insert-empty-line" variable
+               (:user-visible-flag t
+                :default-value t)
+                nil [40807 41045])
+            ("message-cite-reply-position" variable
+               (:user-visible-flag t
+                :default-value (quote traditional))
+                nil [41047 41660])
+            ("message-cite-style" variable (:user-visible-flag t) nil [41662 42531])
+            ("message-cite-style-outlook" variable
+               (:constant-flag t
+                :default-value (quote ((message-cite-function (quote message-cite-original)) (message-citation-line-function (quote message-insert-formatted-citation-line)) (message-cite-reply-position (quote above)) (message-yank-prefix "") (message-yank-cited-prefix "") (message-yank-empty-prefix "") (message-citation-line-format "
+
+-----------------------
+On %a, %b %d %Y, %N wrote:
+"))))
+                nil [42533 43016])
+            ("message-cite-style-thunderbird" variable
+               (:constant-flag t
+                :default-value (quote ((message-cite-function (quote message-cite-original)) (message-citation-line-function (quote message-insert-formatted-citation-line)) (message-cite-reply-position (quote above)) (message-yank-prefix "> ") (message-yank-cited-prefix ">") (message-yank-empty-prefix ">") (message-citation-line-format "On %D %R %p, %N wrote:"))))
+                nil [43018 43482])
+            ("message-cite-style-gmail" variable
+               (:constant-flag t
+                :default-value (quote ((message-cite-function (quote message-cite-original)) (message-citation-line-function (quote message-insert-formatted-citation-line)) (message-cite-reply-position (quote above)) (message-yank-prefix "    ") (message-yank-cited-prefix "    ") (message-yank-empty-prefix "    ") (message-citation-line-format "On %e %B %Y %R, %f wrote:
+"))))
+                nil [43484 43941])
+            ("message-distribution-function" variable (:user-visible-flag t) nil [43943 44179])
+            ("message-expires" variable (:default-value 14) nil [44181 44374])
+            ("message-user-path" variable nil nil [44376 44736])
+            ("message-reply-buffer" variable nil nil [44844 44877])
+            ("message-reply-headers" variable nil nil [44878 45067])
+            ("message-newsreader" variable nil nil [45068 45099])
+            ("message-mailer" variable nil nil [45100 45127])
+            ("message-sent-message-via" variable nil nil [45128 45165])
+            ("message-checksum" variable nil nil [45166 45195])
+            ("message-send-actions" variable nil nil [45196 45305])
+            ("message-return-action" variable nil nil [45306 45414])
+            ("message-exit-actions" variable nil nil [45415 45524])
+            ("message-kill-actions" variable nil nil [45525 45629])
+            ("message-postpone-actions" variable nil nil [45630 45733])
+            ("define-widget" code nil nil [45735 45925])
+            ("message-default-headers" variable nil nil [45927 46440])
+            ("message-default-mail-headers" variable
+               (:user-visible-flag t
+                :default-value (concat (if (and (boundp (quote mail-default-reply-to)) (stringp mail-default-reply-to)) (format "Reply-to: %s
+" mail-default-reply-to)) (if (and (boundp (quote mail-self-blind)) mail-self-blind) (format "BCC: %s
+" user-mail-address)) (if (and (boundp (quote mail-archive-file-name)) (stringp mail-archive-file-name)) (format "FCC: %s
+" mail-archive-file-name)) (if (boundp (quote mail-default-headers)) mail-default-headers)))
+                nil [46442 47382])
+            ("message-default-news-headers" variable (:user-visible-flag t) nil [47384 47627])
+            ("message-mailer-swallows-blank-line" variable
+               (:user-visible-flag t
+                :default-value (if (and (string-match "sparc-sun-sunos\\(\\'\\|[^5]\\)" system-configuration) (file-readable-p "/etc/sendmail.cf") (with-temp-buffer (insert-file-contents "/etc/sendmail.cf") (goto-char (point-min)) (let ((case-fold-search nil)) (re-search-forward "^OR\\>" nil t)))) (quote (looking-at "[ 	]\\|[][!\"#$%&'()*+,-./0-9;<=>?@A-Z\\\\^_`a-z{|}~]+:"))))
+                nil [47725 48764])
+            ("define-mail-user-agent" code nil nil [48781 48906])
+            ("message-mh-deletable-headers" variable (:default-value (quote (Message-ID Date Lines Sender))) nil [48908 49044])
+            ("message-send-method-alist" variable (:default-value (quote ((news message-news-p message-send-via-news) (mail message-mail-p message-send-via-mail)))) nil [49046 49563])
+            ("message-mail-alias-type" variable
+               (:user-visible-flag t
+                :default-value (quote abbrev))
+                nil [49565 50027])
+            ("message-self-insert-commands" variable (:default-value (quote (self-insert-command))) nil [50029 50553])
+            ("message-auto-save-directory" variable
+               (:user-visible-flag t
+                :default-value (if (file-writable-p message-directory) (file-name-as-directory (expand-file-name "drafts" message-directory)) "~/"))
+                nil [50555 50978])
+            ("message-default-charset" variable (:default-value (and (not (mm-multibyte-p)) (quote iso-8859-1))) nil [50980 51267])
+            ("message-dont-reply-to-names" variable
+               (:user-visible-flag t
+                :default-value (and (boundp (quote mail-dont-reply-to-names)) mail-dont-reply-to-names))
+                nil [51269 51706])
+            ("message-dont-reply-to-names" function nil nil [51708 51799])
+            ("message-shoot-gnksa-feet" variable (:user-visible-flag t) nil [51801 52443])
+            ("message-gnksa-enable-p" function (:arguments ("feature")) nil [52445 52580])
+            ("message-hidden-headers" variable (:default-value (quote ("^References:" "^Face:" "^X-Face:" "^X-Draft-From:"))) nil [52582 53288])
+            ("message-cite-articles-with-x-no-archive" variable (:default-value t) nil [53290 53445])
+            ("message-mode-syntax-table" variable (:default-value (let ((table (copy-syntax-table text-mode-syntax-table))) (modify-syntax-entry 37 ". " table) (modify-syntax-entry 62 ". " table) (modify-syntax-entry 60 ". " table) table)) nil [53503 53773])
+            ("message-header-to" variable
+               (:default-value (quote ((((class color) (background dark)) (:foreground "DarkOliveGreen1" :bold t)) (((class color) (background light)) (:foreground "MidnightBlue" :bold t)) (t (:bold t :italic t))))
+                :type "face")
+                nil [53775 54083])
+            ("put" code nil nil [54116 54176])
+            ("put" code nil nil [54177 54228])
+            ("message-header-cc" variable
+               (:default-value (quote ((((class color) (background dark)) (:foreground "chartreuse1" :bold t)) (((class color) (background light)) (:foreground "MidnightBlue")) (t (:bold t))))
+                :type "face")
+                nil [54230 54514])
+            ("put" code nil nil [54547 54607])
+            ("put" code nil nil [54608 54659])
+            ("message-header-subject" variable
+               (:default-value (quote ((((class color) (background dark)) (:foreground "OliveDrab1")) (((class color) (background light)) (:foreground "navy blue" :bold t)) (t (:bold t))))
+                :type "face")
+                nil [54661 54951])
+            ("put" code nil nil [54984 55054])
+            ("put" code nil nil [55055 55111])
+            ("message-header-newsgroups" variable
+               (:default-value (quote ((((class color) (background dark)) (:foreground "yellow" :bold t :italic t)) (((class color) (background light)) (:foreground "blue4" :bold t :italic t)) (t (:bold t :italic t))))
+                :type "face")
+                nil [55113 55439])
+            ("put" code nil nil [55472 55548])
+            ("put" code nil nil [55549 55608])
+            ("message-header-other" variable
+               (:default-value (quote ((((class color) (background dark)) (:foreground "VioletRed1")) (((class color) (background light)) (:foreground "steel blue")) (t (:bold t :italic t))))
+                :type "face")
+                nil [55610 55904])
+            ("put" code nil nil [55937 56003])
+            ("put" code nil nil [56004 56058])
+            ("message-header-name" variable
+               (:default-value (quote ((((class color) (background dark)) (:foreground "green")) (((class color) (background light)) (:foreground "cornflower blue")) (t (:bold t))))
+                :type "face")
+                nil [56060 56337])
+            ("put" code nil nil [56370 56434])
+            ("put" code nil nil [56435 56488])
+            ("message-header-xheader" variable
+               (:default-value (quote ((((class color) (background dark)) (:foreground "DeepSkyBlue1")) (((class color) (background light)) (:foreground "blue")) (t (:bold t))))
+                :type "face")
+                nil [56490 56770])
+            ("put" code nil nil [56803 56873])
+            ("put" code nil nil [56874 56930])
+            ("message-separator" variable
+               (:default-value (quote ((((class color) (background dark)) (:foreground "LightSkyBlue1")) (((class color) (background light)) (:foreground "brown")) (t (:bold t))))
+                :type "face")
+                nil [56932 57206])
+            ("put" code nil nil [57239 57299])
+            ("put" code nil nil [57300 57351])
+            ("message-cited-text" variable
+               (:default-value (quote ((((class color) (background dark)) (:foreground "LightPink1")) (((class color) (background light)) (:foreground "red")) (t (:bold t))))
+                :type "face")
+                nil [57353 57626])
+            ("put" code nil nil [57659 57721])
+            ("put" code nil nil [57722 57774])
+            ("message-mml" variable
+               (:default-value (quote ((((class color) (background dark)) (:foreground "MediumSpringGreen")) (((class color) (background light)) (:foreground "ForestGreen")) (t (:bold t))))
+                :type "face")
+                nil [57776 58044])
+            ("put" code nil nil [58077 58125])
+            ("put" code nil nil [58126 58171])
+            ("message-font-lock-make-header-matcher" function (:arguments ("regexp")) nil [58173 58659])
+            ("message-font-lock-keywords" variable (:default-value (let ((content "[ 	]*\\(.+\\(
+[ 	].*\\)*\\)
+?")) (\` (((\, (message-font-lock-make-header-matcher (concat "^\\([Tt]o:\\)" content))) (1 (quote message-header-name)) (2 (quote message-header-to) nil t)) ((\, (message-font-lock-make-header-matcher (concat "^\\(^[GBF]?[Cc][Cc]:\\|^[Rr]eply-[Tt]o:\\)" content))) (1 (quote message-header-name)) (2 (quote message-header-cc) nil t)) ((\, (message-font-lock-make-header-matcher (concat "^\\([Ss]ubject:\\)" content))) (1 (quote message-header-name)) (2 (quote message-header-subject) nil t)) ((\, (message-font-lock-make-header-matcher (concat "^\\([Nn]ewsgroups:\\|Followup-[Tt]o:\\)" content))) (1 (quote message-header-name)) (2 (quote message-header-newsgroups) nil t)) ((\, (message-font-lock-make-header-matcher (concat "^\\(X-[A-Za-z0-9-]+:\\|In-Reply-To:\\)" content))) (1 (quote message-header-name)) (2 (quote message-header-xheader))) ((\, (message-font-lock-make-header-matcher (concat "^\\([A-Z][^: 
+	]+:\\)" content))) (1 (quote message-header-name)) (2 (quote message-header-other) nil t)) (\,@ (if (and mail-header-separator (not (equal mail-header-separator ""))) (\` (((\, (concat "^\\(" (regexp-quote mail-header-separator) "\\)$")) 1 (quote message-separator)))) nil)) ((lambda (limit) (re-search-forward (concat "^\\(" message-cite-prefix-regexp "\\).*") limit t)) (0 (quote message-cited-text))) ("<#/?\\(multipart\\|part\\|external\\|mml\\|secure\\)[^>]*>" (0 (quote message-mml))))))) nil [58661 60275])
+            ("put" code nil nil [60385 60456])
+            ("message-face-alist" variable (:default-value (quote ((bold . message-bold-region) (underline . underline-region) (default lambda (b e) (message-unbold-region b e) (ununderline-region b e))))) nil [60458 60762])
+            ("message-send-hook" variable nil nil [60764 61009])
+            ("message-send-mail-hook" variable nil nil [61011 61265])
+            ("message-send-news-hook" variable nil nil [61267 61521])
+            ("message-sent-hook" variable nil nil [61523 61633])
+            ("message-send-coding-system" variable (:default-value (quote binary)) nil [61635 61721])
+            ("message-draft-coding-system" variable
+               (:user-visible-flag t
+                :default-value mm-auto-save-coding-system)
+                nil [61723 62038])
+            ("message-send-mail-partially-limit" variable nil nil [62040 62451])
+            ("message-alternative-emails" variable (:user-visible-flag t) nil [62453 62931])
+            ("message-hierarchical-addresses" variable nil nil [62933 63524])
+            ("message-mail-user-agent" variable nil nil [63526 64098])
+            ("message-wide-reply-confirm-recipients" variable nil nil [64100 64634])
+            ("message-user-fqdn" variable (:user-visible-flag t) nil [64636 64869])
+            ("message-use-idna" variable (:default-value (and (condition-case nil (require (quote idna)) (file-error)) (mm-coding-system-p (quote utf-8)) (executable-find idna-program) (string= (idna-to-ascii "räksmörgås") "xn--rksmrgs-5wao1o") t)) nil [64871 65513])
+            ("message-generate-hashcash" variable
+               (:user-visible-flag t
+                :default-value (if (executable-find "hashcash") (quote opportunistic)))
+                nil [65515 66091])
+            ("message-sending-message" variable (:default-value "Sending...") nil [66118 66163])
+            ("message-buffer-list" variable nil nil [66164 66196])
+            ("message-this-is-news" variable nil nil [66197 66230])
+            ("message-this-is-mail" variable nil nil [66231 66264])
+            ("message-draft-article" variable nil nil [66265 66299])
+            ("message-mime-part" variable nil nil [66300 66330])
+            ("message-posting-charset" variable nil nil [66331 66367])
+            ("message-inserted-headers" variable nil nil [66368 66405])
+            ("message-inhibit-ecomplete" variable nil nil [66406 66444])
+            ("gnus-active-hashtb" variable nil nil [66471 66498])
+            ("gnus-read-active-file" variable nil nil [66499 66529])
+            ("message-unix-mail-delimiter" variable (:default-value (let ((time-zone-regexp (concat "\\([A-Z]?[A-Z]?[A-Z][A-Z]\\( DST\\)?" "\\|[-+]?[0-9][0-9][0-9][0-9]" "\\|" "\\) *"))) (concat "From " "\\([^ -
+-].*\\)?" "\\([^ - ]+\\) +" "\\([^ - ]+\\) +" "\\([0-3]?[0-9]\\) +" "\\([0-2][0-9]:[0-5][0-9]\\(:[0-6][0-9]\\)?\\) *" time-zone-regexp " \\([0-9][0-9]+\\) *" time-zone-regexp "\\(remote from .*\\)?" "
+"))) nil [66707 68566])
+            ("message-unsent-separator" variable (:default-value (concat "^ *---+ +Unsent message follows +---+ *$\\|" "^ *---+ +Returned message +---+ *$\\|" "^Start of returned message$\\|" "^ *---+ +Original message +---+ *$\\|" "^ *--+ +begin message +--+ *$\\|" "^ *---+ +Original message follows +---+ *$\\|" "^ *---+ +Undelivered message follows +---+ *$\\|" "^------ This is a copy of the message, including all the headers. ------ *$\\|" "^|? *---+ +Message text follows: +---+ *|?$")) nil [68568 69133])
+            ("message-field-fillers" variable (:default-value (quote ((To message-fill-field-address) (Cc message-fill-field-address) (From message-fill-field-address)))) nil [69135 69320])
+            ("message-header-format-alist" variable (:default-value (\` ((From) (Newsgroups) (To) (Cc) (Subject) (In-Reply-To) (Fcc) (Bcc) (Date) (Organization) (Distribution) (Lines) (Expires) (Message-ID) (References . message-shorten-references) (User-Agent)))) nil [69322 69651])
+            ("message-options" variable nil nil [69653 69726])
+            ("unless" code nil nil [69933 70008])
+            ("message-send-mail-real-function" variable nil nil [70010 70087])
+            ("message-bogus-system-names" variable (:default-value "\\`localhost\\.\\|\\.local\\'") nil [70089 70194])
+            ("message-valid-fqdn-regexp" variable (:default-value (concat "[a-z0-9][-.a-z0-9]+\\." "\\([a-z][a-z]\\|" "aero\\|arpa\\|asia\\|bitnet\\|biz\\|bofh\\|" "cat\\|com\\|coop\\|edu\\|gov\\|" "info\\|int\\|jobs\\|" "mil\\|mobi\\|museum\\|name\\|net\\|" "org\\|pro\\|tel\\|travel\\|uucp\\)")) nil [70196 70901])
+            ("gnus-alive-p" function (:prototype-flag t) nil [70903 70939])
+            ("gnus-delay-article" function (:prototype-flag t) nil [70940 70983])
+            ("gnus-extract-address-components" function (:prototype-flag t) nil [70984 71039])
+            ("gnus-find-method-for-group" function (:prototype-flag t) nil [71040 71085])
+            ("gnus-group-decoded-name" function (:prototype-flag t) nil [71086 71134])
+            ("gnus-group-name-charset" function (:prototype-flag t) nil [71135 71183])
+            ("gnus-group-name-decode" function (:prototype-flag t) nil [71184 71231])
+            ("gnus-groups-from-server" function (:prototype-flag t) nil [71232 71274])
+            ("gnus-make-local-hook" function (:prototype-flag t) nil [71275 71319])
+            ("gnus-open-server" function (:prototype-flag t) nil [71320 71359])
+            ("gnus-output-to-mail" function (:prototype-flag t) nil [71360 71403])
+            ("gnus-output-to-rmail" function (:prototype-flag t) nil [71404 71448])
+            ("gnus-request-post" function (:prototype-flag t) nil [71449 71489])
+            ("gnus-select-frame-set-input-focus" function (:prototype-flag t) nil [71490 71547])
+            ("gnus-server-string" function (:prototype-flag t) nil [71548 71585])
+            ("idna-to-ascii" function (:prototype-flag t) nil [71586 71618])
+            ("message-setup-toolbar" function (:prototype-flag t) nil [71619 71666])
+            ("mh-new-draft-name" function (:prototype-flag t) nil [71667 71706])
+            ("mh-send-letter" function (:prototype-flag t) nil [71707 71743])
+            ("nndraft-request-associate-buffer" function (:prototype-flag t) nil [71744 71798])
+            ("nndraft-request-expire-articles" function (:prototype-flag t) nil [71799 71852])
+            ("nnvirtual-find-group-art" function (:prototype-flag t) nil [71853 71901])
+            ("rmail-msg-is-pruned" function (:prototype-flag t) nil [71902 71941])
+            ("rmail-output" function (:prototype-flag t) nil [71942 71977])
+            ("unless" code nil nil [72026 72118])
+            ("message-y-or-n-p" function (:arguments ("question" "show" "text")) nil [72155 72349])
+            ("message-delete-line" function (:arguments ("n")) nil [72351 72547])
+            ("message-mark-active-p" function nil nil [72549 72670])
+            ("message-unquote-tokens" function (:arguments ("elems")) nil [72672 72947])
+            ("message-tokenize-header" function (:arguments ("header" "separator")) nil [72949 73892])
+            ("nnheader-insert-file-contents" function (:prototype-flag t) nil [73894 73946])
+            ("message-mail-file-mbox-p" function (:arguments ("file")) nil [73948 74273])
+            ("message-fetch-field" function (:arguments ("header" "not-all")) nil [74275 74720])
+            ("message-field-value" function (:arguments ("header" "not-all")) nil [74722 74976])
+            ("message-narrow-to-field" function nil nil [74978 75319])
+            ("message-add-header" function (:arguments ("headers")) nil [75321 75937])
+            ("message-with-reply-buffer" function (:arguments ("forms")) nil [75939 76195])
+            ("put" code nil nil [76197 76253])
+            ("put" code nil nil [76254 76312])
+            ("message-fetch-reply-field" function (:arguments ("header")) nil [76314 76531])
+            ("message-strip-list-identifiers" function (:arguments ("subject")) nil [76533 77128])
+            ("message-strip-subject-re" function (:arguments ("subject")) nil [77130 77337])
+            ("message-replacement-char" variable (:default-value ".") nil [77339 77571])
+            ("message-strip-subject-encoded-words" function (:arguments ("subject")) nil [77742 80332])
+            ("message-strip-subject-trailing-was" function (:arguments ("subject")) nil [80391 81380])
+            ("message-change-subject" function
+               (:user-visible-flag t
+                :arguments ("new-subject"))
+                nil [81450 82408])
+            ("message-mark-inserted-region" function
+               (:user-visible-flag t
+                :arguments ("beg" "end" "verbatim"))
+                nil [82410 82945])
+            ("message-mark-insert-file" function
+               (:user-visible-flag t
+                :arguments ("file" "verbatim"))
+                nil [82947 83489])
+            ("message-add-archive-header" function (:user-visible-flag t) nil [83491 84226])
+            ("message-cross-post-followup-to-header" function
+               (:user-visible-flag t
+                :arguments ("target-group"))
+                nil [84228 85967])
+            ("message-cross-post-insert-note" function (:arguments ("target-group" "cross-post" "in-old" "old-groups")) nil [85969 87307])
+            ("message-cross-post-followup-to" function
+               (:user-visible-flag t
+                :arguments ("target-group"))
+                nil [87309 88748])
+            ("message-reduce-to-to-cc" function (:user-visible-flag t) nil [88788 89458])
+            ("message-remove-header" function (:arguments ("header" "is-regexp" "first" "reverse")) nil [89515 90540])
+            ("message-remove-first-header" function (:arguments ("header")) nil [90542 90920])
+            ("message-narrow-to-headers" function nil nil [90922 91226])
+            ("message-narrow-to-head-1" function nil nil [91228 91461])
+            ("message-narrow-to-head" function nil nil [91581 91761])
+            ("message-narrow-to-headers-or-head" function nil nil [91763 92129])
+            ("message-news-p" function nil nil [92131 92461])
+            ("message-mail-p" function nil nil [92463 92803])
+            ("message-subscribed-p" function nil nil [92805 93034])
+            ("message-next-header" function nil nil [93036 93262])
+            ("message-sort-headers-1" function nil nil [93264 93610])
+            ("message-sort-headers" function (:user-visible-flag t) nil [93612 94303])
+            ("message-kill-address" function (:user-visible-flag t) nil [94305 94504])
+            ("Info-goto-node" function (:prototype-flag t) nil [94507 94540])
+            ("mml2015-use" variable nil nil [94541 94561])
+            ("message-info" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [94563 95216])
+            ("message-mode-map" variable nil nil [95267 95296])
+            ("unless" code nil nil [95298 99291])
+            ("easy-menu-define" code nil nil [99293 101284])
+            ("easy-menu-define" code nil nil [101286 103619])
+            ("message-tool-bar-map" variable nil nil [103621 103654])
+            ("facemenu-add-face-function" variable nil nil [103656 103691])
+            ("facemenu-remove-face-function" variable nil nil [103692 103730])
+            ("message-strip-special-text-properties" variable (:default-value t) nil [103909 104526])
+            ("message-forbidden-properties" variable (:default-value (quote (field nil read-only nil invisible nil intangible nil mouse-face nil modification-hooks nil insert-in-front-hooks nil insert-behind-hooks nil point-entered nil point-left nil))) nil [104528 105291])
+            ("message-tamago-not-in-use-p" function (:arguments ("pos")) nil [105293 105961])
+            ("message-mail-alias-type-p" function (:arguments ("type")) nil [105963 106124])
+            ("message-strip-forbidden-properties" function (:arguments ("begin" "end" "old-length")) nil [106126 106753])
+            ("ecomplete-setup" function (:prototype-flag t) nil [106755 106794])
+            ("define-derived-mode" code nil nil [106829 112113])
+            ("message-setup-fill-variables" function nil nil [112115 114237])
+            ("message-goto-to" function (:user-visible-flag t) nil [114300 114424])
+            ("message-goto-from" function (:user-visible-flag t) nil [114426 114556])
+            ("message-goto-subject" function (:user-visible-flag t) nil [114558 114697])
+            ("message-goto-cc" function (:user-visible-flag t) nil [114699 114828])
+            ("message-goto-bcc" function (:user-visible-flag t) nil [114830 114968])
+            ("message-goto-fcc" function (:user-visible-flag t) nil [114970 115115])
+            ("message-goto-reply-to" function (:user-visible-flag t) nil [115117 115269])
+            ("message-goto-newsgroups" function (:user-visible-flag t) nil [115271 115419])
+            ("message-goto-distribution" function (:user-visible-flag t) nil [115421 115575])
+            ("message-goto-followup-to" function (:user-visible-flag t) nil [115577 115741])
+            ("message-goto-mail-followup-to" function (:user-visible-flag t) nil [115743 115914])
+            ("message-goto-keywords" function (:user-visible-flag t) nil [115916 116068])
+            ("message-goto-summary" function (:user-visible-flag t) nil [116070 116219])
+            ("message-goto-body" function (:user-visible-flag t) nil [116221 116599])
+            ("message-in-body-p" function nil nil [116601 116887])
+            ("message-goto-eoh" function (:user-visible-flag t) nil [116889 117016])
+            ("message-goto-signature" function (:user-visible-flag t) nil [117018 117356])
+            ("message-generate-unsubscribed-mail-followup-to" function
+               (:user-visible-flag t
+                :arguments ("include-cc"))
+                nil [117358 118366])
+            ("message-insert-to" function
+               (:user-visible-flag t
+                :arguments ("force"))
+                nil [118371 119285])
+            ("message-insert-wide-reply" function (:user-visible-flag t) nil [119287 119533])
+            ("message-header-synonyms" variable (:default-value (quote ((To Cc Bcc) (Original-To)))) nil [119535 119956])
+            ("message-carefully-insert-headers" function (:arguments ("headers")) nil [119958 121138])
+            ("message-widen-reply" function (:user-visible-flag t) nil [121140 121665])
+            ("message-insert-newsgroups" function (:user-visible-flag t) nil [121667 122649])
+            ("message-delete-not-region" function
+               (:user-visible-flag t
+                :arguments ("beg" "end"))
+                nil [122676 123457])
+            ("message-kill-to-signature" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [123459 124006])
+            ("message-newline-and-reformat" function
+               (:user-visible-flag t
+                :arguments ("arg" "not-break"))
+                nil [124008 126825])
+            ("message-fill-paragraph" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [126827 127270])
+            ("message-point-in-header-p" function nil nil [127272 127575])
+            ("message-do-auto-fill" function nil nil [127577 127725])
+            ("message-insert-signature" function
+               (:user-visible-flag t
+                :arguments ("force"))
+                nil [127727 129171])
+            ("message-insert-importance-high" function (:user-visible-flag t) nil [129173 129454])
+            ("message-insert-importance-low" function (:user-visible-flag t) nil [129456 129737])
+            ("message-insert-or-toggle-importance" function (:user-visible-flag t) nil [129739 130349])
+            ("message-insert-disposition-notification-to" function (:user-visible-flag t) nil [130351 130858])
+            ("message-elide-region" function
+               (:user-visible-flag t
+                :arguments ("b" "e"))
+                nil [130860 131251])
+            ("message-caesar-translation-table" variable nil nil [131253 131298])
+            ("message-caesar-region" function
+               (:user-visible-flag t
+                :arguments ("b" "e" "n"))
+                nil [131300 132081])
+            ("message-make-caesar-translation-table" function (:arguments ("n")) nil [132083 132552])
+            ("message-caesar-buffer-body" function
+               (:user-visible-flag t
+                :arguments ("rotnum" "wide"))
+                nil [132554 133202])
+            ("message-pipe-buffer-body" function (:arguments ("program")) nil [133204 133503])
+            ("message-rename-buffer" function
+               (:user-visible-flag t
+                :arguments ("enter-string"))
+                nil [133505 134384])
+            ("message-fill-yanked-message" function
+               (:user-visible-flag t
+                :arguments ("justifyp"))
+                nil [134386 134786])
+            ("message-indent-citation" function (:arguments ("start" "end" "yank-only")) nil [134788 136497])
+            ("message-remove-blank-cited-lines" function
+               (:user-visible-flag t
+                :arguments ("remove"))
+                nil [136499 137101])
+            ("message--yank-original-internal" function (:arguments ("arg")) nil [137103 138503])
+            ("message-yank-original" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [138505 139201])
+            ("message-yank-buffer" function
+               (:user-visible-flag t
+                :arguments ("buffer"))
+                nil [139203 139439])
+            ("message-buffers" function nil nil [139441 139761])
+            ("message-cite-original-1" function (:arguments ("strip-signature")) nil [139763 141928])
+            ("message-cite-original" function nil nil [141930 142044])
+            ("gnus-extract-address-components" variable nil nil [142046 142086])
+            ("format-spec" function (:prototype-flag t) nil [142088 142125])
+            ("message-insert-formatted-citation-line" function (:arguments ("from" "date")) nil [142127 145638])
+            ("message-cite-original-without-signature" function nil nil [145640 145836])
+            ("message-insert-citation-line" function nil nil [145838 146036])
+            ("message-position-on-field" function (:arguments ("header" "afters")) nil [146038 146805])
+            ("message-send-and-exit" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [146840 147373])
+            ("message-dont-send" function (:user-visible-flag t) nil [147375 147680])
+            ("message-kill-buffer" function (:user-visible-flag t) nil [147682 148852])
+            ("message-bury" function (:arguments ("buffer")) nil [148854 149258])
+            ("message-send" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [149260 151886])
+            ("message-send-via-mail" function (:arguments ("arg")) nil [151888 151988])
+            ("message-send-via-news" function (:arguments ("arg")) nil [151990 152107])
+            ("message-check" function (:arguments ("type" "forms")) nil [152109 152265])
+            ("put" code nil nil [152267 152311])
+            ("put" code nil nil [152312 152363])
+            ("message-text-with-property" function (:arguments ("prop" "start" "end" "reverse")) nil [152365 153312])
+            ("message-bogus-addresses" variable (:default-value (quote ("noreply" "nospam" "invalid" "@@" "[^[:ascii:]].*@" "[ 	]"))) nil [153314 154127])
+            ("message-fix-before-sending" function nil nil [154129 157482])
+            ("message-bogus-recipient-p" function (:arguments ("recipients")) nil [157484 158582])
+            ("message-check-recipients" function (:user-visible-flag t) nil [158584 159434])
+            ("custom-add-option" code nil nil [159436 159501])
+            ("message-add-action" function (:arguments ("action" "types")) nil [159503 159710])
+            ("message-delete-action" function (:arguments ("action" "types")) nil [159712 159989])
+            ("message-do-actions" function (:arguments ("actions")) nil [159991 160308])
+            ("message-send-mail-partially" function nil nil [160310 162789])
+            ("declare-function" code nil nil [162791 162859])
+            ("message-send-mail" function (:arguments ("arg")) nil [162861 168725])
+            ("sendmail-program" variable nil nil [168727 168752])
+            ("smtpmail-smtp-user" variable nil nil [168753 168780])
+            ("message-multi-smtp-send-mail" function nil nil [168782 169564])
+            ("message-send-mail-with-sendmail" function nil nil [169566 172073])
+            ("message-send-mail-with-qmail" function nil nil [172075 174008])
+            ("mh-previous-window-config" variable nil nil [174010 174044])
+            ("message-send-mail-with-mh" function nil nil [174046 174635])
+            ("message-smtpmail-send-it" function nil nil [174637 175028])
+            ("message-send-mail-with-mailclient" function nil nil [175030 175332])
+            ("message-canlock-generate" function nil nil [175334 175711])
+            ("canlock-password" variable nil nil [175713 175738])
+            ("canlock-password-for-verify" variable nil nil [175739 175775])
+            ("message-canlock-password" function nil nil [175777 176197])
+            ("message-insert-canlock" function nil nil [176199 176323])
+            ("nnheader-get-report" function (:prototype-flag t) nil [176325 176367])
+            ("declare-function" code nil nil [176369 176433])
+            ("message-send-news" function (:arguments ("arg")) nil [176435 180180])
+            ("message-check-element" function (:arguments ("type")) nil [180232 180511])
+            ("message-check-news-syntax" function nil nil [180513 180810])
+            ("message-check-news-header-syntax" function nil nil [180812 190100])
+            ("message-check-news-body-syntax" function nil nil [190102 193452])
+            ("message-checksum" function nil nil [193454 193855])
+            ("message-do-fcc" function nil nil [193857 196124])
+            ("message-output" function (:arguments ("filename")) nil [196126 196658])
+            ("message-cleanup-headers" function nil nil [196660 197742])
+            ("message-make-date" function (:arguments ("now")) nil [197744 197931])
+            ("message-insert-expires" function
+               (:user-visible-flag t
+                :arguments ("days"))
+                nil [197933 198198])
+            ("message-make-expires-date" function (:arguments ("days")) nil [198200 198523])
+            ("message-make-message-id" function nil nil [198525 199194])
+            ("message-unique-id-char" variable nil nil [199196 199231])
+            ("message-unique-id" function nil nil [199472 200599])
+            ("message-number-base36" function (:arguments ("num" "len")) nil [200601 200838])
+            ("message-make-organization" function nil nil [200840 201544])
+            ("message-make-lines" function nil nil [201546 201770])
+            ("message-make-references" function nil nil [201772 202133])
+            ("message-make-in-reply-to" function nil nil [202135 203534])
+            ("message-make-distribution" function nil nil [203536 203801])
+            ("message-make-expires" function nil nil [203803 204183])
+            ("message-make-path" function nil nil [204185 204517])
+            ("message-make-from" function (:arguments ("name" "address")) nil [204519 206494])
+            ("message-make-sender" function nil nil [206496 206709])
+            ("message-make-address" function nil nil [206711 206870])
+            ("message-user-mail-address" function nil nil [206872 207174])
+            ("message-sendmail-envelope-from" function nil nil [207176 207485])
+            ("message-make-fqdn" function nil nil [207487 208892])
+            ("message-make-domain" function nil nil [208894 209003])
+            ("message-to-list-only" function (:user-visible-flag t) nil [209005 209381])
+            ("message-make-mail-followup-to" function (:arguments ("only-show-subscribed")) nil [209383 210918])
+            ("message-idna-to-ascii-rhs-1" function (:arguments ("header")) nil [210920 212006])
+            ("message-idna-to-ascii-rhs" function (:user-visible-flag t) nil [212008 212873])
+            ("Date" variable nil nil [212875 212888])
+            ("Message-ID" variable nil nil [212889 212908])
+            ("Organization" variable nil nil [212909 212930])
+            ("From" variable nil nil [212931 212944])
+            ("Path" variable nil nil [212945 212958])
+            ("Subject" variable nil nil [212959 212975])
+            ("Newsgroups" variable nil nil [212976 212995])
+            ("In-Reply-To" variable nil nil [212996 213016])
+            ("References" variable nil nil [213017 213036])
+            ("To" variable nil nil [213037 213048])
+            ("Distribution" variable nil nil [213049 213070])
+            ("Lines" variable nil nil [213071 213085])
+            ("User-Agent" variable nil nil [213086 213105])
+            ("Expires" variable nil nil [213106 213122])
+            ("message-generate-headers" function (:arguments ("headers")) nil [213124 218707])
+            ("message-insert-courtesy-copy" function (:arguments ("message")) nil [218709 219198])
+            ("message-skip-to-next-address" function nil nil [219241 219701])
+            ("message-split-line" function (:user-visible-flag t) nil [219703 220016])
+            ("message-insert-header" function (:arguments ("header" "value")) nil [220018 220155])
+            ("message-field-name" function nil nil [220157 220317])
+            ("message-fill-field" function nil nil [220319 220586])
+            ("message-fill-field-address" function nil nil [220588 221005])
+            ("message-fill-field-general" function nil nil [221007 221521])
+            ("message-shorten-1" function (:arguments ("list" "cut" "surplus")) nil [221523 221707])
+            ("message-shorten-references" function (:arguments ("header" "references")) nil [221709 223635])
+            ("message-position-point" function nil nil [223637 224080])
+            ("message-beginning-of-line" variable (:default-value t) nil [224082 224327])
+            ("visual-line-mode" variable nil nil [224329 224354])
+            ("declare-function" code nil nil [224355 224421])
+            ("message-beginning-of-line" function
+               (:user-visible-flag t
+                :arguments ("n"))
+                nil [224423 225646])
+            ("message-buffer-name" function (:arguments ("type" "to" "group")) nil [225648 227475])
+            ("message-pop-to-buffer" function (:arguments ("name" "switch-function")) nil [227477 228415])
+            ("message-do-send-housekeeping" function nil nil [228417 229283])
+            ("message-default-send-rename-function" function nil nil [229285 230158])
+            ("message-mail-user-agent" function nil nil [230160 230424])
+            ("message-setup" function (:arguments ("headers" "yank-action" "actions" "continue" "switch-function" "return-action")) nil [230521 231394])
+            ("message-headers-to-generate" function (:arguments ("headers" "included-headers" "excluded-headers")) nil [231396 232211])
+            ("message-setup-1" function (:arguments ("headers" "yank-action" "actions" "return-action")) nil [232213 235226])
+            ("message-set-auto-save-file-name" function nil nil [235228 236469])
+            ("message-disassociate-draft" function nil nil [236471 236689])
+            ("message-insert-headers" function (:user-visible-flag t) nil [236691 237160])
+            ("message-mail" function
+               (:user-visible-flag t
+                :arguments ("to" "subject" "other-headers" "continue" "switch-function" "yank-action" "send-actions" "return-action" "ignored"))
+                nil [237231 238729])
+            ("message-news" function
+               (:user-visible-flag t
+                :arguments ("newsgroups" "subject"))
+                nil [238746 239062])
+            ("message-alter-recipients-discard-bogus-full-name" function (:arguments ("addrcell")) nil [239064 239586])
+            ("message-alter-recipients-function" variable nil nil [239588 240031])
+            ("message-get-reply-headers" function (:arguments ("wide" "to-address" "address-headers")) nil [240033 245977])
+            ("message-prune-recipients" function (:arguments ("recipients")) nil [245979 246556])
+            ("message-simplify-subject-functions" variable (:default-value (quote (message-strip-list-identifiers message-strip-subject-re message-strip-subject-trailing-was message-strip-subject-encoded-words))) nil [246558 247149])
+            ("message-simplify-subject" function (:arguments ("subject" "functions")) nil [247151 247929])
+            ("message-reply" function
+               (:user-visible-flag t
+                :arguments ("to-address" "wide" "switch-function"))
+                nil [247946 249779])
+            ("message-wide-reply" function
+               (:user-visible-flag t
+                :arguments ("to-address"))
+                nil [249796 249956])
+            ("message-followup" function
+               (:user-visible-flag t
+                :arguments ("to-newsgroups"))
+                nil [249973 254197])
+            ("message-is-yours-p" function nil nil [254199 255796])
+            ("message-cancel-news" function
+               (:user-visible-flag t
+                :arguments ("arg"))
+                nil [255813 257336])
+            ("message-supersede" function (:user-visible-flag t) nil [257353 258339])
+            ("message-recover" function (:user-visible-flag t) nil [258356 259049])
+            ("message-wash-subject" function (:arguments ("subject")) nil [259073 260078])
+            ("message-forward-decoded-p" variable nil nil [260106 260195])
+            ("message-forward-subject-name-subject" function (:arguments ("subject")) nil [260197 260920])
+            ("message-forward-subject-author-subject" function (:arguments ("subject")) nil [260922 261507])
+            ("message-forward-subject-fwd" function (:arguments ("subject")) nil [261509 261765])
+            ("message-make-forward-subject" function nil nil [261767 262587])
+            ("gnus-article-decoded-p" variable nil nil [262589 262620])
+            ("message-forward" function
+               (:user-visible-flag t
+                :arguments ("news" "digest"))
+                nil [262638 263226])
+            ("message-forward-make-body-plain" function (:arguments ("forward-buffer")) nil [263228 264149])
+            ("message-remove-ignored-headers" function (:arguments ("b" "e")) nil [264151 264601])
+            ("message-forward-make-body-mime" function (:arguments ("forward-buffer" "beg" "end")) nil [264603 265236])
+            ("message-forward-make-body-mml" function (:arguments ("forward-buffer")) nil [265238 266392])
+            ("message-forward-make-body-digest-plain" function (:arguments ("forward-buffer")) nil [266394 266670])
+            ("message-forward-make-body-digest-mime" function (:arguments ("forward-buffer")) nil [266672 267094])
+            ("message-forward-make-body-digest" function (:arguments ("forward-buffer")) nil [267096 267305])
+            ("mm-uu-dissect-text-parts" function (:prototype-flag t) nil [267307 267351])
+            ("mm-uu-dissect" function (:prototype-flag t) nil [267352 267385])
+            ("message-signed-or-encrypted-p" function (:arguments ("dont-emulate-mime" "handles")) nil [267387 269331])
+            ("message-forward-make-body" function (:arguments ("forward-buffer" "digest")) nil [269348 270232])
+            ("declare-function" code nil nil [270234 270296])
+            ("message-forward-rmail-make-body" function (:arguments ("forward-buffer")) nil [270313 270651])
+            ("message-insinuate-rmail" function (:user-visible-flag t) nil [270701 270916])
+            ("message-inhibit-body-encoding" variable nil nil [270918 270960])
+            ("message-resend" function
+               (:user-visible-flag t
+                :arguments ("address"))
+                nil [270977 273410])
+            ("message-bounce" function (:user-visible-flag t) nil [273427 274837])
+            ("message-mail-other-window" function
+               (:user-visible-flag t
+                :arguments ("to" "subject"))
+                nil [274917 275353])
+            ("message-mail-other-frame" function
+               (:user-visible-flag t
+                :arguments ("to" "subject"))
+                nil [275370 275802])
+            ("message-news-other-window" function
+               (:user-visible-flag t
+                :arguments ("newsgroups" "subject"))
+                nil [275819 276181])
+            ("message-news-other-frame" function
+               (:user-visible-flag t
+                :arguments ("newsgroups" "subject"))
+                nil [276198 276558])
+            ("message-bold-region" function
+               (:user-visible-flag t
+                :arguments ("start" "end"))
+                nil [276666 277139])
+            ("message-unbold-region" function
+               (:user-visible-flag t
+                :arguments ("start" "end"))
+                nil [277156 277617])
+            ("message-exchange-point-and-mark" function nil nil [277619 277810])
+            ("defalias" code nil nil [277812 277858])
+            ("defalias" code nil nil [277859 277909])
+            ("defalias" code nil nil [277910 277954])
+            ("message-kill-all-overlays" function nil nil [277955 278153])
+            ("tool-bar-mode" variable nil nil [278178 278200])
+            ("message-tool-bar-update" function (:arguments ("symbol" "value")) nil [278400 278653])
+            ("message-tool-bar" variable (:default-value (if (eq gmm-tool-bar-style (quote gnome)) (quote message-tool-bar-gnome) (quote message-tool-bar-retro))) nil [278655 279414])
+            ("message-tool-bar-gnome" variable (:default-value (quote ((ispell-message "spell" nil :vert-only t :visible (or (not (boundp (quote flyspell-mode))) (not flyspell-mode))) (flyspell-buffer "spell" t :vert-only t :visible (and (boundp (quote flyspell-mode)) flyspell-mode) :help "Flyspell whole buffer") (message-send-and-exit "mail/send" t :label "Send") (message-dont-send "mail/save-draft") (mml-attach-file "attach" mml-mode-map :vert-only t) (mml-preview "mail/preview" mml-mode-map) (mml-secure-message-sign-encrypt "lock" mml-mode-map :visible nil) (message-insert-importance-high "important" nil :visible nil) (message-insert-importance-low "unimportant" nil :visible nil) (message-insert-disposition-notification-to "receipt" nil :visible nil)))) nil [279416 280498])
+            ("message-tool-bar-retro" variable (:default-value (quote ((message-send-and-exit "gnus/mail-send") (message-kill-buffer "close") (message-dont-send "cancel") (mml-attach-file "attach" mml-mode-map) (ispell-message "spell") (mml-preview "preview" mml-mode-map) (message-insert-importance-high "gnus/important") (message-insert-importance-low "gnus/unimportant") (message-insert-disposition-notification-to "gnus/receipt")))) nil [280500 281259])
+            ("message-tool-bar-zap-list" variable (:default-value (quote (new-file open-file dired kill-buffer write-file print-buffer customize help))) nil [281261 281703])
+            ("image-load-path" variable nil nil [281705 281729])
+            ("message-make-tool-bar" function (:arguments ("force")) nil [281731 282394])
+            ("message-newgroups-header-regexp" variable (:default-value "^\\(Newsgroups\\|Followup-To\\|Posted-To\\|Gcc\\):") nil [282424 282605])
+            ("message-completion-alist" variable (:default-value (list (cons message-newgroups-header-regexp (quote message-expand-group)) (quote ("^\\(Resent-\\)?\\(To\\|B?Cc\\):" . message-expand-name)) (quote ("^\\(Reply-To\\|From\\|Mail-Followup-To\\|Mail-Copies-To\\):" . message-expand-name)) (quote ("^\\(Disposition-Notification-To\\|Return-Receipt-To\\):" . message-expand-name)))) nil [282607 283120])
+            ("message-expand-name-databases" variable (:default-value (quote (bbdb eudc))) nil [283122 283365])
+            ("message-tab-body-function" variable (:user-visible-flag t) nil [283367 283689])
+            ("declare-function" code nil nil [283691 283759])
+            ("message-tab" function (:user-visible-flag t) nil [283761 284522])
+            ("mail-abbrev-mode-regexp" variable nil nil [284524 284556])
+            ("message-completion-function" function nil nil [284558 285040])
+            ("message-expand-group" function nil nil [285042 285783])
+            ("defalias" code nil nil [285785 287069])
+            ("message-expand-name" function nil nil [287071 287673])
+            ("message-talkative-question" function (:arguments ("ask" "question" "show" "text")) nil [287692 288333])
+            ("message-flatten-list" function (:arguments ("list")) nil [288335 288601])
+            ("message-generate-new-buffer-clone-locals" function (:arguments ("name" "varstr")) nil [288603 289063])
+            ("message-clone-locals" function (:arguments ("buffer" "varstr")) nil [289065 289637])
+            ("message-encode-message-body" function nil nil [289667 291297])
+            ("message-read-from-minibuffer" function (:arguments ("prompt" "initial-contents")) nil [291299 291804])
+            ("message-use-alternative-email-as-from" function nil nil [291806 292593])
+            ("message-options-get" function (:arguments ("symbol")) nil [292595 292669])
+            ("message-options-set" function (:arguments ("symbol" "value")) nil [292671 292954])
+            ("message-options-set-recipient" function nil nil [292956 293501])
+            ("message-hide-headers" function nil nil [293503 294386])
+            ("message-hide-header-p" function (:arguments ("regexps")) nil [294388 294669])
+            ("declare-function" code nil nil [294671 294736])
+            ("declare-function" code nil nil [294737 294785])
+            ("message-put-addresses-in-ecomplete" function nil nil [294787 295232])
+            ("ecomplete-display-matches" function (:prototype-flag t) nil [295234 295283])
+            ("message-display-abbrev" function
+               (:user-visible-flag t
+                :arguments ("choose"))
+                nil [295285 296059])
+            ("message-form-letter-separator" variable (:default-value "
+----------next form letter message follows this line----------
+") nil [297635 297897])
+            ("message-send-form-letter-delay" variable (:default-value 1) nil [297899 298208])
+            ("message-send-form-letter" function
+               (:user-visible-flag t
+                :arguments ("force"))
+                nil [298210 299446])
+            ("message-replace-header" function (:arguments ("header" "new-value" "after" "force")) nil [299448 300004])
+            ("message-recipients-without-full-name" variable (:default-value (list "ding@gnus.org" "bugs@gnus.org" "emacs-devel@gnu.org" "emacs-pretest-bug@gnu.org" "bug-gnu-emacs@gnu.org")) nil [300006 300457])
+            ("message-simplify-recipients" function nil nil [300459 301003])
+            ("when" code nil nil [301005 301081])
+            ("message" package nil nil [301083 301101])
+            ("run-hooks" code nil nil [301103 301133]))          
+      :file "message.el.gz"
+      :pointmax 301206
+      :fsize 77801
+      :lastmodtime '(21291 53104 0 0)
+      :unmatched-syntax '((close-paren 1458 . 1459) (symbol 1421 . 1438) (open-paren 1420 . 1421) (close-paren 1223 . 1224) (symbol 1190 . 1207) (open-paren 1189 . 1190) (close-paren 1187 . 1188) (symbol 1094 . 1110) (open-paren 1093 . 1094))))
+  :file "!usr!local!share!emacs!24.4!lisp!gnus!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
