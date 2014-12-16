@@ -1,21 +1,21 @@
-;;(require 'package)
-;;(add-to-list 'package-archives
-  ;;'("melpa" . "http://melpa.milkbox.net/packages/") t)
 (require 'package)
-(setq package-archives
-      '(("gnu" . "http://elpa.gnu.org/packages/")
-	("marmalade" . "http://marmalade-repo.org/packages/")
-	("melpa" . "http://melpa.milkbox.net/packages/")))
-(package-initialize)
+(add-to-list 'package-archives
+  '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;; (require 'package)
+;; (setq package-archives
+;;       '(("gnu" . "http://elpa.gnu.org/packages/")
+;; 	("marmalade" . "http://marmalade-repo.org/packages/")
+;; 	("melpa" . "http://melpa.milkbox.net/packages/")))
+;;(package-initialize)
 (add-to-list 'load-path "~/.mylisp/")
-(add-to-list 'load-path "~/.mylisp/cedet/")
+(add-to-list 'load-path "~/.emacs.d/cedet/")
 (add-to-list 'load-path "~/.mylisp/helm/")
 (add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-20141117.327/")
 (add-to-list 'load-path "~/.emacs.d/elpa/ecb-20140215.114/")  
 (load-file (concat user-emacs-directory "/cedet/cedet-devel-load.el"))
-(load-file (concat user-emacs-directory "cedet/contrib/cedet-contrib-load.el"))
-;; (setq semanticdb-project-roots
-;;       (list (expand-file-name "/")));semantic检索范围
+(load-file (concat user-emacs-directory "/cedet/contrib/cedet-contrib-load.el"))
+ (setq semanticdb-project-roots
+       (list (expand-file-name "/")));semantic检索范围
 ;;设置semantic cache临时文件的路径，避免到处都是临时文件
 (setq semanticdb-default-save-directory "~/.emacs.d/")
 ;;使用google 代码规范
@@ -34,9 +34,9 @@
 (require 'eassist nil 'noerror)
 (semantic-load-enable-minimum-features)
 (setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")
-(semantic-load-enable-code-helpers)
-(semantic-load-enable-gaudy-code-helpers)
-(semantic-load-enable-excessive-code-helpers)
+;;(semantic-load-enable-code-helpers)
+;;(semantic-load-enable-gaudy-code-helpers)
+;;(semantic-load-enable-excessive-code-helpers)
 ;;(semantic-load-enable-semantic-debugging-helpers)
 (require 'cc-mode)
 (require 'semantic)
@@ -47,7 +47,7 @@
 
 
 (require 'ecb)
-;;(require 'ecb-autoloads)
+(require 'ecb-autoloads)
 ;;(ecb-activate)
 (when (require 'ecb nil 'noerror)
   (setq ecb-tip-of-the-day nil)
@@ -119,5 +119,5 @@
 (setq bc-bookmark-limit 300)
 ;; Configuration of Python IDE
 ;; https://github.com/jorgenschaefer/elpy
-(require 'elpy nil t)
-(elpy-enable)
+;;(require 'elpy nil t)
+;;(elpy-enable)
