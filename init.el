@@ -9,7 +9,7 @@
 ;;(package-initialize)
 (add-to-list 'load-path "~/.mylisp/")
 (add-to-list 'load-path "~/.emacs.d/cedet/")
-(add-to-list 'load-path "~/.mylisp/helm/")
+(add-to-list 'load-path "~/.emacs.d/elpa/helm-20141219.55")
 (add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-20141117.327/")
 (add-to-list 'load-path "~/.emacs.d/elpa/ecb-20140215.114/")  
 (load-file (concat user-emacs-directory "/cedet/cedet-devel-load.el"))
@@ -47,7 +47,7 @@
 
 
 (require 'ecb)
-(require 'ecb-autoloads)
+;;(require 'ecb-autoloads)
 ;;(ecb-activate)
 (when (require 'ecb nil 'noerror)
   (setq ecb-tip-of-the-day nil)
