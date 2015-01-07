@@ -72,6 +72,7 @@
 ;;;;ejb 快捷键
 (require 'helm-config)
 (helm-mode 1)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (require 'xcscope)
 (put 'set-goal-column 'disabled nil)
 (put 'upcase-region 'disabled nil)
