@@ -34,7 +34,7 @@
 (require 'eassist nil 'noerror)
 (semantic-load-enable-minimum-features)
 (setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")
-;;(semantic-load-enable-code-helpers)
+(semantic-load-enable-code-helpers)
 ;;(semantic-load-enable-gaudy-code-helpers)
 ;;(semantic-load-enable-excessive-code-helpers)
 ;;(semantic-load-enable-semantic-debugging-helpers)
@@ -44,10 +44,8 @@
 (global-semantic-idle-scheduler-mode 1)
 (semantic-mode 1)
 (semantic-add-system-include "/usr/include/boost" 'c++-mode)
-
-
 (require 'ecb)
-(require 'ecb-autoloads)
+;;(require 'ecb-autoloads)
 ;;(ecb-activate)
 (when (require 'ecb nil 'noerror)
   (setq ecb-tip-of-the-day nil)
@@ -73,6 +71,7 @@
 ;;(setq x-select-enable-clipboard t);支持emacs和外部程序的粘贴
 ;;;;ejb 快捷键
 (require 'helm-config)
+(helm-mode 1)
 (require 'xcscope)
 (put 'set-goal-column 'disabled nil)
 (put 'upcase-region 'disabled nil)
@@ -111,7 +110,7 @@
   (untabify (point-min) (point-max))
   (save-buffer)
     )
-;;(semanticdb-enable-cscope-databases)  ;;This is causing problems
+(semanticdb-enable-cscope-databases)  ;;This is causing problems
 ;;auto company
 (add-to-list 'load-path "~/.mylisp/company-mode/")
 (autoload 'company-mode "company" nil t)
@@ -121,3 +120,4 @@
 ;; https://github.com/jorgenschaefer/elpy
 ;;(require 'elpy nil t)
 ;;(elpy-enable)
+(put 'dired-find-alternate-file 'disabled nil)
