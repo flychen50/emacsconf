@@ -146,5 +146,5 @@
 (require 'elpy nil t)
 (elpy-enable)
 (setq elpy-rpc-backend "jedi")
-(setq elpy-rpc-python-command "python2.6")
+;;(setq elpy-rpc-python-command "python2.4")
 (put 'dired-find-alternate-file 'disabled nil)
