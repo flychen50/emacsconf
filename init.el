@@ -1,20 +1,38 @@
+;; Load CEDET.
+;; See cedet/common/cedet.info for configuration details.
+;; IMPORTANT: Tou must place this *before* any CEDET component (including
+;; EIEIO) gets activated by another package (Gnus, auth-source, ...).
+(load-file "~/.emacs.d/cedet/cedet-devel-load.el")
+;; Add further minor-modes to be enabled by semantic-mode.
+;; See doc-string of `semantic-default-submodes' for other things
+;; you can use here.
+(add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
+(add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
+(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
+;; Enable Semantic
+(semantic-mode 1)
+;; Enable EDE (Project Management) features
+(global-ede-mode 1)
+
 (require 'package)
+;; this is intended for manually installed libraries
+(add-to-list 'load-path "~/.emacs.d/elpa/")
+;; load the package system and add some repositories
 (add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
-;; (require 'package)
-;; (setq package-archives
-;;       '(("gnu" . "http://elpa.gnu.org/packages/")
-;; 	("marmalade" . "http://marmalade-repo.org/packages/")
-;; 	("melpa" . "http://melpa.milkbox.net/packages/")))
-;;(package-initialize)
+	     '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;; Install a hook running post-init.el *after* initialization took place
+;; Do here basic initialization, (require) non-ELPA packages, etc.
+
+;; disable automatic loading of packages after init.el is done
+(setq package-enable-at-startup nil)
+;; and force it to happen now
+(package-initialize)
+;; NOW you can (require) your ELPA packages and configure them as normal
 (add-to-list 'load-path "~/.mylisp/")
-(add-to-list 'load-path "~/.emacs.d/cedet/")
-(add-to-list 'load-path "~/.emacs.d/elpa/helm-20141219.55")
-(add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-20141117.327/")
-(add-to-list 'load-path "~/.emacs.d/elpa/ecb-20140215.114/")  
-(load-file (concat user-emacs-directory "/cedet/cedet-devel-load.el"))
 (load-file (concat user-emacs-directory "/cedet/contrib/cedet-contrib-load.el"))
- (setq semanticdb-project-roots
+(setq semanticdb-project-roots
        (list (expand-file-name "/")));semantic检索范围
 ;;设置semantic cache临时文件的路径，避免到处都是临时文件
 (setq semanticdb-default-save-directory "~/.emacs.d/")
@@ -70,9 +88,9 @@
 ;;(global-set-key [end] 'end-of-buffer)
 ;;(setq x-select-enable-clipboard t);支持emacs和外部程序的粘贴
 ;;;;ejb 快捷键
-(require 'helm-config)
-(helm-mode 1)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+;; (require 'helm-config)
+;; (helm-mode 1)
+;; (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (require 'xcscope)
 (put 'set-goal-column 'disabled nil)
 (put 'upcase-region 'disabled nil)
@@ -117,8 +135,16 @@
 (autoload 'company-mode "company" nil t)
 (setq bc-bookmark-file "~/.emacs.d/bookmark")
 (setq bc-bookmark-limit 300)
-;; Configuration of Python IDE
-;; https://github.com/jorgenschaefer/elpy
-;;(require 'elpy nil t)
-;;(elpy-enable)
+(defun my-rpm-changelog-increment-version ()
+  (interactive)
+  (goto-char (point-min))
+  (let* ((max (search-forward-regexp rpm-section-regexp))
+	 (version (rpm-spec-field-value "Version" max)))
+    (rpm-add-change-log-entry (concat "Upgrade version to " version))
+    )
+    )
+(require 'elpy nil t)
+(elpy-enable)
+(setq elpy-rpc-backend "jedi")
+(setq elpy-rpc-python-command "python2.6")
 (put 'dired-find-alternate-file 'disabled nil)
