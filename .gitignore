@@ -33,5 +33,5 @@ tramp
 
 #elpa packages
 .elpa/
-
+.cedet/
 bookmarks
