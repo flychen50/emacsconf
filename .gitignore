@@ -30,3 +30,8 @@ tramp
 
 # cask packages
 .cask/
+
+#elpa packages
+.elpa/
+
+bookmarks
