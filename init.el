@@ -10,9 +10,9 @@
 (add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
 (add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
 ;; Enable Semantic
-(semantic-mode 1)
+;;(semantic-mode 1)
 ;; Enable EDE (Project Management) features
-(global-ede-mode 1)
+;;(global-ede-mode 1)
 
 (require 'package)
 ;; this is intended for manually installed libraries
@@ -47,20 +47,20 @@
 (require 'cedet)
 (require 'semantic)
 (require 'ede)
-(global-ede-mode)
+;;(global-ede-mode)
 ;;cpp和header快速切换
 (require 'eassist nil 'noerror)
 (semantic-load-enable-minimum-features)
 (setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")
-(semantic-load-enable-code-helpers)
+;;(semantic-load-enable-code-helpers)
 ;;(semantic-load-enable-gaudy-code-helpers)
 ;;(semantic-load-enable-excessive-code-helpers)
 ;;(semantic-load-enable-semantic-debugging-helpers)
 (require 'cc-mode)
 (require 'semantic)
-(global-semanticdb-minor-mode 1)
-(global-semantic-idle-scheduler-mode 1)
-(semantic-mode 1)
+;;(global-semanticdb-minor-mode 1)
+;;(global-semantic-idle-scheduler-mode 1)
+;;(semantic-mode 1)
 (semantic-add-system-include "/usr/include/boost" 'c++-mode)
 (require 'ecb)
 ;;(require 'ecb-autoloads)
@@ -129,7 +129,7 @@
   (untabify (point-min) (point-max))
   (save-buffer)
     )
-(semanticdb-enable-cscope-databases)  ;;This is causing problems
+;;(semanticdb-enable-cscope-databases)  ;;This is causing problems
 ;;auto company
 (add-to-list 'load-path "~/.mylisp/company-mode/")
 (autoload 'company-mode "company" nil t)
@@ -143,9 +143,9 @@
     (rpm-add-change-log-entry (concat "Upgrade version to " version))
     )
     )
-(require 'elpy nil t)
-(elpy-enable)
-(setq elpy-rpc-backend "jedi")
+;; (require 'elpy nil t)
+;; (elpy-enable)
+;; (setq elpy-rpc-backend "jedi")
 ;;(setq elpy-rpc-python-command "python2.4")
 (put 'dired-find-alternate-file 'disabled nil)
 (require 'web-mode)
