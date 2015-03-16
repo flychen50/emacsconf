@@ -1,3 +1,5 @@
+(unless (= emacs-major-version 24)
+    (error "Emacs version 24 is required"))
 ;; Load CEDET.
 ;; See cedet/common/cedet.info for configuration details.
 ;; IMPORTANT: Tou must place this *before* any CEDET component (including
@@ -13,7 +15,8 @@
 ;;(semantic-mode 1)
 ;; Enable EDE (Project Management) features
 ;;(global-ede-mode 1)
-
+(defvar init-dir (file-name-directory load-file-name))
+(defvar tmp-dir (expand-file-name "tmp" init-dir))
 (require 'package)
 ;; this is intended for manually installed libraries
 (add-to-list 'load-path "~/.emacs.d/elpa/")
@@ -32,6 +35,104 @@
 
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
+(require 'use-package)
+
+
+; helm
+(require 'helm-config)
+(require 'imenu-anywhere)
+(setq enable-recursive-minibuffers t)
+(bind-key "C-c h" 'helm-mini)
+(bind-key "M-l" 'helm-locate)
+(bind-key "M-t" 'helm-top)
+(bind-key "C-." 'helm-imenu-anywhere)
+(bind-key "C-x C-f" 'helm-find-files)
+;(bind-key "M-x" 'helm-M-x)
+(bind-key "M-l" 'helm-eshell-history)
+
+; eshell
+(add-hook 'eshell-mode-hook
+          #'(lambda ()
+              (define-key eshell-mode-map
+                [remap eshell-pcomplete]
+                'helm-esh-pcomplete)))
+
+
+(use-package undo-tree
+  :init (global-undo-tree-mode 1)
+  :config
+  (progn
+    (setq undo-tree-visualizer-diff t)
+    (setq undo-tree-history-directory-alist (expand-file-name ".undo" tmp-dir))
+    (setq undo-tree-visualizer-timestamps t)))
+
+
+(use-package switch-window
+  :bind (("C-x o" . switch-window)))
+
+;; Git
+(use-package magit
+  :init
+  (progn
+    (use-package magit-blame)
+    (bind-key "C-c C-a" 'magit-just-amend magit-mode-map))
+  :config
+  (progn
+    (setq magit-default-tracking-name-function 'magit-default-tracking-name-branch-only)
+    (setq magit-set-upstream-on-push t)
+    (setq magit-completing-read-function 'magit-ido-completing-read)
+    (setq magit-stage-all-confirm nil)
+    (setq magit-unstage-all-confirm nil)
+    (setq magit-restore-window-configuration t))
+  :bind (("M-g s" . magit-status)
+	 ("M-g l" . magit-log)
+	 ("M-g f" . magit-pull)
+	 ("M-g p" . magit-push)))
+
+(use-package git-blame)
+(use-package git-commit-mode)
+(use-package git-rebase-mode)
+(use-package gitignore-mode)
+(use-package gitconfig-mode)
+
+(setq-default
+ magit-save-some-buffers nil
+ magit-process-popup-time 10
+ magit-diff-refine-hunk t
+ magit-completing-read-function 'magit-ido-completing-read)
+(add-hook 'git-commit-mode-hook 'goto-address-mode)
+
+;; End
+
+(use-package git-gutter
+  :config
+  (progn
+    (global-git-gutter-mode t)
+    (git-gutter:linum-setup)
+    (add-hook 'python-mode-hook 'git-gutter-mode)
+    (custom-set-variables
+     '(git-gutter:window-width 2)
+     '(git-gutter:modified-sign "☁")
+     '(git-gutter:added-sign "☀")
+     '(git-gutter:deleted-sign "☂")
+     '(git-gutter:unchanged-sign " ")
+     '(git-gutter:separator-sign "|")
+     '(git-gutter:hide-gutter t))
+    (set-face-background 'git-gutter:modified "purple") ;; background color
+    (set-face-foreground 'git-gutter:added "green")
+    (set-face-foreground 'git-gutter:deleted "red")
+    (set-face-background 'git-gutter:unchanged "yellow")
+    (set-face-foreground 'git-gutter:separator "yellow")
+    (add-to-list 'git-gutter:update-hooks 'focus-in-hook))
+  :bind (("C-x C-g" . git-gutter:toggle)
+	 ("C-x v =" . git-gutter:popup-hunk)
+	 ("C-x p" . git-gutter:previous-hunk)
+	 ("C-x n" . git-gutter:next-hunk)
+	 ("C-x v s" . git-gutter:stage-hunk)
+	          ("C-x v r" . git-gutter:revert-hunk)))
+
+
+
 
 ;; NOW you can (require) your ELPA packages and configure them as normal
 (add-to-list 'load-path "~/.mylisp/")
@@ -104,7 +205,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ecb-options-version "2.40"))
+ '(ecb-options-version "2.40")
+ '(magit-diff-options nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -160,3 +262,5 @@
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+
+
