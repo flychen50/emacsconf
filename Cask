@@ -9,3 +9,6 @@
 (depends-on "js2-mode")
 (depends-on "magit")
 (depends-on "web-mode")
+(depends-on "smartparens")
+(depends-on "switch-window")
+(depends-on "undo-tree")
