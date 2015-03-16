@@ -18,3 +18,4 @@
 (depends-on "undo-tree")
 (depends-on "use-package")
 (depends-on "web-mode")
+(depends-on "browse-kill-ring" :git "https://github.com/browse-kill-ring/browse-kill-ring.git" :files ("*" (:exclude ".git")))

@@ -1,6 +1,5 @@
 (unless (= emacs-major-version 24)
   (error "Emacs version 24 is required"))
-
 ;; Load CEDET.
 ;; See cedet/common/cedet.info for configuration details.
 ;; IMPORTANT: Tou must place this *before* any CEDET component (including
@@ -130,7 +129,8 @@
 	          ("C-x v r" . git-gutter:revert-hunk)))
 
 
-
+(use-package browse-kill-ring
+    :bind (("M-y" . browse-kill-ring)))
 
 ;; NOW you can (require) your ELPA packages and configure them as normal
 (add-to-list 'load-path "~/.mylisp/")
