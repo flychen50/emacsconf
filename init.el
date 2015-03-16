@@ -262,3 +262,5 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 
 
+(bind-key "C-z  " 'undo)
+(bind-key "C-c b" 'switch-to-prev-buffer)
