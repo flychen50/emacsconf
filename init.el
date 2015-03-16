@@ -217,7 +217,9 @@
   :config
     (ido-ubiquitous-mode t))
 
-
+;; (use-package company
+;;   :config
+;;   (company-mode 1))
 
 ;; NOW you can (require) your ELPA packages and configure them as normal
 (add-to-list 'load-path "~/.mylisp/")
