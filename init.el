@@ -353,3 +353,4 @@
 
 (bind-key "C-z  " 'undo)
 (bind-key "C-c b" 'switch-to-prev-buffer)
+(add-hook 'after-init-hook 'global-company-mode)
