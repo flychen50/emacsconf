@@ -29,6 +29,10 @@
 (setq package-enable-at-startup nil)
 ;; and force it to happen now
 (package-initialize)
+
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+
 ;; NOW you can (require) your ELPA packages and configure them as normal
 (add-to-list 'load-path "~/.mylisp/")
 (load-file (concat user-emacs-directory "/cedet/contrib/cedet-contrib-load.el"))
