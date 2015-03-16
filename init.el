@@ -1,5 +1,6 @@
 (unless (= emacs-major-version 24)
-    (error "Emacs version 24 is required"))
+  (error "Emacs version 24 is required"))
+
 ;; Load CEDET.
 ;; See cedet/common/cedet.info for configuration details.
 ;; IMPORTANT: Tou must place this *before* any CEDET component (including
@@ -32,12 +33,9 @@
 (setq package-enable-at-startup nil)
 ;; and force it to happen now
 (package-initialize)
-
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 (require 'use-package)
-
-
 ; helm
 (require 'helm-config)
 (require 'imenu-anywhere)
