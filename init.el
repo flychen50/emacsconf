@@ -19,12 +19,12 @@
 (defvar tmp-dir (expand-file-name "tmp" init-dir))
 (require 'package)
 ;; this is intended for manually installed libraries
-(add-to-list 'load-path "~/.emacs.d/elpa/")
-;; load the package system and add some repositories
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;; (add-to-list 'load-path "~/.emacs.d/elpa/")
+;; ;; load the package system and add some repositories
+;; (add-to-list 'package-archives
+;; 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
+;; (add-to-list 'package-archives
+;; 	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
 ;; Install a hook running post-init.el *after* initialization took place
 ;; Do here basic initialization, (require) non-ELPA packages, etc.
 
