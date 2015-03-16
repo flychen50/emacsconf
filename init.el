@@ -244,7 +244,7 @@
 (require 'eassist nil 'noerror)
 (semantic-load-enable-minimum-features)
 (setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")
-;;(semantic-load-enable-code-helpers)
+(semantic-load-enable-code-helpers)
 ;;(semantic-load-enable-gaudy-code-helpers)
 ;;(semantic-load-enable-excessive-code-helpers)
 ;;(semantic-load-enable-semantic-debugging-helpers)
@@ -355,13 +355,13 @@
 (bind-key "C-c b" 'switch-to-prev-buffer)
 ;;(add-hook 'after-init-hook 'global-company-mode)
 ;; company
-(require 'company)
-(add-hook 'after-init-hook 'global-company-mode)
-(delete 'company-semantic company-backends)
-(define-key c-mode-map  [(control tab)] 'company-complete)
-(define-key c++-mode-map  [(control tab)] 'company-complete)
-;; company-c-headers
-(add-to-list 'company-backends 'company-c-headers)
+;; (require 'company)
+;; (add-hook 'after-init-hook 'global-company-mode)
+;; ;;(delete 'company-semantic company-backends)
+;; (define-key c-mode-map  [(control tab)] 'company-complete)
+;; (define-key c++-mode-map  [(control tab)] 'company-complete)
+;; ;; company-c-headers
+;; (add-to-list 'company-backends 'company-c-headers)
 
 ;; hs-minor-mode for folding source code
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
