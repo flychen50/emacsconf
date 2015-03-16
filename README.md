@@ -16,3 +16,6 @@ Cask安装和使用
 curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
+
+
+fork from https://github.com/dongweiming/emacs.d

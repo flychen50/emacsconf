@@ -132,6 +132,37 @@
 (use-package browse-kill-ring
     :bind (("M-y" . browse-kill-ring)))
 
+
+
+
+(defun load-local (filename)
+  (let ((file (s-concat (f-expand filename user-emacs-directory) ".el")))
+    (if (f-exists? file)
+	(load-file file))))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector ["#262626" "#d70000" "#5f8700" "#af8700" "#0087ff" "#af005f" "#00afaf" "#626262"])
+ '(anzu-deactivate-region t)
+ '(anzu-mode-lighter "")
+ '(anzu-replace-to-string-separator " => ")
+ '(anzu-search-threshold 1000)
+ '(background-color nil)
+ '(background-mode dark)
+ '(cursor-color nil)
+ '(foreground-color nil))
+
+(add-to-list 'custom-theme-load-path (expand-file-name "themes" init-dir))
+(load-theme 'noctilux t)
+
+(add-hook 'emacs-startup-hook
+	  (lambda ()
+	    (when (string= (buffer-name) "*scratch*")
+	      (animate-string "Emacs Makes All Computing Simple" (/ (frame-height) 2)))))
+
 ;; NOW you can (require) your ELPA packages and configure them as normal
 (add-to-list 'load-path "~/.mylisp/")
 (load-file (concat user-emacs-directory "/cedet/contrib/cedet-contrib-load.el"))
