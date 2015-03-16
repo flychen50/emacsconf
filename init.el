@@ -163,6 +163,62 @@
 	    (when (string= (buffer-name) "*scratch*")
 	      (animate-string "Emacs Makes All Computing Simple" (/ (frame-height) 2)))))
 
+
+
+;;;; Local
+
+(load-local "helper")
+(load-local "misc")
+(load-local "functions")
+(load-local "modeline")
+(load-local "hs-minor-mode-conf")
+(load-local "smartparens-config")
+;; key-chord
+					;(load-local "keys")
+;; Map files to modes
+(load-local "mode-mappings")
+(when (eq system-type 'darwin)
+    (load-local "osx"))
+
+
+;;;; Common
+
+(add-hook 'prog-mode-hook 'show-prog-keywords)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(defun my-hook ()
+  (idle-highlight-mode t))
+
+;;;; Packages
+
+(use-package ht)
+
+(use-package ido
+  :init (ido-mode 1)
+  :config
+  (progn
+    (setq ido-case-fold t)
+    (setq ido-everywhere t)
+    (setq ido-enable-prefix nil)
+    (setq ido-enable-flex-matching t)
+    (setq ido-create-new-buffer 'always)
+    (setq ido-max-prospects 10)
+    (setq ido-save-directory-list-file (expand-file-name "ido-saved-places" tmp-dir))
+    (setq ido-file-extensions-order '(".py" ".el" ".coffee" ".js" ".css" ".scss"))
+    (add-hook 'ido-setup-hook (lambda ()
+                                (define-key ido-completion-map [up] 'previous-history-element)))
+    (add-to-list 'ido-ignore-files "\\.DS_Store")))
+
+(use-package flx-ido
+  :config
+  (flx-ido-mode 1))
+
+(use-package ido-ubiquitous
+  :config
+    (ido-ubiquitous-mode t))
+
+
+
 ;; NOW you can (require) your ELPA packages and configure them as normal
 (add-to-list 'load-path "~/.mylisp/")
 (load-file (concat user-emacs-directory "/cedet/contrib/cedet-contrib-load.el"))
@@ -228,7 +284,7 @@
 (require 'xcscope)
 (put 'set-goal-column 'disabled nil)
 (put 'upcase-region 'disabled nil)
- 
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -247,7 +303,7 @@
   "Insert the current time"
   (interactive "*")
   (insert (current-time-string)))
-;(global-set-key "C-xt" 'insert-current-time) 
+;(global-set-key "C-xt" 'insert-current-time)
 (defun cpplint ()
   "check source code format according to Google Style Guide"
   (interactive)

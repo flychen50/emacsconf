@@ -6,6 +6,7 @@
 (depends-on "company")
 (depends-on "gist")
 (depends-on "git")
+(depends-on "ht")
 (depends-on "git-blame")
 (depends-on "git-gutter")
 (depends-on "gitattributes-mode")
@@ -21,3 +22,5 @@
 (depends-on "use-package")
 (depends-on "web-mode")
 (depends-on "rpm-spec-mode")
+(depends-on "flx-ido")
+(depends-on "ido-ubiquitous")
