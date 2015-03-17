@@ -20,7 +20,8 @@ curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 (cask-initialize)
 
 
-fork from https://github.com/dongweiming/emacs.d
+fork from https://github.com/dongweiming/emacs.d for python
+fork from https://github.com/tuhdo/emacs-c-ide-demo for c++
 Installation
 ---
 
