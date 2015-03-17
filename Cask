@@ -63,6 +63,7 @@
 (depends-on "project-explorer")
 (depends-on "projectile")
 (depends-on "python-mode")
+(depends-on "php-mode")
 (depends-on "rainbow-delimiters")
 (depends-on "rainbow-mode")
 (depends-on "rinari")

@@ -58,7 +58,7 @@
 (bind-key "M-t" 'helm-top)
 (bind-key "C-." 'helm-imenu-anywhere)
 (bind-key "C-x C-f" 'helm-find-files)
-;(bind-key "M-x" 'helm-M-x)
+                                        ;(bind-key "M-x" 'helm-M-x)
 (bind-key "M-l" 'helm-eshell-history)
 
 ; eshell
@@ -551,7 +551,7 @@
   :config
   (progn
     (setq recentf-save-file (expand-file-name ".recentf" tmp-dir)
-      recentf-max-saved-items 250)
+          recentf-max-saved-items 250)
     (recentf-mode 1)))
 
 ;; Save minibuffer history.
@@ -717,16 +717,17 @@
 (use-package helm-ipython)
 
 ;; helm-open-github
-;(use-package helm-open-github
-;  :config
-;  (progn
-;    (global-set-key (kbd "C-c o f") 'helm-open-github-from-file)
-;    (global-set-key (kbd "C-c o c") 'helm-open-github-from-commit)
-;    (global-set-key (kbd "C-c o i") 'helm-open-github-from-issues)
-;    (global-set-key (kbd "C-c o p") 'helm-open-github-from-pull-requests)))
+                                        ;(use-package helm-open-github
+                                        ;  :config
+                                        ;  (progn
+                                        ;    (global-set-key (kbd "C-c o f") 'helm-open-github-from-file)
+                                        ;    (global-set-key (kbd "C-c o c") 'helm-open-github-from-commit)
+                                        ;    (global-set-key (kbd "C-c o i") 'helm-open-github-from-issues)
+                                        ;    (global-set-key (kbd "C-c o p") 'helm-open-github-from-pull-requests)))
 
-;; (use-package ido-hacks
-;;   :init (ido-hacks-mode))
+(require 'ido-hacks)
+(use-package ido-hacks
+  :init (ido-hacks-mode))
 
 ;;;; Bindings
 
