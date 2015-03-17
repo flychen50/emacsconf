@@ -877,7 +877,7 @@
 ;;(semanticdb-enable-cscope-databases)  ;;This is causing problems
 ;;auto company
 ;;(add-to-list 'load-path "~/.mylisp/company-mode/")
-(autoload 'company-mode "company" nil t)
+;;(autoload 'company-mode "company" nil t)
 (setq bc-bookmark-file "~/.emacs.d/bookmark")
 (setq bc-bookmark-limit 300)
 (defun my-rpm-changelog-increment-version ()
@@ -889,10 +889,10 @@
     )
     )
 
-(require 'company)
-(add-hook 'after-init-hook 'global-company-mode)
-(delete 'company-clang company-backends)
-(define-key c-mode-map  [(control tab)] 'company-complete)
-(define-key c++-mode-map  [(control tab)] 'company-complete)
-;; company-c-headers
-(add-to-list 'company-backends 'company-c-headers)
+;; (require 'company)
+;; (add-hook 'after-init-hook 'global-company-mode)
+;; (delete 'company-clang company-backends)
+;; (define-key c-mode-map  [(control tab)] 'company-complete)
+;; (define-key c++-mode-map  [(control tab)] 'company-complete)
+;; ;; company-c-headers
+;; (add-to-list 'company-backends 'company-c-headers)
