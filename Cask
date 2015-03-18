@@ -3,6 +3,9 @@
 (source marmalade)
 
 (depends-on "ac-js2")
+(depends-on "google-c-style")
+(depends-on "cedet")
+(depends-on "ecb")
 (depends-on "ace-jump-mode")
 (depends-on "ag")
 (depends-on "aggressive-indent")
@@ -71,7 +74,6 @@
 (depends-on "sass-mode")
 (depends-on "scss-mode")
 (depends-on "slime")
-(depends-on "smart-forward")
 (depends-on "smartparens")
 (depends-on "smex")
 (depends-on "switch-window")
