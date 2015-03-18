@@ -334,7 +334,7 @@
 (use-package yasnippet
   :init
   (progn
-    (use-package yasnippets)
+;;    (use-package yasnippets)
     (yas-global-mode 1)
     (setq-default yas/prompt-functions '(yas/ido-prompt))))
 
@@ -836,7 +836,7 @@
 ;; (require 'helm-config)
 ;; (helm-mode 1)
 ;; (global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(require 'xcscope)
+;;(require 'xcscope)
 (put 'set-goal-column 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
