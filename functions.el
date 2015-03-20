@@ -173,7 +173,7 @@ PROMPT sets the `read-string prompt."
 
 (install-search-engine "google"     "http://www.google.com/search?q="              "Google: ")
 (install-search-engine "github"     "https://github.com/search?q="                 "Search GitHub: ")
-(install-search-engine "code"       "http://code.dapps.douban.com/hub/search?q="   "Search Code: ")
+(install-search-engine "stackoverflow"       "http://stackoverflow.com/search?q="   "Search stackoverflow: ")
 
 (defun delete-trailing-blank-lines ()
   "Deletes all blank lines at the end of the file."

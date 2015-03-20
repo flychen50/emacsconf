@@ -758,7 +758,7 @@
 ;; search in GitHub/Google
 (bind-key "C-c G" 'search-github)
 (bind-key "C-c g" 'search-google)
-(bind-key "C-c q" 'search-code)
+(bind-key "C-c q" 'search-stackoverflow)
 
 ;; automatically add the comment.
 (bind-key "C-c j" 'comment-dwim)

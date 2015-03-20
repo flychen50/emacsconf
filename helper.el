@@ -90,7 +90,7 @@ C-c v           func/class list
 C-c f           toggle-fullscreen ; Only for GUI
 C-c G           search github
 C-c g           search google
-C-c q           search douban code
+C-c q           search stackoverflow
 C-c j           add or delete comment
 C-c k           align-text by =
 C-c w           hs-hide-block
