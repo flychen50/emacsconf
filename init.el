@@ -334,7 +334,7 @@
 (use-package yasnippet
   :init
   (progn
-;;    (use-package yasnippets)
+    (use-package yasnippets)
     (yas-global-mode 1)
     (setq-default yas/prompt-functions '(yas/ido-prompt))))
 

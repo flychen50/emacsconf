@@ -85,3 +85,4 @@
 (depends-on "web-mode")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
+(depends-on "yasnippets" :git "https://github.com/flychen50/yasnippets.git" :files ("*" (:exclude ".git")))
