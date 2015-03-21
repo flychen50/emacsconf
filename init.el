@@ -84,7 +84,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector ["#262626" "#d70000" "#5f8700" "#af8700" "#0087ff" "#af005f" "#00afaf" "#626262"])
+ '(ansi-color-names-vector
+   ["#262626" "#d70000" "#5f8700" "#af8700" "#0087ff" "#af005f" "#00afaf" "#626262"])
  '(anzu-deactivate-region t)
  '(anzu-mode-lighter "")
  '(anzu-replace-to-string-separator " => ")
@@ -92,7 +93,12 @@
  '(background-color nil)
  '(background-mode dark)
  '(cursor-color nil)
- '(foreground-color nil))
+ '(custom-safe-themes
+   (quote
+    ("1a85b8ade3d7cf76897b338ff3b20409cb5a5fbed4e45c6f38c98eee7b025ad4" "3d5ef3d7ed58c9ad321f05360ad8a6b24585b9c49abcee67bdcbb0fe583a6950" "7bde52fdac7ac54d00f3d4c559f2f7aa899311655e7eb20ec5491f3b5c533fe8" "49eea2857afb24808915643b1b5bd093eefb35424c758f502e98a03d0d3df4b1" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "978ff9496928cc94639cb1084004bf64235c5c7fb0cfbcc38a3871eb95fa88f6" "08efabe5a8f3827508634a3ceed33fa06b9daeef9c70a24218b70494acdf7855" "c043d365773b9f01e516f392b771b2ff46a8071852cc3ebf0f50d48fd3d32765" default)))
+ '(ecb-options-version "2.40")
+ '(foreground-color nil)
+ '(magit-diff-options nil))
 
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" init-dir))
 (load-theme 'noctilux t)
@@ -840,13 +846,7 @@
 (put 'set-goal-column 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ecb-options-version "2.40")
- '(magit-diff-options nil))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
