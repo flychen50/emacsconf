@@ -648,6 +648,7 @@
     (add-hook 'python-mode-hook 'jedi:setup)
     (add-hook 'python-mode-hook 'my-hook)
     (setq jedi:complete-on-dot t)
+    ;;(setq python-remove-cwd-from-path nil)
     (setq py-electric-colon-active t)
     (setenv "LC_CTYPE" "UTF-8"))
   :bind (("M-." . jedi:goto-definition)
@@ -655,6 +656,11 @@
          ("C-c d" . jedi:show-doc)
          ("M-SPC" . jedi:complete)))
 
+
+;; Make C-c C-c behave like C-u C-c C-c in Python mode
+;; (require 'python)
+;; (define-key python-mode-map (kbd "C-c C-c")
+;;     (lambda () (interactive) (python-shell-send-buffer t)))
 (add-hook 'python-mode-hook
           (lambda ()
             (add-hook 'before-save-hook 'python-hooks)))
