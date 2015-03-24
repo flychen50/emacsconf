@@ -36,6 +36,7 @@
 (depends-on "gitattributes-mode")
 (depends-on "gitconfig-mode")
 (depends-on "gitignore-mode")
+(depends-on "gist")
 (depends-on "golden-ratio")
 (depends-on "google-c-style")
 (depends-on "helm")
