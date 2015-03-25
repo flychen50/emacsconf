@@ -17,6 +17,7 @@
 (depends-on "crontab-mode")
 (depends-on "css-mode")
 (depends-on "dash")
+(depends-on "emacs-dayone" :git "https://github.com/ganmacs/emacs-dayone" :files ("*" (:exclude ".git")))
 (depends-on "dash-at-point")
 (depends-on "diff-hl")
 (depends-on "dired-k")

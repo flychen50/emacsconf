@@ -891,10 +891,10 @@
   (interactive)
   (goto-char (point-min))
   (let* ((max (search-forward-regexp rpm-section-regexp))
-	 (version (rpm-spec-field-value "Version" max)))
+         (version (rpm-spec-field-value "Version" max)))
     (rpm-add-change-log-entry (concat "Upgrade version to " version))
     )
-    )
+  )
 
 ;; (require 'company)
 ;; (add-hook 'after-init-hook 'global-company-mode)
