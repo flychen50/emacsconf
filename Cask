@@ -86,6 +86,7 @@
 (depends-on "virtualenvwrapper")
 (depends-on "visual-regexp")
 (depends-on "web-mode")
+(depends-on "org2blog")
 (depends-on "xcscope")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")

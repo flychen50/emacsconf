@@ -175,37 +175,40 @@
                                (setq sql-product 'mysql)
                                (sql-highlight-mysql-keywords)))))
 
-(use-package auto-complete)
-(use-package auto-complete-config
-  :config
-  (progn
-    (ac-config-default)
-    (ac-flyspell-workaround)
-    (global-auto-complete-mode t)
-    (setq ac-auto-show-menu t)
-    (setq ac-dwim t)
-    (setq ac-use-menu-map t)
-    (setq ac-quick-help-delay 1)
-    (setq ac-quick-help-height 60)
-    (set-default 'ac-sources
-                 '(ac-source-dictionary
-                   ac-source-words-in-buffer
-                   ac-source-words-in-same-mode-buffers
-                   ac-source-words-in-all-buffer))
-    (dolist (mode '(magit-log-edit-mode log-edit-mode text-mode haml-mode css-mode
-                                        sass-mode yaml-mode csv-mode espresso-mode
-                                        scss-mode html-mode nxml-mode web-mode
-                                        lisp-mode js2-mode markdown-mode))
-      (add-to-list 'ac-modes mode))
-    (add-to-list 'ac-dictionary-directories tmp-dir)
-    (setq ac-comphist-file (expand-file-name ".ac-comphist.dat" tmp-dir))
-    ;;Key triggers
-    (ac-set-trigger-key "TAB")
-    (define-key ac-completing-map (kbd "C-M-n") 'ac-next)
-    (define-key ac-completing-map (kbd "C-M-p") 'ac-previous)
-    (define-key ac-completing-map "\t" 'ac-complete)
-    (define-key ac-completing-map "\r" nil)))
+;; (use-package auto-complete)
+;; (use-package auto-complete-config
+;;   :config
+;;   (progn
+;;     (ac-config-default)
+;;     (ac-flyspell-workaround)
+;;     (global-auto-complete-mode t)
+;;     (setq ac-auto-show-menu t)
+;;     (setq ac-dwim t)
+;;     (setq ac-use-menu-map t)
+;;     (setq ac-quick-help-delay 1)
+;;     (setq ac-quick-help-height 60)
+;;     (set-default 'ac-sources
+;;                  '(ac-source-dictionary
+;;                    ac-source-words-in-buffer
+;;                    ac-source-words-in-same-mode-buffers
+;;                    ac-source-words-in-all-buffer))
+;;     (dolist (mode '(magit-log-edit-mode log-edit-mode text-mode haml-mode css-mode
+;;                                         sass-mode yaml-mode csv-mode espresso-mode
+;;                                         scss-mode html-mode nxml-mode web-mode
+;;                                         lisp-mode js2-mode markdown-mode))
+;;       (add-to-list 'ac-modes mode))
+;;     (add-to-list 'ac-dictionary-directories tmp-dir)
+;;     (setq ac-comphist-file (expand-file-name ".ac-comphist.dat" tmp-dir))
+;;     ;;Key triggers
+;;     (ac-set-trigger-key "TAB")
+;;     (define-key ac-completing-map (kbd "C-M-n") 'ac-next)
+;;     (define-key ac-completing-map (kbd "C-M-p") 'ac-previous)
+;;     (define-key ac-completing-map "\t" 'ac-complete)
+;;     (define-key ac-completing-map "\r" nil)))
 
+
+
+(add-hook 'after-init-hook 'global-company-mode)
 (use-package projectile
   :config
   (progn
@@ -903,3 +906,48 @@
 ;; (define-key c++-mode-map  [(control tab)] 'company-complete)
 ;; ;; company-c-headers
 ;; (add-to-list 'company-backends 'company-c-headers)
+;; The following lines are always needed. Choose your own keys.
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+(setq org-agenda-files '("~/org"))
+(add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
+(setq org-log-done 'time)
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (sh . t)
+   (python . t)
+   (R . t)
+   (ruby . t)
+   (ditaa . t)
+   (dot . t)
+   (octave . t)
+   (sqlite . t)
+   (perl . t)
+   (C . t)
+   ))
+;; org2blog
+;;
+
+(require 'org2blog-autoloads)
+(setq org2blog/wp-blog-alist
+      `(("abc"
+         :url "http://flychen.sinaapp.com/xmlrpc.php"
+         :username "flychen"
+         :password 20053267
+         :keep-new-lines t
+         :confirm t
+         :wp-code nil
+         :tags-as-categories nil)
+        ))
+
+(setq org2blog/wp-buffer-template
+      "#+DATE: %s
+#+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil TeX:nil
+#+CATEGORY: Heart
+#+TAGS:
+#+PERMALINK:
+#+TITLE:
+\n")
