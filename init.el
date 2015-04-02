@@ -930,24 +930,4 @@
    ))
 ;; org2blog
 ;;
-
-(require 'org2blog-autoloads)
-(setq org2blog/wp-blog-alist
-      `(("abc"
-         :url "http://flychen.sinaapp.com/xmlrpc.php"
-         :username "flychen"
-         :password 20053267
-         :keep-new-lines t
-         :confirm t
-         :wp-code nil
-         :tags-as-categories nil)
-        ))
-
-(setq org2blog/wp-buffer-template
-      "#+DATE: %s
-#+OPTIONS: toc:nil num:nil todo:nil pri:nil tags:nil ^:nil TeX:nil
-#+CATEGORY: Heart
-#+TAGS:
-#+PERMALINK:
-#+TITLE:
-\n")
+(put 'dired-find-alternate-file 'disabled nil)
