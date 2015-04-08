@@ -930,3 +930,8 @@
    ))
 
 (put 'dired-find-alternate-file 'disabled nil)
+
+
+;; ;; disable semantic in all non C/C++ buffers
+;; (add-to-list 'semantic-inhibit-functions
+;;              (lambda () (not (member major-mode '(c-mode c++-mode)))))
