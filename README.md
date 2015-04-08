@@ -27,7 +27,7 @@ Installation
 
 ```
 curl -fsSkL https://raw.github.com/cask/cask/master/go | python
-git clone https://github.com/dongweiming/emacs.d .emacs.d
+git clone https://github.com/flychen50/emacsconf  .emacs.d
 cd .emacs.d
 cask install
 sudo pip install epc jedi pep8 autopep8 flake8
@@ -102,7 +102,7 @@ Keybinding         | Description
 <kbd>C-c f</kbd> |toggle-fullscreen ; Only for GUI
 <kbd>C-c G</kbd> |search github
 <kbd>C-c g</kbd> |search google
-<kbd>C-c q</kbd> |search douban code
+<kbd>C-c q</kbd> |search stackoverflow
 <kbd>C-c j</kbd> |add or delete comment
 <kbd>C-c k</kbd> |align-text by =
 <kbd>C-c w</kbd> |hs-hide-block

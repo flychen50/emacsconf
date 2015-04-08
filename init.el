@@ -274,6 +274,7 @@
     (bind-key "C-c C-a" 'magit-just-amend magit-mode-map))
   :config
   (progn
+    (setq magit-last-seen-setup-instructions "1.4.0")
     (setq magit-default-tracking-name-function 'magit-default-tracking-name-branch-only)
     (setq magit-set-upstream-on-push t)
     (setq magit-completing-read-function 'magit-ido-completing-read)
@@ -812,7 +813,7 @@
 (require 'eassist nil 'noerror)
 (semantic-load-enable-minimum-features)
 (setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")
-(semantic-load-enable-code-helpers)
+;;(semantic-load-enable-code-helpers)
 ;;(semantic-load-enable-gaudy-code-helpers)
 ;;(semantic-load-enable-excessive-code-helpers)
 ;;(semantic-load-enable-semantic-debugging-helpers)
@@ -930,3 +931,8 @@
    ))
 
 (put 'dired-find-alternate-file 'disabled nil)
+
+
+;; ;; disable semantic in all non C/C++ buffers
+;; (add-to-list 'semantic-inhibit-functions
+;;              (lambda () (not (member major-mode '(c-mode c++-mode)))))
