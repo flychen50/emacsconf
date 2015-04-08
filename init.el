@@ -928,6 +928,5 @@
    (perl . t)
    (C . t)
    ))
-;; org2blog
-;;
+
 (put 'dired-find-alternate-file 'disabled nil)
