@@ -61,6 +61,15 @@
                                         ;(bind-key "M-x" 'helm-M-x)
 (bind-key "M-l" 'helm-eshell-history)
 
+(when (executable-find "curl")
+  (setq helm-google-suggest-use-curl-p t))
+
+(setq helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
+      helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
+      helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
+      helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
+      helm-ff-file-name-history-use-recentf t)
+
 ; eshell
 (add-hook 'eshell-mode-hook
           #'(lambda ()
@@ -794,36 +803,27 @@
 (add-to-list 'load-path "~/.mylisp/")
 (load-file (concat user-emacs-directory "/cedet/contrib/cedet-contrib-load.el"))
 (setq semanticdb-project-roots
-       (list (expand-file-name "/")));semantic检索范围
+      (list (expand-file-name "/")));semantic检索范围
 ;;设置semantic cache临时文件的路径，避免到处都是临时文件
 (setq semanticdb-default-save-directory "~/.emacs.d/")
-;;使用google 代码规范
-(require 'google-c-style)
-(add-hook 'c-mode-common-hook 'google-set-c-style)
-(add-hook 'c-mode-common-hook 'google-make-newline-indent)
-;;使用yas进行代码快速插入,如doc，插入注释
-(require 'yasnippet)
- (yas-global-mode 1)
 ;;代码浏览框架
 (require 'cedet)
 (require 'semantic)
 (require 'ede)
+(require 'ecb)
+(require 'eassist nil 'noerror)
 ;;(global-ede-mode)
 ;;cpp和header快速切换
-(require 'eassist nil 'noerror)
 (semantic-load-enable-minimum-features)
 (setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")
 ;;(semantic-load-enable-code-helpers)
 ;;(semantic-load-enable-gaudy-code-helpers)
 ;;(semantic-load-enable-excessive-code-helpers)
 ;;(semantic-load-enable-semantic-debugging-helpers)
-(require 'cc-mode)
-(require 'semantic)
 ;;(global-semanticdb-minor-mode 1)
 ;;(global-semantic-idle-scheduler-mode 1)
 ;;(semantic-mode 1)
 (semantic-add-system-include "/usr/include/boost" 'c++-mode)
-(require 'ecb)
 ;;(require 'ecb-autoloads)
 ;;(ecb-activate)
 (when (require 'ecb nil 'noerror)
@@ -837,26 +837,23 @@
 (global-set-key (kbd "<f5>") 'ecb-goto-window-methods)
 (global-set-key (kbd "<f4>") 'ecb-goto-window-sources)
 (global-set-key (kbd "<f3>") 'ecb-goto-window-history)
-;;(add-to-list 'load-path (expand-file-name "~/.mylisp"))
-;;
-;; And the following to your ~/.emacs startup file.
-;;
-;;(require 'init-ecb)
 
-;;(global-linum-mode 'linum-mode);;在左边显示行号
-;;设置home键指向buffer开头，end键指向buffer结尾
-;;(global-set-key [home] 'beginning-of-buffer)
-;;(global-set-key [end] 'end-of-buffer)
-;;(setq x-select-enable-clipboard t);支持emacs和外部程序的粘贴
-;;;;ejb 快捷键
-;; (require 'helm-config)
-;; (helm-mode 1)
-;; (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+
+
+
+
+;;使用google 代码规范
+(require 'google-c-style)
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+;;使用yas进行代码快速插入,如doc，插入注释
+(require 'yasnippet)
+(yas-global-mode 1)
+
 (require 'xcscope)
+(cscope-setup)
 (put 'set-goal-column 'disabled nil)
 (put 'upcase-region 'disabled nil)
-
-
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -868,11 +865,11 @@
   "Insert the current time"
   (interactive "*")
   (insert (current-time-string)))
-;(global-set-key "C-xt" 'insert-current-time)
+                                        ;(global-set-key "C-xt" 'insert-current-time)
 (defun cpplint ()
   "check source code format according to Google Style Guide"
   (interactive)
-    (compilation-start (concat "/usr/bin/cpplint.py " (buffer-file-name))))
+  (compilation-start (concat "/usr/bin/cpplint.py " (buffer-file-name))))
 (defun format-function ()
   "Format the whole buffer."
   (setq tab-width 4) ;; change this to taste, this is what K&R uses <img src="http://zhanxw.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley">
@@ -884,7 +881,7 @@
   (indent-region (point-min) (point-max) nil)
   (untabify (point-min) (point-max))
   (save-buffer)
-    )
+  )
 ;;(semanticdb-enable-cscope-databases)  ;;This is causing problems
 ;;auto company
 ;;(add-to-list 'load-path "~/.mylisp/company-mode/")
@@ -932,7 +929,8 @@
 
 (put 'dired-find-alternate-file 'disabled nil)
 
-
+;; (global-set-key (kbd "<M-left>") 'ecb-goto-window-methods)
+;; (global-set-key (kbd "<M-right>") 'ecb-goto-window-edit1)
 ;; ;; disable semantic in all non C/C++ buffers
 ;; (add-to-list 'semantic-inhibit-functions
 ;;              (lambda () (not (member major-mode '(c-mode c++-mode)))))

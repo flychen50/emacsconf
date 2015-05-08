@@ -70,6 +70,7 @@
 (depends-on "powerline")
 (depends-on "project-explorer")
 (depends-on "projectile")
+(depends-on "helm-projectile")
 (depends-on "python-mode")
 (depends-on "rainbow-delimiters")
 (depends-on "rainbow-mode")
