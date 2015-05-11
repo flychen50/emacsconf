@@ -800,7 +800,7 @@
 
 
 ;; NOW you can (require) your ELPA packages and configure them as normal
-(add-to-list 'load-path "~/.mylisp/")
+;;(add-to-list 'load-path "~/.mylisp/")
 (load-file (concat user-emacs-directory "/cedet/contrib/cedet-contrib-load.el"))
 (setq semanticdb-project-roots
       (list (expand-file-name "/")));semantic检索范围
