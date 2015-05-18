@@ -756,6 +756,10 @@
 (use-package ido-hacks
   :init (ido-hacks-mode))
 
+(use-package template)
+
+
+
 ;;;; Bindings
 
 (bind-key "C-x h" 'my-help)
@@ -944,3 +948,22 @@
 ;;  (frame-parameter nil 'font)
 ;;  'han
 ;;  (font-spec :family "Hiragino Sans GB" ))
+(eval-after-load 'autoinsert
+  '(define-auto-insert '("\\.c\\'" . "C skeleton")
+     '(
+       "Short description: "
+       "/**\n * "
+       (file-name-nondirectory (buffer-file-name))
+       " -- " str \n
+       " *" \n
+       " * Written on " (format-time-string "%A, %e %B %Y.") \n
+       " */" > \n \n
+       "#include <stdio.h>" \n
+       "#include \""
+       (file-name-sans-extension
+        (file-name-nondirectory (buffer-file-name)))
+       ".h\"" \n \n
+       "int main()" \n
+       "{" > \n
+       > _ \n
+              "}" > \n)))
