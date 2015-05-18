@@ -1,3 +1,4 @@
+
 (load-file "~/.emacs.d/cedet/cedet-devel-load.el")
 ;; Add further minor-modes to be enabled by semantic-mode.
 ;; See doc-string of `semantic-default-submodes' for other things
@@ -740,6 +741,7 @@
 
 ;; helm-ipython
 (use-package helm-ipython)
+(use-package helm-ag)
 
 ;; helm-open-github
                                         ;(use-package helm-open-github
@@ -934,3 +936,11 @@
 ;; ;; disable semantic in all non C/C++ buffers
 ;; (add-to-list 'semantic-inhibit-functions
 ;;              (lambda () (not (member major-mode '(c-mode c++-mode)))))
+;;(set-fontset-font "fontset-default" 'han '("STHeiti"))
+;;(set-default-font "Source Code Pro-12")
+;;(set-fontset-font "fontset-default" 'gb18030' ("STHeiti" . "unicode-bmp"))
+;; set Chinese font, or the when showing Italic Chinese characters, only rectangle block shown
+;; (set-fontset-font
+;;  (frame-parameter nil 'font)
+;;  'han
+;;  (font-spec :family "Hiragino Sans GB" ))

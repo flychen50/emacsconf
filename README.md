@@ -112,3 +112,9 @@ Keybinding         | Description
 <kbd>C-c c</kbd> |hs-toggle-hiding
 <kbd>C-z</kbd> |undo
 <kbd>M-/</kbd> |hippie-expand
+
+
+<kbd>c-c p a </kbd> | 在同名不同后缀文件之间切换
+C-c p 4 a 在两个窗口显示不同的后缀文件
+C-c p f 显示一个项目下所有文件
+C-c p p 在不同的项目间切换
