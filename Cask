@@ -48,7 +48,7 @@
 (depends-on "helm-dash")
 (depends-on "helm-descbinds")
 (depends-on "helm-ipython" :git "https://github.com/emacs-helm/helm-ipython.git" :files ("*" (:exclude ".git")))
-(depends-on "helm-ipython")
+;;(depends-on "helm-ipython")
 (depends-on "helm-misc")
 (depends-on "helm-open-github")
 (depends-on "helm-projectile")
