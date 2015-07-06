@@ -114,5 +114,5 @@ Keybinding         | Description
 <kbd>M-/</kbd> |hippie-expand
 <kbd>c-c p a </kbd> | 在同名不同后缀文件之间切换
 <kbd>C-c p 4 a</kbd> | 在两个窗口显示不同的后缀文件
-C-c p f 显示一个项目下所有文件
-C-c p p 在不同的项目间切换
+<kbd>C-c p f</kbd> | 显示一个项目下所有文件
+<kbd>C-c p p</kbd> | 在不同的项目间切换
