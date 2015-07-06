@@ -52,12 +52,12 @@
 
                                         ; helm
 (require 'helm-config)
-(require 'imenu-anywhere)
+;;(require 'imenu-anywhere)
 (setq enable-recursive-minibuffers t)
 (bind-key "C-c h" 'helm-mini)
 (bind-key "M-l" 'helm-locate)
 (bind-key "M-t" 'helm-top)
-(bind-key "C-." 'helm-imenu-anywhere)
+;;(bind-key "C-." 'helm-imenu-anywhere)
 (bind-key "C-x C-f" 'helm-find-files)
                                         ;(bind-key "M-x" 'helm-M-x)
 (bind-key "M-l" 'helm-eshell-history)
@@ -426,11 +426,11 @@
   :bind (("M-%" . anzu-query-replace)
          ("C-M-%" . anzu-query-replace-regexp)))
 
-(use-package scss-mode
-  :config
-  (progn
-    ;; Default not execute scss-compile
-    (setq scss-compile-at-save nil)))
+;; (use-package scss-mode
+;;   :config
+;;   (progn
+;;     ;; Default not execute scss-compile
+;;     (setq scss-compile-at-save nil)))
 
 (use-package eshell
   :bind ("M-1" . eshell)
@@ -679,14 +679,14 @@
           (lambda ()
             (add-hook 'before-save-hook 'python-hooks)))
 
-(use-package emmet-mode
-  :config
-  (progn
-    (add-hook 'sgml-mode-hook 'emmet-mode)
-    (add-hook 'scss-mode-hook 'emmet-mode)
-    (add-hook 'css-mode-hook  'emmet-mode))
-  :bind
-  ("M-TAB" . emmet-expand-line))
+;; (use-package emmet-mode
+;;   :config
+;;   (progn
+;;     (add-hook 'sgml-mode-hook 'emmet-mode)
+;;     (add-hook 'scss-mode-hook 'emmet-mode)
+;;     (add-hook 'css-mode-hook  'emmet-mode))
+;;   :bind
+;;   ("M-TAB" . emmet-expand-line))
 
 (use-package visual-regexp
   :bind (("C-c r" . vr/replace)
@@ -720,27 +720,27 @@
     (setq helm-swoop-speed-or-color nil)))
 
 ;; helm-css-scss
-(use-package helm-css-scss
-  :config
-  (progn
-    (setq helm-css-scss-insert-close-comment-depth 4)
-    (setq helm-css-scss-split-with-multiple-windows nil)
-    (setq helm-css-scss-split-direction 'split-window-vertically)
-    (--each '(css-mode-hook
-              scss-mode-hook
-              less-css-mode-hook)
-      (add-hook it (lambda ()
-                     (local-set-key (kbd "s-i") 'helm-css-scss)
-                     (local-set-key (kbd "s-I") 'helm-css-scss-back-to-last-point))))
-    (define-key isearch-mode-map (kbd "s-i") 'helm-css-scss-from-isearch)
-    (define-key helm-css-scss-map (kbd "s-i") 'helm-css-scss-multi-from-helm-css-scss)))
+;; (use-package helm-css-scss
+;;   :config
+;;   (progn
+;;     (setq helm-css-scss-insert-close-comment-depth 4)
+;;     (setq helm-css-scss-split-with-multiple-windows nil)
+;;     (setq helm-css-scss-split-direction 'split-window-vertically)
+;;     (--each '(css-mode-hook
+;;               scss-mode-hook
+;;               less-css-mode-hook)
+;;       (add-hook it (lambda ()
+;;                      (local-set-key (kbd "s-i") 'helm-css-scss)
+;;                      (local-set-key (kbd "s-I") 'helm-css-scss-back-to-last-point))))
+;;     (define-key isearch-mode-map (kbd "s-i") 'helm-css-scss-from-isearch)
+;;     (define-key helm-css-scss-map (kbd "s-i") 'helm-css-scss-multi-from-helm-css-scss)))
 
 ;; helm-descbinds
 (use-package helm-descbinds
   :init (helm-descbinds-mode))
 
 ;; helm-ipython
-(use-package helm-ipython)
+;;(use-package helm-ipython)
 (use-package helm-ag)
 
 ;; helm-open-github
