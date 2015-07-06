@@ -5,7 +5,7 @@
 ;; you can use here.
 (add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
 (add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
-(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
+;;(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
 ;; Enable Semantic
 ;;(semantic-mode 1)
 ;; Enable EDE (Project Management) features
@@ -111,7 +111,7 @@
  '(magit-diff-options nil))
 
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" init-dir))
-(load-theme 'noctilux t)
+;;(load-theme 'noctilux t)
 
 (add-hook 'emacs-startup-hook
           (lambda ()
@@ -298,8 +298,8 @@
          ("M-g p" . magit-push)))
 
 (use-package git-blame)
-(use-package git-commit-mode)
-(use-package git-rebase-mode)
+;;(use-package git-commit-mode)
+;;(use-package git-rebase-mode)
 (use-package gitignore-mode)
 (use-package gitconfig-mode)
 
