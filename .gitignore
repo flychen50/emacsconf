@@ -36,3 +36,16 @@ tramp
 .cedet/
 bookmarks
 ac-comphist.dat
+.python-environments/
+    .sx/
+        cedet/
+            flycheck_srecode-map.el
+                games/
+                    projectile-bookmarks.eld
+                        projectile.cache
+                            request/
+                                saved-places
+                                    semanticdb/
+                                        tmp/
+                                            url/
+                                                var/pcache/gh/gh-gist-api/flychen50@gmail-com
