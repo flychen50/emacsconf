@@ -32,8 +32,8 @@ tramp
 .cask/
 
 #elpa packages
-.elpa/
-.cedet/
+elpa/
+cedet/
 bookmarks
 ac-comphist.dat
 python-environments/
@@ -48,4 +48,7 @@ aved-places
 semanticdb/
 tmp/
 url/
-var/pcache/gh/gh-gist-api/flychen50@gmail-com
+var/
+.python-environments/
+.sx/
+saved-places
