@@ -36,10 +36,10 @@ tramp
 .cedet/
 bookmarks
 ac-comphist.dat
-.python-environments/
-    .sx/
-        cedet/
-            flycheck_srecode-map.el
+python-environments/
+sx/
+cedet/
+flycheck_srecode-map.el
                 games/
                     projectile-bookmarks.eld
                         projectile.cache
