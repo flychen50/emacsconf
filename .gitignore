@@ -35,3 +35,4 @@ tramp
 .elpa/
 .cedet/
 bookmarks
+ac-comphist.dat
