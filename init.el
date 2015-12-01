@@ -697,6 +697,7 @@
   :bind (("C-h C-m" . discover-my-major)))
 
 (use-package crontab-mode)
+(use-package transpose-frame)
 
 (use-package aggressive-indent
   :config
@@ -822,13 +823,13 @@
 ;;cpp和header快速切换
 (semantic-load-enable-minimum-features)
 (setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")
-;;(semantic-load-enable-code-helpers)
-;;(semantic-load-enable-gaudy-code-helpers)
-;;(semantic-load-enable-excessive-code-helpers)
-;;(semantic-load-enable-semantic-debugging-helpers)
-;;(global-semanticdb-minor-mode 1)
-;;(global-semantic-idle-scheduler-mode 1)
-;;(semantic-mode 1)
+(semantic-load-enable-code-helpers)
+(semantic-load-enable-gaudy-code-helpers)
+(semantic-load-enable-excessive-code-helpers)
+(semantic-load-enable-semantic-debugging-helpers)
+(global-semanticdb-minor-mode 1)
+(global-semantic-idle-scheduler-mode 1)
+(semantic-mode 1)
 (semantic-add-system-include "/usr/include/boost" 'c++-mode)
 ;;(require 'ecb-autoloads)
 ;;(ecb-activate)
