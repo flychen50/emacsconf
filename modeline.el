@@ -88,11 +88,11 @@
                         (lhs
                          (list
                           ; Position, including warning for 80 columns
-                          (powerline-raw "%4l:" 'mode-line-position-face)
-                          (if (>= (current-column) 80)
-                               (powerline-raw "%3c" 'mode-line-80col-face)
-                            (powerline-raw "%3c" 'mode-line-position-face))
-                          (powerline-raw " ")
+                          ;; (powerline-raw "%4l:" 'mode-line-position-face)
+                          ;; (if (>= (current-column) 80)
+                          ;;      (powerline-raw "%3c" 'mode-line-80col-face)
+                          ;;   (powerline-raw "%3c" 'mode-line-position-face))
+                          ;; (powerline-raw " ")
                           ; read-only or modified status
                           (cond (buffer-read-only
                                  (powerline-raw " RO " 'mode-line-read-only-face))
