@@ -111,7 +111,8 @@
  '(magit-diff-options nil))
 
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" init-dir))
-;;(load-theme 'noctilux t)
+(load-theme 'noctilux t)
+(load-theme 'xiaoming t)
 
 (add-hook 'emacs-startup-hook
           (lambda ()
@@ -513,7 +514,7 @@
   (setq ag-arguments
         '("--smart-case" "--nogroup" "--column" "--smart-case" "--stats" "--")
         ag-highlight-search t)
-  :bind (("C-x C-a" . ag-project)))
+  :bind (("C-x C-y" . ag-project)))
 
 (use-package undo-tree
   :init (global-undo-tree-mode 1)
@@ -830,7 +831,7 @@
 (global-semanticdb-minor-mode 1)
 (global-semantic-idle-scheduler-mode 1)
 (semantic-mode 1)
-(semantic-add-system-include "/usr/include/boost" 'c++-mode)
+;;(semantic-add-system-include "/usr/include/boost" 'c++-mode)
 ;;(require 'ecb-autoloads)
 ;;(ecb-activate)
 (when (require 'ecb nil 'noerror)
@@ -893,6 +894,22 @@
 ;;auto company
 ;;(add-to-list 'load-path "~/.mylisp/company-mode/")
 ;;(autoload 'company-mode "company" nil t)
+
+
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+
+;; replace the `completion-at-point' and `complete-symbol' bindings in
+;; irony-mode's buffers by irony-mode's function
+(defun my-irony-mode-hook ()
+  (define-key irony-mode-map [remap completion-at-point]
+    'irony-completion-at-point-async)
+  (define-key irony-mode-map [remap complete-symbol]
+    'irony-completion-at-point-async))
+(add-hook 'irony-mode-hook 'my-irony-mode-hook)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+
 (setq bc-bookmark-file "~/.emacs.d/bookmark")
 (setq bc-bookmark-limit 300)
 (defun my-rpm-changelog-increment-version ()
