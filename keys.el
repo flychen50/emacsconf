@@ -11,4 +11,6 @@
 (key-chord-define-global "mi" 'magit-in-perspective)
 (key-chord-define-global "dj" 'dired-jump-other-window)
 (key-chord-define-global "aa" 'ack-and-a-half)
+(key-chord-define-global "pa" 'helm-projectile-ag)
+(key-chord-define-global "pg" 'helm-projectile-grep)
 (key-chord-mode +1)
