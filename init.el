@@ -106,6 +106,7 @@
  '(custom-safe-themes
    (quote
     ("1a85b8ade3d7cf76897b338ff3b20409cb5a5fbed4e45c6f38c98eee7b025ad4" "3d5ef3d7ed58c9ad321f05360ad8a6b24585b9c49abcee67bdcbb0fe583a6950" "7bde52fdac7ac54d00f3d4c559f2f7aa899311655e7eb20ec5491f3b5c533fe8" "49eea2857afb24808915643b1b5bd093eefb35424c758f502e98a03d0d3df4b1" "0c311fb22e6197daba9123f43da98f273d2bfaeeaeb653007ad1ee77f0003037" "978ff9496928cc94639cb1084004bf64235c5c7fb0cfbcc38a3871eb95fa88f6" "08efabe5a8f3827508634a3ceed33fa06b9daeef9c70a24218b70494acdf7855" "c043d365773b9f01e516f392b771b2ff46a8071852cc3ebf0f50d48fd3d32765" default)))
+ '(ecb-layout-window-sizes nil)
  '(ecb-options-version "2.40")
  '(foreground-color nil)
  '(magit-diff-options nil))
@@ -128,7 +129,7 @@
 (load-local "hs-minor-mode-conf")
 (load-local "smartparens-config")
 ;; key-chord
-;(load-local "keys")
+(load-local "keys")
 ;; Map files to modes
 (load-local "mode-mappings")
 (when (eq system-type 'darwin)
