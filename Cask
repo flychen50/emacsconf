@@ -7,6 +7,8 @@
 (depends-on "ag")
 (depends-on "aggressive-indent")
 (depends-on "anzu")
+(depends-on "ggtags")
+(depends-on "helm-gtags")
 (depends-on "irony")
 (depends-on "auto-complete")
 (depends-on "bind-key")

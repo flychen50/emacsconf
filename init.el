@@ -360,59 +360,59 @@
     (yas-global-mode 1)
     (setq-default yas/prompt-functions '(yas/ido-prompt))))
 
-(use-package yaml-mode
-  :mode ("\\.yml$" . yaml-mode))
+;; (use-package yaml-mode
+;;   :mode ("\\.yml$" . yaml-mode))
 
-(use-package css-mode
-  :config
-  (progn
-    (setq css-indent-offset 4)))
+;; (use-package css-mode
+;;   :config
+;;   (progn
+;;     (setq css-indent-offset 4)))
 
-(use-package js2-mode
-  :mode (("\\.js$" . js2-mode))
-  :interpreter ("node" . js2-mode)
-  :config
-  (progn
-    (setq js2-use-font-lock-faces t
-          mode-name "JS2")
-    (setq-default js2-bounce-indent-p nil
-                  js-indent-level 4
-                  js2-basic-indent 2
-                  js2-basic-offset 4
-                  js2-auto-indent-p t
-                  js2-cleanup-whitespace t
-                  js2-enter-indents-newline t
-                  js2-global-externs "jQuery $"
-                  js2-indent-on-enter-key t
-                  js2-mode-indent-ignore-first-tab t
-                  js2-global-externs '("module" "require" "buster"
-                                       "sinon" "assert" "refute"
-                                       "setTimeout" "clearTimeout"
-                                       "setInterval" "clearInterval"
-                                       "location" "__dirname"
-                                       "console" "JSON"))
+;; (use-package js2-mode
+;;   :mode (("\\.js$" . js2-mode))
+;;   :interpreter ("node" . js2-mode)
+;;   :config
+;;   (progn
+;;     (setq js2-use-font-lock-faces t
+;;           mode-name "JS2")
+;;     (setq-default js2-bounce-indent-p nil
+;;                   js-indent-level 4
+;;                   js2-basic-indent 2
+;;                   js2-basic-offset 4
+;;                   js2-auto-indent-p t
+;;                   js2-cleanup-whitespace t
+;;                   js2-enter-indents-newline t
+;;                   js2-global-externs "jQuery $"
+;;                   js2-indent-on-enter-key t
+;;                   js2-mode-indent-ignore-first-tab t
+;;                   js2-global-externs '("module" "require" "buster"
+;;                                        "sinon" "assert" "refute"
+;;                                        "setTimeout" "clearTimeout"
+;;                                        "setInterval" "clearInterval"
+;;                                        "location" "__dirname"
+;;                                        "console" "JSON"))
 
-    (add-hook 'js2-mode-hook 'ac-js2-mode)
-    (add-hook 'js-mode-hook 'js2-minor-mode)
-    (js2-imenu-extras-setup)))
+;;     (add-hook 'js2-mode-hook 'ac-js2-mode)
+;;     (add-hook 'js-mode-hook 'js2-minor-mode)
+;;     (js2-imenu-extras-setup)))
 
-(use-package js2-refactor
-  :config
-  (progn
-    (js2r-add-keybindings-with-prefix "M-m")))
+;; (use-package js2-refactor
+;;   :config
+;;   (progn
+;;     (js2r-add-keybindings-with-prefix "M-m")))
 
-(use-package coffee-mode
-  :config
-  (progn
-    (add-hook 'coffee-mode-hook
-              (lambda ()
-                (setq coffee-tab-width 2)
-                (setq coffee-args-compile '("-c" "-m"))
-                (add-hook 'coffee-after-compile-hook 'sourcemap-goto-corresponding-point)
-                (setq coffee-cleanup-whitespace nil)))))
+;; (use-package coffee-mode
+;;   :config
+;;   (progn
+;;     (add-hook 'coffee-mode-hook
+;;               (lambda ()
+;;                 (setq coffee-tab-width 2)
+;;                 (setq coffee-args-compile '("-c" "-m"))
+;;                 (add-hook 'coffee-after-compile-hook 'sourcemap-goto-corresponding-point)
+;;                 (setq coffee-cleanup-whitespace nil)))))
 
-(use-package sh-script
-  :config (setq sh-basic-offset 4))
+;; (use-package sh-script
+;;   :config (setq sh-basic-offset 4))
 
 (use-package anzu
   :init (global-anzu-mode +1)
@@ -818,9 +818,9 @@
 ;;代码浏览框架
 (require 'cedet)
 (require 'semantic)
-(require 'ede)
-(require 'ecb)
-(require 'eassist nil 'noerror)
+;;(require 'ede)
+;;(require 'ecb)
+;;(require 'eassist nil 'noerror)
 ;;(global-ede-mode)
 ;;cpp和header快速切换
 (semantic-load-enable-minimum-features)
@@ -828,161 +828,161 @@
 (semantic-load-enable-code-helpers)
 (semantic-load-enable-gaudy-code-helpers)
 (semantic-load-enable-excessive-code-helpers)
-(semantic-load-enable-semantic-debugging-helpers)
+;;(semantic-load-enable-semantic-debugging-helpers)
 (global-semanticdb-minor-mode 1)
 (global-semantic-idle-scheduler-mode 1)
 (semantic-mode 1)
 ;;(semantic-add-system-include "/usr/include/boost" 'c++-mode)
 ;;(require 'ecb-autoloads)
 ;;(ecb-activate)
-(when (require 'ecb nil 'noerror)
-  (setq ecb-tip-of-the-day nil)
-  (setq ecb-auto-compatibility-check nil)
-  (setq ecb-primary-secondary-mouse-buttons 'mouse-1--C-mouse-1))
-(global-set-key (kbd "<f9>") 'semantic-ia-fast-jump)   ; 打开ejb
-(global-set-key (kbd "<f8>") 'eassist-switch-h-cpp)   ; 打开ejb
-(global-set-key (kbd "<f7>") 'ecb-minor-mode)   ; 打开ejb
-(global-set-key (kbd "<f6>") 'ecb-goto-window-edit1)
-(global-set-key (kbd "<f5>") 'ecb-goto-window-methods)
-(global-set-key (kbd "<f4>") 'ecb-goto-window-sources)
-(global-set-key (kbd "<f3>") 'ecb-goto-window-history)
+;; (when (require 'ecb nil 'noerror)
+;;   (setq ecb-tip-of-the-day nil)
+;;   (setq ecb-auto-compatibility-check nil)
+;;   (setq ecb-primary-secondary-mouse-buttons 'mouse-1--C-mouse-1))
+;; (global-set-key (kbd "<f9>") 'semantic-ia-fast-jump)   ; 打开ejb
+;; (global-set-key (kbd "<f8>") 'eassist-switch-h-cpp)   ; 打开ejb
+;; (global-set-key (kbd "<f7>") 'ecb-minor-mode)   ; 打开ejb
+;; (global-set-key (kbd "<f6>") 'ecb-goto-window-edit1)
+;; (global-set-key (kbd "<f5>") 'ecb-goto-window-methods)
+;; (global-set-key (kbd "<f4>") 'ecb-goto-window-sources)
+;; (global-set-key (kbd "<f3>") 'ecb-goto-window-history)
 
 
 
 
 
-;;使用google 代码规范
-(require 'google-c-style)
-(add-hook 'c-mode-common-hook 'google-set-c-style)
-(add-hook 'c-mode-common-hook 'google-make-newline-indent)
-;;使用yas进行代码快速插入,如doc，插入注释
-(require 'yasnippet)
-(yas-global-mode 1)
+;; ;; ;;使用google 代码规范
+;; ;; (require 'google-c-style)
+;; ;; (add-hook 'c-mode-common-hook 'google-set-c-style)
+;; ;; (add-hook 'c-mode-common-hook 'google-make-newline-indent)
+;; ;;使用yas进行代码快速插入,如doc，插入注释
+;; (require 'yasnippet)
+;; (yas-global-mode 1)
 
-(require 'xcscope)
-(cscope-setup)
-(put 'set-goal-column 'disabled nil)
-(put 'upcase-region 'disabled nil)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-;; insert-current-time
-(defun insert-current-time ()
-  "Insert the current time"
-  (interactive "*")
-  (insert (current-time-string)))
-                                        ;(global-set-key "C-xt" 'insert-current-time)
-(defun cpplint ()
-  "check source code format according to Google Style Guide"
-  (interactive)
-  (compilation-start (concat "/usr/bin/cpplint.py " (buffer-file-name))))
-(defun format-function ()
-  "Format the whole buffer."
-  (setq tab-width 4) ;; change this to taste, this is what K&R uses <img src="http://zhanxw.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley">
-  (setq c-basic-offset tab-width)
-  (c-set-offset 'substatement-open 0)
-  ;; next line is strange, I copied it from .emacs, but it cannot find c-lineup-arglist-intro-after-paren
-  ;; however, disable this line seems working as well.
-  ;;(c-set-offset 'arglist-intro c-lineup-arglist-intro-after-paren)
-  (indent-region (point-min) (point-max) nil)
-  (untabify (point-min) (point-max))
-  (save-buffer)
-  )
-;;(semanticdb-enable-cscope-databases)  ;;This is causing problems
-;;auto company
-;;(add-to-list 'load-path "~/.mylisp/company-mode/")
-;;(autoload 'company-mode "company" nil t)
+;; (require 'xcscope)
+;; (cscope-setup)
+;; (put 'set-goal-column 'disabled nil)
+;; (put 'upcase-region 'disabled nil)
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  )
+;; ;; insert-current-time
+;; (defun insert-current-time ()
+;;   "Insert the current time"
+;;   (interactive "*")
+;;   (insert (current-time-string)))
+;;                                         ;(global-set-key "C-xt" 'insert-current-time)
+;; (defun cpplint ()
+;;   "check source code format according to Google Style Guide"
+;;   (interactive)
+;;   (compilation-start (concat "/usr/bin/cpplint.py " (buffer-file-name))))
+;; (defun format-function ()
+;;   "Format the whole buffer."
+;;   (setq tab-width 4) ;; change this to taste, this is what K&R uses <img src="http://zhanxw.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley">
+;;   (setq c-basic-offset tab-width)
+;;   (c-set-offset 'substatement-open 0)
+;;   ;; next line is strange, I copied it from .emacs, but it cannot find c-lineup-arglist-intro-after-paren
+;;   ;; however, disable this line seems working as well.
+;;   ;;(c-set-offset 'arglist-intro c-lineup-arglist-intro-after-paren)
+;;   (indent-region (point-min) (point-max) nil)
+;;   (untabify (point-min) (point-max))
+;;   (save-buffer)
+;;   )
+;; ;;(semanticdb-enable-cscope-databases)  ;;This is causing problems
+;; ;;auto company
+;; ;;(add-to-list 'load-path "~/.mylisp/company-mode/")
+;; ;;(autoload 'company-mode "company" nil t)
 
 
-(add-hook 'c++-mode-hook 'irony-mode)
-(add-hook 'c-mode-hook 'irony-mode)
-(add-hook 'objc-mode-hook 'irony-mode)
+;; (add-hook 'c++-mode-hook 'irony-mode)
+;; (add-hook 'c-mode-hook 'irony-mode)
+;; (add-hook 'objc-mode-hook 'irony-mode)
 
-;; replace the `completion-at-point' and `complete-symbol' bindings in
-;; irony-mode's buffers by irony-mode's function
-(defun my-irony-mode-hook ()
-  (define-key irony-mode-map [remap completion-at-point]
-    'irony-completion-at-point-async)
-  (define-key irony-mode-map [remap complete-symbol]
-    'irony-completion-at-point-async))
-(add-hook 'irony-mode-hook 'my-irony-mode-hook)
-(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+;; ;; replace the `completion-at-point' and `complete-symbol' bindings in
+;; ;; irony-mode's buffers by irony-mode's function
+;; (defun my-irony-mode-hook ()
+;;   (define-key irony-mode-map [remap completion-at-point]
+;;     'irony-completion-at-point-async)
+;;   (define-key irony-mode-map [remap complete-symbol]
+;;     'irony-completion-at-point-async))
+;; (add-hook 'irony-mode-hook 'my-irony-mode-hook)
+;; (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
-(setq bc-bookmark-file "~/.emacs.d/bookmark")
-(setq bc-bookmark-limit 300)
-(defun my-rpm-changelog-increment-version ()
-  (interactive)
-  (goto-char (point-min))
-  (let* ((max (search-forward-regexp rpm-section-regexp))
-         (version (rpm-spec-field-value "Version" max)))
-    (rpm-add-change-log-entry (concat "Upgrade version to " version))
-    )
-  )
+;; (setq bc-bookmark-file "~/.emacs.d/bookmark")
+;; (setq bc-bookmark-limit 300)
+;; (defun my-rpm-changelog-increment-version ()
+;;   (interactive)
+;;   (goto-char (point-min))
+;;   (let* ((max (search-forward-regexp rpm-section-regexp))
+;;          (version (rpm-spec-field-value "Version" max)))
+;;     (rpm-add-change-log-entry (concat "Upgrade version to " version))
+;;     )
+;;   )
 
-;; (require 'company)
-;; (add-hook 'after-init-hook 'global-company-mode)
-;; (delete 'company-clang company-backends)
-;; (define-key c-mode-map  [(control tab)] 'company-complete)
-;; (define-key c++-mode-map  [(control tab)] 'company-complete)
-;; ;; company-c-headers
-;; (add-to-list 'company-backends 'company-c-headers)
-;; The following lines are always needed. Choose your own keys.
-(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-(setq org-agenda-files '("~/org"))
-(add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
-(setq org-log-done 'time)
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '(
-   (sh . t)
-   (python . t)
-   (R . t)
-   (ruby . t)
-   (ditaa . t)
-   (dot . t)
-   (octave . t)
-   (sqlite . t)
-   (perl . t)
-   (C . t)
-   ))
+;; ;; (require 'company)
+;; ;; (add-hook 'after-init-hook 'global-company-mode)
+;; ;; (delete 'company-clang company-backends)
+;; ;; (define-key c-mode-map  [(control tab)] 'company-complete)
+;; ;; (define-key c++-mode-map  [(control tab)] 'company-complete)
+;; ;; ;; company-c-headers
+;; ;; (add-to-list 'company-backends 'company-c-headers)
+;; ;; The following lines are always needed. Choose your own keys.
+;; (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+;; (setq org-agenda-files '("~/org"))
+;; (add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
+;; (setq org-log-done 'time)
+;; (global-set-key "\C-cl" 'org-store-link)
+;; (global-set-key "\C-ca" 'org-agenda)
+;; (global-set-key "\C-cb" 'org-iswitchb)
+;; (org-babel-do-load-languages
+;;  'org-babel-load-languages
+;;  '(
+;;    (sh . t)
+;;    (python . t)
+;;    (R . t)
+;;    (ruby . t)
+;;    (ditaa . t)
+;;    (dot . t)
+;;    (octave . t)
+;;    (sqlite . t)
+;;    (perl . t)
+;;    (C . t)
+;;    ))
 
-(put 'dired-find-alternate-file 'disabled nil)
+;; (put 'dired-find-alternate-file 'disabled nil)
 
-;; (global-set-key (kbd "<M-left>") 'ecb-goto-window-methods)
-;; (global-set-key (kbd "<M-right>") 'ecb-goto-window-edit1)
-;; ;; disable semantic in all non C/C++ buffers
-;; (add-to-list 'semantic-inhibit-functions
-;;              (lambda () (not (member major-mode '(c-mode c++-mode)))))
-;;(set-fontset-font "fontset-default" 'han '("STHeiti"))
-;;(set-default-font "Source Code Pro-12")
-;;(set-fontset-font "fontset-default" 'gb18030' ("STHeiti" . "unicode-bmp"))
-;; set Chinese font, or the when showing Italic Chinese characters, only rectangle block shown
-;; (set-fontset-font
-;;  (frame-parameter nil 'font)
-;;  'han
-;;  (font-spec :family "Hiragino Sans GB" ))
-(eval-after-load 'autoinsert
-  '(define-auto-insert '("\\.c\\'" . "C skeleton")
-     '(
-       "Short description: "
-       "/**\n * "
-       (file-name-nondirectory (buffer-file-name))
-       " -- " str \n
-       " *" \n
-       " * Written on " (format-time-string "%A, %e %B %Y.") \n
-       " */" > \n \n
-       "#include <stdio.h>" \n
-       "#include \""
-       (file-name-sans-extension
-        (file-name-nondirectory (buffer-file-name)))
-       ".h\"" \n \n
-       "int main()" \n
-       "{" > \n
-       > _ \n
-              "}" > \n)))
+;; ;; (global-set-key (kbd "<M-left>") 'ecb-goto-window-methods)
+;; ;; (global-set-key (kbd "<M-right>") 'ecb-goto-window-edit1)
+;; ;; ;; disable semantic in all non C/C++ buffers
+;; ;; (add-to-list 'semantic-inhibit-functions
+;; ;;              (lambda () (not (member major-mode '(c-mode c++-mode)))))
+;; ;;(set-fontset-font "fontset-default" 'han '("STHeiti"))
+;; ;;(set-default-font "Source Code Pro-12")
+;; ;;(set-fontset-font "fontset-default" 'gb18030' ("STHeiti" . "unicode-bmp"))
+;; ;; set Chinese font, or the when showing Italic Chinese characters, only rectangle block shown
+;; ;; (set-fontset-font
+;; ;;  (frame-parameter nil 'font)
+;; ;;  'han
+;; ;;  (font-spec :family "Hiragino Sans GB" ))
+;; (eval-after-load 'autoinsert
+;;   '(define-auto-insert '("\\.c\\'" . "C skeleton")
+;;      '(
+;;        "Short description: "
+;;        "/**\n * "
+;;        (file-name-nondirectory (buffer-file-name))
+;;        " -- " str \n
+;;        " *" \n
+;;        " * Written on " (format-time-string "%A, %e %B %Y.") \n
+;;        " */" > \n \n
+;;        "#include <stdio.h>" \n
+;;        "#include \""
+;;        (file-name-sans-extension
+;;         (file-name-nondirectory (buffer-file-name)))
+;;        ".h\"" \n \n
+;;        "int main()" \n
+;;        "{" > \n
+;;        > _ \n
+;;               "}" > \n)))
