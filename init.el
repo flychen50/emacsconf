@@ -137,8 +137,8 @@
 
 ;;;; Common
 
-(add-hook 'prog-mode-hook 'show-prog-keywords)
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;;(add-hook 'prog-mode-hook 'show-prog-keywords)
+;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (defun my-hook ()
   (idle-highlight-mode t))
@@ -348,10 +348,10 @@
     (setq-default save-place t)
     (setq save-place-file "~/.emacs.d/saved-places")))
 
-(use-package flycheck
-  :config
-  (progn
-    (add-hook 'after-init-hook 'global-flycheck-mode)))
+;; (use-package flycheck
+;;   :config
+;;   (progn
+;;     (add-hook 'after-init-hook 'global-flycheck-mode)))
 
 (use-package yasnippet
   :init
