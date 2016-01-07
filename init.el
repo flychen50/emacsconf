@@ -260,8 +260,8 @@
     (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
     (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)))
 
-(use-package json-reformat
-  :bind (("C-x i" . json-reformat-region)))
+;; (use-package json-reformat
+;;   :bind (("C-x i" . json-reformat-region)))
 
 (use-package browse-kill-ring
   :bind (("M-y" . browse-kill-ring)))
@@ -449,20 +449,20 @@
   :init (progn
           (add-to-list 'auto-mode-alist '("\\.plim\\'" . plim-mode))))
 
-(use-package web-mode
-  :config
-  (progn
-    (add-hook 'web-mode-hook
-              (lambda ()
-                (web-mode-set-engine "mako")
-                (setq web-mode-disable-auto-pairing t)
-                (setq web-mode-css-indent-offset 4)
-                (setq web-mode-indent-style 4)
-                (setq web-mode-markup-indent-offset 4)
-                (setq web-mode-block-padding 4)
-                (setq web-mode-style-padding 4)
-                (setq web-mode-code-indent-offset 4)
-                (setq web-mode-script-padding 4)))))
+;; (use-package web-mode
+;;   :config
+;;   (progn
+;;     (add-hook 'web-mode-hook
+;;               (lambda ()
+;;                 (web-mode-set-engine "mako")
+;;                 (setq web-mode-disable-auto-pairing t)
+;;                 (setq web-mode-css-indent-offset 4)
+;;                 (setq web-mode-indent-style 4)
+;;                 (setq web-mode-markup-indent-offset 4)
+;;                 (setq web-mode-block-padding 4)
+;;                 (setq web-mode-style-padding 4)
+;;                 (setq web-mode-code-indent-offset 4)
+;;                 (setq web-mode-script-padding 4)))))
 
 (use-package ibuffer
   :config (setq ibuffer-expert t)
@@ -701,11 +701,11 @@
 (use-package crontab-mode)
 (use-package transpose-frame)
 
-(use-package aggressive-indent
-  :config
-  (progn
-    (global-aggressive-indent-mode 1)
-    (add-to-list 'aggressive-indent-excluded-modes 'html-mode)))
+;; (use-package aggressive-indent
+;;   :config
+;;   (progn
+;;     (global-aggressive-indent-mode 1)
+;;     (add-to-list 'aggressive-indent-excluded-modes 'html-mode)))
 
 ;; helm-swoop
 (use-package helm-swoop
@@ -811,8 +811,8 @@
 ;; NOW you can (require) your ELPA packages and configure them as normal
 ;;(add-to-list 'load-path "~/.mylisp/")
 (load-file (concat user-emacs-directory "/cedet/contrib/cedet-contrib-load.el"))
-(setq semanticdb-project-roots
-      (list (expand-file-name "/")));semantic检索范围
+;; (setq semanticdb-project-roots
+;;       (list (expand-file-name "/")));semantic检索范围
 ;;设置semantic cache临时文件的路径，避免到处都是临时文件
 (setq semanticdb-default-save-directory "~/.emacs.d/")
 ;;代码浏览框架
@@ -859,8 +859,8 @@
 ;; (require 'yasnippet)
 ;; (yas-global-mode 1)
 
-;; (require 'xcscope)
-;; (cscope-setup)
+(require 'xcscope)
+(cscope-setup)
 ;; (put 'set-goal-column 'disabled nil)
 ;; (put 'upcase-region 'disabled nil)
 ;; (custom-set-faces
@@ -930,27 +930,56 @@
 ;; ;; ;; company-c-headers
 ;; ;; (add-to-list 'company-backends 'company-c-headers)
 ;; ;; The following lines are always needed. Choose your own keys.
-;; (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-;; (setq org-agenda-files '("~/org"))
-;; (add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
-;; (setq org-log-done 'time)
-;; (global-set-key "\C-cl" 'org-store-link)
-;; (global-set-key "\C-ca" 'org-agenda)
-;; (global-set-key "\C-cb" 'org-iswitchb)
-;; (org-babel-do-load-languages
-;;  'org-babel-load-languages
-;;  '(
-;;    (sh . t)
-;;    (python . t)
-;;    (R . t)
-;;    (ruby . t)
-;;    (ditaa . t)
-;;    (dot . t)
-;;    (octave . t)
-;;    (sqlite . t)
-;;    (perl . t)
-;;    (C . t)
-;;    ))
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+(setq org-agenda-files '("~/org"))
+(add-hook 'org-mode-hook 'turn-on-font-lock) ; not needed when global-font-lock-mode is on
+(setq org-src-fontify-natively t)
+(setq org-log-done 'time)
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (sh . t)
+   (python . t)
+   (R . t)
+   (ruby . t)
+   (ditaa . t)
+   (dot . t)
+   (octave . t)
+   (sqlite . t)
+   (perl . t)
+   (C . t)
+   ))
+
+(setq org-publish-project-alist
+      '(("orgfiles"
+         :base-directory "."
+         :base-extension "org"
+         :publishing-directory "/ssh:xinfeng.chen@192.168.14.147:/home/xinfeng.chen/local/html/"
+         :publishing-function org-html-publish-to-html
+;;         :exclude "PrivatePage.org"   ;; regexp
+         :headline-levels 2
+         :table-of-contens t
+         :section-numbers t
+         :with-toc t
+                        :html-head "<link rel=\"stylesheet\"
+                       href=\"../other/mystyle.css\" type=\"text/css\"/>"
+                        :html-preamble t)
+
+        ;; ("images"
+        ;;  :base-directory "~/images/"
+        ;;  :base-extension "j\\|gif\\|png"               :publishing-directory "/ssh:user@host:~/html/images/"
+        ;;  :publishing-function org-publish-attachment)
+
+        ;; ("other"
+        ;;  :base-directory "~/other/"
+        ;;  :base-extension "css\\|el"
+        ;;  :publishing-directory "/ssh:user@host:~/html/other/"
+        ;;  :publishing-function org-publish-attachment)
+        ;;               ("website" :components ("orgfiles" "images" "other"))))
+        ))
 
 ;; (put 'dired-find-alternate-file 'disabled nil)
 
