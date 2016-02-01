@@ -701,11 +701,11 @@
 (use-package crontab-mode)
 (use-package transpose-frame)
 
-;; (use-package aggressive-indent
-;;   :config
-;;   (progn
-;;     (global-aggressive-indent-mode 1)
-;;     (add-to-list 'aggressive-indent-excluded-modes 'html-mode)))
+(use-package aggressive-indent
+  :config
+  (progn
+    (global-aggressive-indent-mode 1)
+    (add-to-list 'aggressive-indent-excluded-modes 'html-mode)))
 
 ;; helm-swoop
 (use-package helm-swoop
@@ -952,7 +952,7 @@
    (perl . t)
    (C . t)
    ))
-
+(setq org-src-fontify-natively t)
 (setq org-publish-project-alist
       '(("orgfiles"
          :base-directory "."
