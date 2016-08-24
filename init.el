@@ -113,7 +113,7 @@
 
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" init-dir))
 ;;(load-theme 'noctilux t)
-(load-theme 'xiaoming t)
+;;(load-theme 'xiaoming t)
 
 (add-hook 'emacs-startup-hook
           (lambda ()
@@ -784,11 +784,11 @@
 (bind-key  [f5] 'revert-buffer)
 (bind-key  [C-f5] 'revert-buffer-with-coding-system)
 
-;; Change windows
-(bind-key "C-x <up>" 'windmove-up)
-(bind-key "C-x <down>" 'windmove-down)
-(bind-key "C-x <right>" 'windmove-right)
-(bind-key "C-x <left>" 'windmove-left)
+;; ;; Change windows
+;; (bind-key "C-x <up>" 'windmove-up)
+;; (bind-key "C-x <down>" 'windmove-down)
+;; (bind-key "C-x <right>" 'windmove-right)
+;; (bind-key "C-x <left>" 'windmove-left)
 
 ;; search in GitHub/Google
 (bind-key "C-c G" 'search-github)
@@ -797,7 +797,7 @@
 
 ;; automatically add the comment.
 (bind-key "C-c j" 'comment-dwim)
-;; Align Text use "="
+;; Align Text use " ="
 (bind-key "C-c k" 'align-to-equals)
 
 
