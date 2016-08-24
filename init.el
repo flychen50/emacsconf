@@ -146,6 +146,7 @@
 ;;;; Packages
 
 (use-package ht)
+(use-package autopair)
 
 ;; hippie-expand
 (global-set-key (kbd "M-/") 'hippie-expand)

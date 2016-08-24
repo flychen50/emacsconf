@@ -2,6 +2,7 @@
 (source melpa)
 (source marmalade)
 
+(depends-on "autopair")
 (depends-on "ac-js2")
 (depends-on "ace-jump-mode")
 (depends-on "ag")
