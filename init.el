@@ -112,7 +112,7 @@
  '(magit-diff-options nil))
 
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" init-dir))
-(load-theme 'noctilux t)
+;;(load-theme 'noctilux t)
 (load-theme 'xiaoming t)
 
 (add-hook 'emacs-startup-hook
@@ -156,9 +156,9 @@
         try-expand-dabbrev-all-buffers
         try-expand-dabbrev-from-kill))
 
-(use-package powerline
-  :config
-  (powerline-ha-theme))
+;;(use-package powerline
+;;  :config
+;;  (powerline-ha-theme))
 
 (global-hl-line-mode +1)
 (use-package hl-line
@@ -180,12 +180,12 @@
          ("M-X" . smex-major-mode-commands)))
   :config (setq smex-save-file (expand-file-name ".smex-items" tmp-dir))
 
-(use-package sql
-  :config
-  (progn
-    (add-hook 'sql-mode-hook (lambda ()
-                               (setq sql-product 'mysql)
-                               (sql-highlight-mysql-keywords)))))
+;; (use-package sql
+;;   :config
+;;   (progn
+;;     (add-hook 'sql-mode-hook (lambda ()
+;;                                (setq sql-product 'mysql)
+;;                                (sql-highlight-mysql-keywords)))))
 
 ;; (use-package auto-complete)
 ;; (use-package auto-complete-config
@@ -957,7 +957,7 @@
       '(("orgfiles"
          :base-directory "."
          :base-extension "org"
-         :publishing-directory "/ssh:xinfeng.chen@192.168.14.147:/home/xinfeng.chen/local/html/"
+         :publishing-directory "/ssh:root@107.182.190.245:/home/wwwroot/default"
          :publishing-function org-html-publish-to-html
 ;;         :exclude "PrivatePage.org"   ;; regexp
          :headline-levels 2
@@ -1015,3 +1015,4 @@
 ;;        "{" > \n
 ;;        > _ \n
 ;;               "}" > \n)))
+(setq debug-on-error t)
