@@ -1,10 +1,10 @@
 
-(load-file "~/.emacs.d/cedet/cedet-devel-load.el")
+;;(load-file "~/.emacs.d/cedet/cedet-devel-load.el")
 ;; Add further minor-modes to be enabled by semantic-mode.
 ;; See doc-string of `semantic-default-submodes' for other things
 ;; you can use here.
-(add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
-(add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
+;;(add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
+;;(add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
 ;;(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
 ;; Enable Semantic
 ;;(semantic-mode 1)
@@ -157,9 +157,9 @@
         try-expand-dabbrev-all-buffers
         try-expand-dabbrev-from-kill))
 
-;;(use-package powerline
-;;  :config
-;;  (powerline-ha-theme))
+(use-package powerline
+ :config
+ (powerline-ha-theme))
 
 (global-hl-line-mode +1)
 (use-package hl-line
@@ -811,28 +811,28 @@
 
 ;; NOW you can (require) your ELPA packages and configure them as normal
 ;;(add-to-list 'load-path "~/.mylisp/")
-(load-file (concat user-emacs-directory "/cedet/contrib/cedet-contrib-load.el"))
+;;(load-file (concat user-emacs-directory "/cedet/contrib/cedet-contrib-load.el"))
 ;; (setq semanticdb-project-roots
 ;;       (list (expand-file-name "/")));semantic检索范围
 ;;设置semantic cache临时文件的路径，避免到处都是临时文件
-(setq semanticdb-default-save-directory "~/.emacs.d/")
+;;(setq semanticdb-default-save-directory "~/.emacs.d/")
 ;;代码浏览框架
-(require 'cedet)
-(require 'semantic)
+;;(require 'cedet)
+;;(require 'semantic)
 ;;(require 'ede)
 ;;(require 'ecb)
 ;;(require 'eassist nil 'noerror)
 ;;(global-ede-mode)
 ;;cpp和header快速切换
-(semantic-load-enable-minimum-features)
-(setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")
-(semantic-load-enable-code-helpers)
-(semantic-load-enable-gaudy-code-helpers)
-(semantic-load-enable-excessive-code-helpers)
-;;(semantic-load-enable-semantic-debugging-helpers)
-(global-semanticdb-minor-mode 1)
-(global-semantic-idle-scheduler-mode 1)
-(semantic-mode 1)
+;; (semantic-load-enable-minimum-features)
+;; (setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")
+;; (semantic-load-enable-code-helpers)
+;; (semantic-load-enable-gaudy-code-helpers)
+;; (semantic-load-enable-excessive-code-helpers)
+;; ;;(semantic-load-enable-semantic-debugging-helpers)
+;; (global-semanticdb-minor-mode 1)
+;; (global-semantic-idle-scheduler-mode 1)
+;; (semantic-mode 1)
 ;;(semantic-add-system-include "/usr/include/boost" 'c++-mode)
 ;;(require 'ecb-autoloads)
 ;;(ecb-activate)
