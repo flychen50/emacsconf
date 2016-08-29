@@ -2,6 +2,11 @@
 (source melpa)
 (source marmalade)
 
+
+(depends-on "ycmd")
+(depends-on "neotree")
+(depends-on "company-ycmd")
+(depends-on "flycheck-ycmd")
 (depends-on "autopair")
 (depends-on "ac-js2")
 (depends-on "ace-jump-mode")
