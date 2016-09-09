@@ -4,6 +4,8 @@
 
 (depends-on "autopair")
 (depends-on "ac-js2")
+(depends-on "flycheck-protobuf")
+(depends-on "protobuf-mode")
 (depends-on "ace-jump-mode")
 (depends-on "ag")
 (depends-on "aggressive-indent")
