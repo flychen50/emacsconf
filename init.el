@@ -702,11 +702,11 @@
 (use-package crontab-mode)
 (use-package transpose-frame)
 
-;; (use-package aggressive-indent
-;;   :config
-;;   (progn
-;;     (global-aggressive-indent-mode 1)
-;;     (add-to-list 'aggressive-indent-excluded-modes 'html-mode)))
+(use-package aggressive-indent
+  :config
+  (progn
+    (global-aggressive-indent-mode 1)
+    (add-to-list 'aggressive-indent-excluded-modes 'html-mode)))
 
 ;; helm-swoop
 (use-package helm-swoop
@@ -852,10 +852,10 @@
 
 
 
-;; ;; ;;使用google 代码规范
-;; ;; (require 'google-c-style)
-;; ;; (add-hook 'c-mode-common-hook 'google-set-c-style)
-;; ;; (add-hook 'c-mode-common-hook 'google-make-newline-indent)
+;;使用google 代码规范
+(require 'google-c-style)
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
 ;; ;;使用yas进行代码快速插入,如doc，插入注释
 ;; (require 'yasnippet)
 ;; (yas-global-mode 1)
@@ -876,22 +876,22 @@
 ;;   (interactive "*")
 ;;   (insert (current-time-string)))
 ;;                                         ;(global-set-key "C-xt" 'insert-current-time)
-;; (defun cpplint ()
-;;   "check source code format according to Google Style Guide"
-;;   (interactive)
-;;   (compilation-start (concat "/usr/bin/cpplint.py " (buffer-file-name))))
-;; (defun format-function ()
-;;   "Format the whole buffer."
-;;   (setq tab-width 4) ;; change this to taste, this is what K&R uses <img src="http://zhanxw.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley">
-;;   (setq c-basic-offset tab-width)
-;;   (c-set-offset 'substatement-open 0)
-;;   ;; next line is strange, I copied it from .emacs, but it cannot find c-lineup-arglist-intro-after-paren
-;;   ;; however, disable this line seems working as well.
-;;   ;;(c-set-offset 'arglist-intro c-lineup-arglist-intro-after-paren)
-;;   (indent-region (point-min) (point-max) nil)
-;;   (untabify (point-min) (point-max))
-;;   (save-buffer)
-;;   )
+(defun cpplint ()
+  "check source code format according to Google Style Guide"
+  (interactive)
+  (compilation-start (concat "/usr/bin/cpplint.py " (buffer-file-name))))
+(defun format-function ()
+  "Format the whole buffer."
+  (setq tab-width 4) ;; change this to taste, this is what K&R uses <img src="http://zhanxw.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley">
+  (setq c-basic-offset tab-width)
+  (c-set-offset 'substatement-open 0)
+  ;; next line is strange, I copied it from .emacs, but it cannot find c-lineup-arglist-intro-after-paren
+  ;; however, disable this line seems working as well.
+  ;;(c-set-offset 'arglist-intro c-lineup-arglist-intro-after-paren)
+  (indent-region (point-min) (point-max) nil)
+  (untabify (point-min) (point-max))
+  (save-buffer)
+  )
 ;; ;;(semanticdb-enable-cscope-databases)  ;;This is causing problems
 ;; ;;auto company
 ;; ;;(add-to-list 'load-path "~/.mylisp/company-mode/")
